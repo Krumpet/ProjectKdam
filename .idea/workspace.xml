@@ -1,7 +1,682 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98363d44-a0a1-4976-a1fb-91fb35c844b8" name="Default" comment="" />
+    <list default="true" id="98363d44-a0a1-4976-a1fb-91fb35c844b8" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-10.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-100.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-101.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-102.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-103.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-104.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-105.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-106.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-107.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-108.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-109.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-11.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-110.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-111.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-112.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-113.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-114.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-115.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-116.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-117.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-118.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-119.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-12.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-120.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-121.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-122.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-123.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-124.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-125.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-126.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-127.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-128.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-129.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-13.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-130.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-131.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-132.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-133.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-134.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-135.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-136.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-137.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-138.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-139.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-14.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-140.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-141.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-142.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-143.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-144.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-145.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-146.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-147.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-148.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-149.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-15.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-150.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-151.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-152.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-153.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-154.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-155.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-156.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-157.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-158.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-159.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-16.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-160.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-161.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-162.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-163.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-164.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-165.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-166.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-167.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-168.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-169.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-17.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-170.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-171.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-172.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-173.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-174.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-175.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-176.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-177.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-178.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-179.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-18.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-180.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-181.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-182.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-183.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-184.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-185.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-186.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-187.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-188.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-189.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-19.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-190.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-191.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-192.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-193.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-194.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-195.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-196.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-197.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-198.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-199.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-20.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-200.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-201.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-202.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-203.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-204.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-205.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-206.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-207.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-208.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-209.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-21.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-210.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-211.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-212.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-213.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-214.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-215.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-216.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-217.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-218.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-219.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-22.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-220.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-221.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-222.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-223.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-224.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-225.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-226.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-227.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-228.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-229.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-23.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-230.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-231.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-232.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-233.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-234.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-235.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-236.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-237.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-238.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-239.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-24.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-240.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-241.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-242.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-243.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-244.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-245.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-246.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-247.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-248.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-249.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-25.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-250.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-251.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-252.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-253.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-254.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-255.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-256.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-257.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-258.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-259.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-26.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-260.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-261.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-262.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-263.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-264.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-265.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-266.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-267.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-268.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-269.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-27.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-270.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-271.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-272.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-273.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-274.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-275.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-276.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-277.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-278.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-279.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-28.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-280.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-281.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-282.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-283.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-284.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-285.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-286.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-287.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-288.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-289.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-29.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-290.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-291.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-292.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-293.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-294.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-295.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-296.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-297.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-298.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-299.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-30.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-300.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-301.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-302.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-303.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-304.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-305.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-306.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-307.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-308.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-309.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-31.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-310.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-311.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-312.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-313.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-314.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-315.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-316.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-317.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-318.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-319.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-32.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-320.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-321.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-322.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-323.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-324.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-325.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-326.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-327.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-328.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-329.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-33.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-330.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-331.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-332.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-333.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-334.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-335.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-336.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-337.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-338.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-339.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-34.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-340.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-341.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-342.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-343.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-344.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-345.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-346.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-347.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-348.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-349.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-35.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-350.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-351.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-352.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-353.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-354.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-355.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-356.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-357.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-358.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-359.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-36.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-360.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-361.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-362.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-363.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-364.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-365.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-366.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-367.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-368.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-369.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-37.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-370.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-371.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-372.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-373.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-374.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-375.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-376.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-377.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-378.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-379.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-38.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-380.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-381.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-382.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-383.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-384.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-385.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-386.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-387.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-388.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-389.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-39.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-390.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-391.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-392.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-393.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-394.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-395.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-396.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-397.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-398.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-399.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-4.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-40.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-400.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-401.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-402.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-403.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-404.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-405.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-406.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-407.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-408.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-409.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-41.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-410.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-411.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-412.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-413.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-414.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-415.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-416.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-417.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-418.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-419.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-42.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-420.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-421.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-422.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-423.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-424.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-425.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-426.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-427.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-428.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-429.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-43.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-430.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-431.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-432.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-433.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-434.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-435.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-436.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-437.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-438.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-439.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-44.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-440.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-441.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-442.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-443.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-444.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-445.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-446.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-447.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-448.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-449.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-45.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-450.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-451.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-452.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-453.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-454.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-455.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-456.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-457.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-458.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-459.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-46.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-460.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-461.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-462.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-463.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-464.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-465.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-466.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-467.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-468.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-469.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-47.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-470.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-471.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-472.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-473.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-474.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-475.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-476.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-477.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-478.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-479.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-48.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-480.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-481.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-482.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-483.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-484.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-485.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-486.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-487.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-488.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-489.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-49.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-490.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-491.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-492.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-493.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-494.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-495.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-496.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-497.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-498.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-499.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-5.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-50.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-500.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-501.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-502.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-503.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-504.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-505.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-506.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-507.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-508.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-509.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-51.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-510.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-511.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-512.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-513.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-514.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-515.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-516.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-517.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-518.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-519.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-52.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-520.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-521.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-522.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-523.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-524.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-525.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-526.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-527.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-528.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-529.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-53.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-530.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-531.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-532.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-533.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-534.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-535.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-536.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-537.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-538.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-539.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-54.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-540.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-541.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-542.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-543.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-544.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-545.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-546.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-547.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-548.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-549.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-55.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-550.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-551.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-552.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-553.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-554.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-555.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-556.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-557.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-558.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-559.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-56.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-560.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-561.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-562.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-563.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-564.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-565.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-566.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-567.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-568.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-569.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-57.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-570.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-571.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-572.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-573.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-574.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-575.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-576.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-577.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-578.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-579.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-58.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-580.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-581.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-582.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-583.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-584.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-585.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-586.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-587.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-588.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-589.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-59.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-590.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-591.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-592.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-593.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-594.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-595.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-596.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-597.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-598.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-599.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-6.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-60.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-600.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-601.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-602.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-603.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-604.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-605.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-606.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-607.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-608.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-609.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-61.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-610.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-611.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-612.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-613.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-614.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-615.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-616.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-617.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-618.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-619.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-62.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-620.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-621.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-622.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-623.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-624.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-625.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-626.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-627.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-628.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-629.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-63.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-630.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-631.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-632.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-633.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-634.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-635.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-636.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-637.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-638.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-639.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-64.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-640.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-641.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-642.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-643.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-644.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-645.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-646.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-647.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-648.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-649.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-65.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-650.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-651.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-652.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-653.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-654.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-655.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-656.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-657.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-658.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-659.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-66.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-660.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-661.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-662.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-663.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-664.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-665.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-666.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-667.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-668.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-67.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-68.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-69.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-7.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-70.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-71.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-72.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-73.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-74.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-75.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-76.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-77.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-78.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-79.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-8.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-80.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-81.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-82.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-83.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-84.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-85.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-86.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-87.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-88.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-89.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-9.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-90.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-91.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-92.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-93.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-94.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-95.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-96.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-97.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-98.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data1/blah-99.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/pdfParser.py" afterPath="$PROJECT_DIR$/pdfParser.py" />
+      <change beforePath="$PROJECT_DIR$/testing/testing.py" afterPath="$PROJECT_DIR$/testing/testing.py" />
+      <change beforePath="$PROJECT_DIR$/utils.py" afterPath="$PROJECT_DIR$/utils.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +689,7 @@
       <file leaf-file-name="kdamUG2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kdamUG2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2391">
+            <state relative-caret-position="0">
               <caret line="297" column="19" lean-forward="false" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="19" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -26,18 +701,18 @@
       <file leaf-file-name="KdamClasses.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KdamClasses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="630">
               <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testing.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testing/testing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="97" column="12" lean-forward="false" selection-start-line="97" selection-start-column="12" selection-end-line="107" selection-end-column="23" />
+            <state relative-caret-position="249">
+              <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -45,13 +720,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="pdfParser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pdfParser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-294">
-              <caret line="4" column="87" lean-forward="false" selection-start-line="4" selection-start-column="87" selection-end-line="4" selection-end-column="87" />
+            <state relative-caret-position="798">
+              <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
               <folding>
-                <element signature="e#0#80#0" expanded="true" />
+                <element signature="e#0#81#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,9 +745,11 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="312">
+              <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,6 +802,9 @@
       <find>236</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -124,10 +814,11 @@
         <option value="$PROJECT_DIR$/kdamUG2.py" />
         <option value="$PROJECT_DIR$/test2.py" />
         <option value="$PROJECT_DIR$/testing/test2.py" />
-        <option value="$PROJECT_DIR$/pdfParser.py" />
         <option value="$PROJECT_DIR$/KdamClasses.py" />
+        <option value="$PROJECT_DIR$/pdfParser.py" />
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/testing/testing.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -136,6 +827,7 @@
     <option name="width" value="976" />
     <option name="height" value="1038" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -152,7 +844,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,15 +851,11 @@
               <item name="Project_Kdam" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project_Kdam" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Project_Kdam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project_Kdam" type="462c0819:PsiDirectoryNode" />
-              <item name="testing" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,7 +879,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testing (1)">
+  <component name="RunManager" selected="Python.testing">
     <configuration name="kdamUG2 download" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -349,11 +1036,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.testing (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.testing" />
         <item index="1" class="java.lang.String" itemvalue="Python.pdfParser" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test2 (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.testing" />
+        <item index="2" class="java.lang.String" itemvalue="Python.testing (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test2 (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test2" />
       </list>
     </recent_temporary>
   </component>
@@ -381,7 +1068,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32873806" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -422,6 +1109,64 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/kdamUG2.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6090">
+          <caret line="297" column="19" lean-forward="false" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KdamClasses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdfParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="87" lean-forward="false" selection-start-line="4" selection-start-column="87" selection-end-line="4" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kdamUG2.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6615">
           <caret line="322" column="42" lean-forward="false" selection-start-line="322" selection-start-column="42" selection-end-line="322" selection-end-column="42" />
           <folding>
@@ -430,22 +1175,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Course.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Faculty.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Course.py" />
+    <entry file="file://$PROJECT_DIR$/Faculty.py" />
     <entry file="file://$PROJECT_DIR$/testing/test2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -476,22 +1207,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Faculty.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Course.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Faculty.py" />
+    <entry file="file://$PROJECT_DIR$/Course.py" />
     <entry file="file://$PROJECT_DIR$/testing/testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2964">
@@ -522,14 +1239,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Course.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1222">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Course.py" />
     <entry file="file://$PROJECT_DIR$/testing/testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2392">
@@ -540,14 +1250,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Faculty.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Faculty.py" />
     <entry file="file://$PROJECT_DIR$/kdamUG2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -633,7 +1336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -641,7 +1343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -649,7 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,7 +1357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -665,7 +1364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="264" column="0" lean-forward="false" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -673,22 +1371,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="2580" column="8" lean-forward="false" selection-start-line="2580" selection-start-column="8" selection-end-line="2580" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Faculty.py" />
+    <entry file="file://$PROJECT_DIR$/Course.py" />
+    <entry file="file://$PROJECT_DIR$/KdamClasses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Faculty.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1239681210/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="202">
+          <caret line="2819" column="8" lean-forward="false" selection-start-line="2819" selection-start-column="8" selection-end-line="2819" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Course.py">
+    <entry file="file://$PROJECT_DIR$/kdamUG2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+        <state relative-caret-position="0">
+          <caret line="297" column="19" lean-forward="false" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/contextlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="128" column="4" lean-forward="false" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -703,57 +1419,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KdamClasses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pdfParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="4" column="87" lean-forward="false" selection-start-line="4" selection-start-column="87" selection-end-line="4" selection-end-column="87" />
+        <state relative-caret-position="798">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
           <folding>
-            <element signature="e#0#80#0" expanded="true" />
+            <element signature="e#0#81#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1239681210/builtins.py">
+    <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="2819" column="8" lean-forward="false" selection-start-line="2819" selection-start-column="8" selection-end-line="2819" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kdamUG2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2391">
-          <caret line="297" column="19" lean-forward="false" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="19" />
+        <state relative-caret-position="312">
+          <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testing/testing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="97" column="12" lean-forward="false" selection-start-line="97" selection-start-column="12" selection-end-line="107" selection-end-column="23" />
+        <state relative-caret-position="249">
+          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

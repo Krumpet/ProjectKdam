@@ -16,3 +16,18 @@ def suppress_stdout():
 
 def toJSON(object):
     return json.dumps(object, default=lambda x: x.__dict__)
+
+
+from contextlib import contextmanager
+
+
+@contextmanager
+def tempOpen(path, mode, encoding):
+    # if this fails there is nothing left to do anyways
+    file = open(path, mode, encoding=encoding)
+
+    try:
+        yield file
+    finally:
+        file.close()
+        os.remove(path)

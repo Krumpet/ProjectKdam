@@ -1,13 +1,14 @@
-import ghostscript # for converting pdf file to text (though Hebrew is reversed)
+import ghostscript  # for converting pdf file to text (though Hebrew is reversed)
 
-from PyPDF2 import PdfFileReader # just for getting number of pages in PDF
+from PyPDF2 import PdfFileReader  # just for getting number of pages in PDF
 
-from utils import suppress_stdout # so you don't see all of the output from Ghostscript
+from utils import suppress_stdout  # so you don't see all of the output from Ghostscript
 
 PDFPath = 'C:\\Users\\ADMIN\\PycharmProjects\\Project_Kdam\\data1\\Catalogue17-18.pdf'
 
-pdf = PdfFileReader(open(PDFPath,'rb'))
-numOfPages : int = pdf.getNumPages()
+pdf = PdfFileReader(open(PDFPath, 'rb'))
+numOfPages: int = pdf.getNumPages()
+
 
 # p=pdf.getPage(70)
 #
@@ -23,22 +24,16 @@ numOfPages : int = pdf.getNumPages()
 # ]
 #
 # ghostscript.Ghostscript(*getPageNum)
-
-args = [
-    "gs".encode(),
-    "-sDEVICE=txtwrite".encode(),
-    ("-o" + "C:\\Users\\ADMIN\\PycharmProjects\\Project_Kdam\\data1\\blah-%d.txt").encode(),
-    PDFPath.encode(),
-]
-
-# devnull = open(os.devnull, 'w')
-# oldstdout_fno = os.dup(sys.stdout.fileno())
-# os.dup2(devnull.fileno(), 1)
-# # makesomenoise()
-# ghostscript.Ghostscript(*args)
-# os.dup2(oldstdout_fno, 1)
-
-with suppress_stdout():
+def catalogueToTxtFiles():
+    args = [
+        "gs".encode(),
+        "-sDEVICE=txtwrite".encode(),
+        ("-o" + "C:\\Users\\ADMIN\\PycharmProjects\\Project_Kdam\\data1\\blah-%d.txt").encode(),
+        PDFPath.encode(),
+    ]
+    # with suppress_stdout():
     ghostscript.Ghostscript(*args)
 
-# ghostscript.Ghostscript(*args)
+
+if __name__ == "__main__":
+    catalogueToTxtFiles()
