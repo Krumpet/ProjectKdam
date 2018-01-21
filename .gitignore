@@ -5,6 +5,7 @@ __pycache__/
 
 # Working data files
 *.html
+*.htm
 *.txt
 
 # C extensions
