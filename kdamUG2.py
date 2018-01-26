@@ -21,37 +21,9 @@ HEB_FILE = r"C:\Users\ADMIN\PycharmProjects\Project_Kdam\heb.txt"
 
 MOED_B = 0
 
-
-
-# TODO: make a course a class and keep records there, e.g:
-# class Course:
-#     CourseId: int;
-#     Moed_A: str;
-#     Moed_B: str;
-#     Kdams: list(str);
-#     Zamuds: list(str);
-#     Followups: list(str);
-#
-# Courses = {}
-
-# class Faculty(Enum):
-#     CS = 1
-#     EE = 2
-#     EI = 3
-#     MATH = 4
-#     PHYS = 5
-#
-#
-# facDictionary = {
-#     Faculty.CS: "cslist.txt",
-#     Faculty.EE: "eelist.txt",
-#     Faculty.EI: "eilist.txt",
-#     Faculty.MATH: "mathlist.txt"
-# }
-
 Semester = "201702"
-# TechnionUgStart = "https://ug3.technion.ac.il/rishum/course?MK=324440&CATINFO=&SEM=201702"
 TechnionUg = "https://ug3.technion.ac.il/rishum/course?SEM=" + Semester + "&MK="
+# TechnionUgStart = "https://ug3.technion.ac.il/rishum/course?MK=324440&CATINFO=&SEM=201702"
 
 
 def convertCsTxtFileToNormalFile(csfile, normalfile):
@@ -94,10 +66,11 @@ def getHTMLDataFromCourse(courseId):
 
 
 def fileExists(filename):
-    b1 = os.path.exists(filename)
-    b2 = os.path.isfile(filename)
-    if (b1 and b2): return True
-    return False
+    # b1 = os.path.exists(filename)
+    # b2 = os.path.isfile(filename)
+    # if (b1 and b2): return True
+    # return False
+    return ((os.path.exists(filename)) and (os.path.isfile(filename)))
 
 
 def courseExists(courseId):
@@ -140,7 +113,7 @@ def convertHebFileToList(hebfile):
 
 
 # TODO: make moed_b an argument, to append MOED_Bs to the list of MOED_As
-def getSubjectAndExam(courseId, isMoedBet : bool):
+def getSubjectAndExam(courseId, isMoedBet: bool):
     global MOED_B
     data = open(MyDataPath + "\\" + str(courseId) + ".htm", encoding="utf8").read()
     # try:
@@ -243,7 +216,7 @@ def parseAllCoursesKdamsZamuds(coursesArray):
     return data
 
 
-def parseAllCoursesTests(coursesArray, isMoedBet : bool):
+def parseAllCoursesTests(coursesArray, isMoedBet: bool):
     print(1)
     dic = {}
     for i in coursesArray:

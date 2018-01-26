@@ -1,14 +1,9 @@
-import ghostscript  # for converting pdf file to text (though Hebrew is reversed)
+import ghostscript # for converting pdf file to text (though Hebrew is reversed)\
 
 from PyPDF2 import PdfFileReader  # just for getting number of pages in PDF
+from utils import *
 
 from utils import suppress_stdout  # so you don't see all of the output from Ghostscript
-
-PDFPath = 'C:\\Users\\ADMIN\\PycharmProjects\\Project_Kdam\\data1\\Catalogue17-18.pdf'
-
-pdf = PdfFileReader(open(PDFPath, 'rb'))
-numOfPages: int = pdf.getNumPages()
-
 
 # p=pdf.getPage(70)
 #
@@ -24,6 +19,13 @@ numOfPages: int = pdf.getNumPages()
 # ]
 #
 # ghostscript.Ghostscript(*getPageNum)
+
+PDFPath = data1Path + r"\Catalogue17-18.pdf"
+# PDFPath = MainPath + r"\data1\Catalogue17-18.pdf"
+pdf = PdfFileReader(open(PDFPath, 'rb'))
+numOfPages: int = pdf.getNumPages()
+
+
 def catalogueToTxtFiles():
     args = [
         "gs".encode(),
