@@ -1,6 +1,7 @@
 import json
 import os
 import pickle
+import re
 import sys
 from time import sleep
 from random import random
@@ -8,20 +9,30 @@ from contextlib import contextmanager
 from urllib.request import urlopen
 
 """
-General utility
+Paths and other string constants
 """
 
-Semester = "201702"
-TechnionUg = "https://ug3.technion.ac.il/rishum/course?SEM=" + Semester + "&MK="
+Semester = "02"
+Year = "2017"
+TestYear = str(int(Year) + int(Semester) - 1)  # For the regex searching for exam dates
+
+TechnionUg = "https://ug3.technion.ac.il/rishum/course?SEM=" + Year + Semester + "&MK="
 TechnionGrad = "http://www.graduate.technion.ac.il/heb/Subjects/?Sub="
+
 MainPath = r"C:\Users\ADMIN\PycharmProjects\Project_Kdam"
 data1Path = MainPath + r"\data1"
 htmlPath = MainPath + r"\html"
 jsonPath = data1Path + "\json"
 picklePath = data1Path + "\pickle"
 
+courseRegex = "(?:^|\D)(\d{5,6})(?:\D|$)"
 
 # MyDataPath = r"C:\Users\ADMIN\PycharmProjects\Project_Kdam\html"
+
+"""
+Generic functions
+"""
+
 
 def suppress_stdout():
     with open(os.devnull, "w") as devnull:
@@ -52,6 +63,23 @@ def tempOpen(path, mode, encoding):
         os.remove(path)
 
 
+def randomSleep():
+    if random() > 0.7:
+        sleep(5)
+
+
+def fileExists(filename):
+    # b1 = os.path.exists(filename)
+    # b2 = os.path.isfile(filename)
+    # if (b1 and b2): return True
+    # return False
+    return ((os.path.exists(filename)) and (os.path.isfile(filename)))
+
+
+def courseExists(courseId):
+    return fileExists(htmlPath + "\\" + str(courseId) + ".htm")
+
+
 """
 Data storage utilities - pickle and JSON
 """
@@ -75,8 +103,3 @@ def fromPickle(filename):
     with open(filename, 'rb') as file:
         result = pickle.load(file, encoding='utf8')
     return result
-
-
-def randomSleep():
-    if random() > 0.7:
-        sleep(5)

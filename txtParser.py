@@ -57,7 +57,7 @@ def parseTexts():
                 facultyName = facultyName[::-1]
                 # TODO: maybe combine data from lines to one big string?
                 # This regex captures all 5,6 digit sequences that aren't part of a longer sequence, like phone numbers
-                courseInEachLine = [re.findall("(?:^|\D)(\d{5,6})(?:\D|$)", data[j]) for j in range(len(data))]
+                courseInEachLine = [re.findall(courseRegex, data[j]) for j in range(len(data))]
                 coursesOnThisPage = list(
                     set([CourseNum(courseNum) for sublist in courseInEachLine for courseNum in sublist]))
                 courseObjects = [Courses.get(courseId, Course(courseId)) for courseId in coursesOnThisPage]

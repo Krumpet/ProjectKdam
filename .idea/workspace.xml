@@ -1,417 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98363d44-a0a1-4976-a1fb-91fb35c844b8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/regex.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/testing/redownload.py" />
+    <list default="true" id="98363d44-a0a1-4976-a1fb-91fb35c844b8" name="Default" comment="big update - pdfparser, txtparser, working on updating course details">
+      <change beforePath="" afterPath="$PROJECT_DIR$/downloadUpdateCourses.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/data2/036044.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044102.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044105.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044127.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044131.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044137.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044140.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044145.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044148.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044157.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044167.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044169.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044191.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044192.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044193.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044198.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044202.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044231.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044262.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/044334.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/045000.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046001.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046005.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046129.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046187.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046189.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046194.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046195.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046196.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046197.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046200.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046201.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046204.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046205.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046206.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046208.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046209.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046210.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046235.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046237.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046265.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046266.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046267.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046268.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046270.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046271.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046272.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046273.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046275.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046278.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046332.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046336.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046345.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046733.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046743.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046745.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046746.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046773.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046831.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046851.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046853.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046868.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046880.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046903.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046925.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/046993.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/048878.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/048921.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/056393.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/066525.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094139.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094189.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094195.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094222.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094241.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094313.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094314.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094323.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094325.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094334.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094412.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094423.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094503.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094564.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094591.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094594.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094607.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094814.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094815.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094816.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094821.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/094831.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/095605.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096208.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096210.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096211.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096224.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096230.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096231.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096250.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096262.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096265.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096310.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096324.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096326.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096327.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096350.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096351.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096411.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096502.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096570.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096573.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096575.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096616.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096617.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096620.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096807.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096815.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/096817.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/097209.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/097210.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/097211.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/097215.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/097230.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/097250.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/097317.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/097332.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/097334.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104013.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104016.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104031.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104032.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104033.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104034.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104035.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104122.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104134.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104135.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104142.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104157.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104165.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104166.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104172.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104173.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104174.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104177.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104192.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104193.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104195.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104215.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104221.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104222.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104223.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104276.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104279.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104281.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104282.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104283.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104285.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/104290.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/106156.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/106378.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/106383.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114020.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114021.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114035.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114036.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114037.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114052.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114054.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114071.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114073.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114074.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114075.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114076.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114086.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114101.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114210.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114246.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114250.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/114252.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/115203.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/115204.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/116004.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/116029.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/116031.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/116217.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/116354.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/124108.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/124120.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/124503.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/124510.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/124801.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/125001.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/125801.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134019.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134020.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134040.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134058.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134082.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134111.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134113.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134117.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134119.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134120.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134121.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134128.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134133.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/134142.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/214909.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/216117.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234107.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234111.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234112.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234114.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234117.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234118.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234122.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234123.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234125.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234127.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234141.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234145.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234218.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234247.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234262.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234267.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234293.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234299.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234301.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234302.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234303.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234304.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234306.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234311.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234312.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234313.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234319.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234322.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234325.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234326.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234329.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234525.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/234900.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236026.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236200.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236268.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236270.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236278.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236299.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236303.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236304.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236305.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236307.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236308.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236309.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236310.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236311.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236313.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236315.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236321.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236323.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236324.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236327.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236328.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236329.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236330.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236332.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236333.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236334.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236336.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236339.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236340.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236341.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236342.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236343.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236345.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236346.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236347.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236348.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236349.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236350.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236351.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236353.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236356.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236357.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236358.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236359.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236360.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236361.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236363.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236366.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236368.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236369.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236370.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236371.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236372.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236373.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236374.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236375.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236376.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236378.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236381.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236499.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236500.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236501.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236502.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236503.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236504.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236506.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236508.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236509.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236510.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236512.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236513.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236515.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236518.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236520.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236521.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236522.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236523.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236524.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236525.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236526.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236601.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236602.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236603.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236604.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236605.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236606.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236607.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236610.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236611.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236612.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236620.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236629.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236635.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236640.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236646.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236648.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236650.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236653.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236698.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236700.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236703.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236712.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236715.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236716.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236719.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236729.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236754.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236755.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236756.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236757.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236760.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236779.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236780.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236790.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236800.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236801.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236802.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236803.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236804.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236805.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236813.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236814.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236815.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236816.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236818.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236823.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236826.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236827.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236828.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236832.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236834.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236860.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236861.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236862.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236873.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236874.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236875.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236927.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236941.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236950.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236951.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236990.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/236991.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/238739.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/238900.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/238901.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/238902.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/276004.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/324033.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/324864.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/336543.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/394901.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/829422.htm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/data2/829489.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/KdamClasses.py" afterPath="$PROJECT_DIR$/KdamClasses.py" />
+      <change beforePath="$PROJECT_DIR$/courseDownloader.py" afterPath="" />
       <change beforePath="$PROJECT_DIR$/kdamUG2.py" afterPath="$PROJECT_DIR$/kdamUG2.py" />
-      <change beforePath="$PROJECT_DIR$/pdfParser.py" afterPath="$PROJECT_DIR$/pdfParser.py" />
-      <change beforePath="$PROJECT_DIR$/testing/eelist.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/testing/htmlReply.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/testing/ielist.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/testing/mathlist.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/testing/physlist.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/testing/test2.py" afterPath="$PROJECT_DIR$/courseDownloader.py" />
-      <change beforePath="$PROJECT_DIR$/testing/testing.py" afterPath="$PROJECT_DIR$/txtParser.py" />
+      <change beforePath="$PROJECT_DIR$/testing/redownload.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/txtParser.py" afterPath="$PROJECT_DIR$/txtParser.py" />
       <change beforePath="$PROJECT_DIR$/utils.py" afterPath="$PROJECT_DIR$/utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -423,12 +20,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="KdamClasses.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KdamClasses.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KdamClasses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="-1761">
+              <caret line="33" column="63" lean-forward="false" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
+              <folding>
+                <element signature="e#44#80#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -446,21 +45,21 @@
       <file leaf-file-name="kdamUG2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kdamUG2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="134" selection-end-column="21" />
+            <state relative-caret-position="-4326">
+              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="76" selection-end-column="65" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1516648255665" expanded="true" signature="1796:1904" ph="..." />
+                <marker date="1516971997139" expanded="true" signature="1798:1906" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="redownload.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testing/redownload.py">
+      <file leaf-file-name="downloadUpdateCourses.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/downloadUpdateCourses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="132" column="16" lean-forward="false" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
+            <state relative-caret-position="1242">
+              <caret line="113" column="47" lean-forward="false" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -481,8 +80,8 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+            <state relative-caret-position="-480">
+              <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -493,22 +92,10 @@
       <file leaf-file-name="txtParser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/txtParser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="861">
               <caret line="46" column="49" lean-forward="false" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="courseDownloader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/courseDownloader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="75" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -525,17 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print(1)</find>
-      <find>div class=&quot;pro</find>
-      <find>קדם</find>
-      <find>download</find>
-      <find>==</find>
-      <find>None</find>
-      <find>clist</find>
-      <find>_2</find>
-      <find>cslist</find>
-      <find>parse</find>
-      <find>encod</find>
       <find>\t</find>
       <find>\r\n</find>
       <find>str</find>
@@ -555,6 +131,17 @@
       <find>findall</find>
       <find>data1</find>
       <find>\d{</find>
+      <find>getEnco`</find>
+      <find>rando</find>
+      <find>2018</find>
+      <find>Faculties</find>
+      <find>htmlpath2</find>
+      <find>(?</find>
+      <find>d{5</find>
+      <find>\d{5,</find>
+      <find>courseex</find>
+      <find>מבני</find>
+      <find>topic</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -567,18 +154,20 @@
         <option value="$PROJECT_DIR$/Course.py" />
         <option value="$PROJECT_DIR$/Faculty.py" />
         <option value="$PROJECT_DIR$/test2.py" />
-        <option value="$PROJECT_DIR$/KdamClasses.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/testing/testing.py" />
         <option value="$PROJECT_DIR$/testing/test2.py" />
         <option value="$PROJECT_DIR$/testing/courseDownloader.py" />
         <option value="$PROJECT_DIR$/kdamUG2.py" />
         <option value="$PROJECT_DIR$/courseDownloader.py" />
-        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/pdfParser.py" />
         <option value="$PROJECT_DIR$/regex.py" />
         <option value="$PROJECT_DIR$/txtParser.py" />
+        <option value="$PROJECT_DIR$/testing/CourseNumTest.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/KdamClasses.py" />
         <option value="$PROJECT_DIR$/testing/redownload.py" />
+        <option value="$PROJECT_DIR$/redownload.py" />
       </list>
     </option>
   </component>
@@ -603,6 +192,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -613,19 +204,17 @@
             <path>
               <item name="Project_Kdam" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project_Kdam" type="462c0819:PsiDirectoryNode" />
-              <item name="html2" type="462c0819:PsiDirectoryNode" />
+              <item name="data1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Project_Kdam" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project_Kdam" type="462c0819:PsiDirectoryNode" />
-              <item name="testing" type="462c0819:PsiDirectoryNode" />
+              <item name="html2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -650,7 +239,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.redownload">
+  <component name="RunManager" selected="Python.redownload (1)">
+    <configuration name="CourseNumTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Project_Kdam" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testing/CourseNumTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="kdamUG2 download" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -705,7 +312,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="pdfParser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="redownload (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -717,7 +324,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Project_Kdam" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pdfParser.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\ADMIN\PycharmProjects\Project_Kdam\downloadUpdateCourses.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -735,7 +342,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Project_Kdam" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testing/redownload.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\ADMIN\PycharmProjects\Project_Kdam\downloadUpdateCourses.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -754,24 +361,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Project_Kdam" />
       <option name="SCRIPT_NAME" value="C:\Users\ADMIN\PycharmProjects\Project_Kdam\courseDownloader.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="testing" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project_Kdam" />
-      <option name="SCRIPT_NAME" value="C:\Users\ADMIN\PycharmProjects\Project_Kdam\txtParser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -799,19 +388,19 @@
       <item index="0" class="java.lang.String" itemvalue="Python.kdamUG2 make" />
       <item index="1" class="java.lang.String" itemvalue="Python.kdamUG2 download" />
       <item index="2" class="java.lang.String" itemvalue="Python.kdamUG2 parse" />
-      <item index="3" class="java.lang.String" itemvalue="Python.testing" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test2 (1)" />
-      <item index="5" class="java.lang.String" itemvalue="Python.pdfParser" />
-      <item index="6" class="java.lang.String" itemvalue="Python.txtParser" />
-      <item index="7" class="java.lang.String" itemvalue="Python.redownload" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test2 (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.txtParser" />
+      <item index="5" class="java.lang.String" itemvalue="Python.redownload" />
+      <item index="6" class="java.lang.String" itemvalue="Python.CourseNumTest" />
+      <item index="7" class="java.lang.String" itemvalue="Python.redownload (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.redownload" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test2 (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.txtParser" />
-        <item index="3" class="java.lang.String" itemvalue="Python.testing" />
-        <item index="4" class="java.lang.String" itemvalue="Python.pdfParser" />
+        <item index="0" class="java.lang.String" itemvalue="Python.redownload (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.redownload" />
+        <item index="2" class="java.lang.String" itemvalue="Python.CourseNumTest" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test2 (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.txtParser" />
       </list>
     </recent_temporary>
   </component>
@@ -843,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516558592540</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="big update - pdfparser, txtparser, working on updating course details">
+      <created>1516931446030</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1516931446030</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -852,20 +448,20 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32826087" sideWeight="0.50632244" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.50632244" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32826087" sideWeight="0.49367756" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39872748" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39782608" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -875,13 +471,26 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Deleted text and html files" />
     <MESSAGE value="added htm to gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="added htm to gitignore" />
+    <MESSAGE value="big update - pdfparser, txtparser, working on updating course details" />
+    <option name="LAST_COMMIT_MESSAGE" value="big update - pdfparser, txtparser, working on updating course details" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="Courses" language="Python" />
+        <watch expression="sorted(Courses)" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -896,36 +505,27 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
+    <expressions id="watch">
+      <expression>
+        <expression-string>sorted(Courses)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Courses</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/courseDownloader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kdamUG2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1274">
-          <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1516648255665" expanded="true" signature="1796:1904" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kdamUG2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6090">
           <caret line="297" column="19" lean-forward="false" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="19" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1516648255665" expanded="true" signature="1796:1904" ph="..." />
+            <marker date="1516971997139" expanded="true" signature="1798:1906" ph="..." />
           </folding>
         </state>
       </provider>
@@ -934,7 +534,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#44#80#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -960,9 +562,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -982,7 +582,7 @@
           <caret line="322" column="42" lean-forward="false" selection-start-line="322" selection-start-column="42" selection-end-line="322" selection-end-column="42" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1516648255665" expanded="true" signature="1796:1904" ph="..." />
+            <marker date="1516971997139" expanded="true" signature="1798:1906" ph="..." />
           </folding>
         </state>
       </provider>
@@ -993,9 +593,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1015,7 +613,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1516648255665" expanded="true" signature="1796:1904" ph="..." />
+            <marker date="1516971997139" expanded="true" signature="1798:1906" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1036,9 +634,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1048,7 +644,7 @@
           <caret line="58" column="38" lean-forward="false" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="38" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1516648255665" expanded="true" signature="1796:1904" ph="..." />
+            <marker date="1516971997139" expanded="true" signature="1798:1906" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1071,7 +667,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1516648255665" expanded="true" signature="1796:1904" ph="..." />
+            <marker date="1516971997139" expanded="true" signature="1798:1906" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1092,7 +688,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1516648255665" expanded="true" signature="1796:1904" ph="..." />
+            <marker date="1516971997139" expanded="true" signature="1798:1906" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1113,7 +709,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1516648255665" expanded="true" signature="1796:1904" ph="..." />
+            <marker date="1516971997139" expanded="true" signature="1798:1906" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1202,49 +798,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pdfParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/courseDownloader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1239681210/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="5051" column="8" lean-forward="false" selection-start-line="5051" selection-start-column="8" selection-end-line="5051" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txtParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="46" column="49" lean-forward="false" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1256,32 +814,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kdamUG2.py">
+    <entry file="file://$PROJECT_DIR$/txtParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="134" selection-end-column="21" />
+        <state relative-caret-position="861">
+          <caret line="46" column="49" lean-forward="false" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1516648255665" expanded="true" signature="1796:1904" ph="..." />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing/redownload.py">
+    <entry file="file://$PROJECT_DIR$/testing/CoursesFull">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="132" column="16" lean-forward="false" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/KdamClasses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        <state relative-caret-position="-1761">
+          <caret line="33" column="63" lean-forward="false" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
+          <folding>
+            <element signature="e#44#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/CourseNumTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/courseDownloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdfParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480">
+          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kdamUG2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4326">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="76" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1516971997139" expanded="true" signature="1798:1906" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/downloadUpdateCourses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="113" column="47" lean-forward="false" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

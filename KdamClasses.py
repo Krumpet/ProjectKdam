@@ -1,6 +1,8 @@
 # import Course
 # from Course import Course
 from typing import Dict, List, Union
+from utils import htmlPath
+from html.parser import HTMLParser
 
 
 class CourseNum(str):
@@ -13,6 +15,8 @@ class CourseNum(str):
         self.id = str
         while (len(self.id) < 6):
             self.id = "0" + self.id
+        # if (len(self.id) < 6):
+        #     self.id = "0" + self.id
 
     def __str__(self):
         return self.id
@@ -27,7 +31,7 @@ class Course:
     zamuds: List[CourseNum]  # list
     followups: List[CourseNum]  # list
 
-    def __init__(self, id, name="", Moed_A="", Moed_B="", Kdams=None, Zamuds=None, Followups=None):
+    def __init__(self, id, name="", Moed_A="None", Moed_B="None", Kdams=None, Zamuds=None, Followups=None):
         self.courseId = CourseNum(id)
         self.name = name
         self.moed_A = Moed_A
@@ -77,6 +81,15 @@ class Course:
             return self.courseId >= other.courseId
         return NotImplemented
 
+    def __str__(self):
+        return "Course {0} ID: {1}, Kdams: {2}, " \
+               "followups: {3}, Moed A: {4}, Moed B: {5}".format(self.name,
+                                                                 self.courseId,
+                                                                 self.kdams,
+                                                                 self.followups,
+                                                                 self.moed_A,
+                                                                 self.moed_B)
+
 
 class Faculty:
     code: str
@@ -105,3 +118,21 @@ class Faculty:
         for course in courseList:
             if course not in self.courses:
                 self.courses.append(course)
+
+
+class MyHTMLParser(HTMLParser):
+    # Initialize lists
+    name = ""
+    kdams = []
+    zamuds = []
+    latestStartTag = ""
+    gotTitle: bool = True
+
+    def handle_starttag(self, startTag, attrs):
+        self.latestStartTag = startTag
+        self.gotTitle = False
+
+    def handle_data(self, data: str):
+        if self.latestStartTag == "title" and not self.gotTitle:
+            self.gotTitle = True
+            self.name = data.split(":")[1].split("-")[0].strip()

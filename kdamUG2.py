@@ -28,7 +28,7 @@ TechnionUg = "https://ug3.technion.ac.il/rishum/course?SEM=" + Semester + "&MK="
 
 def convertCsTxtFileToNormalFile(csfile, normalfile):
     data = open(csfile, "r", encoding="utf8").read()
-    array = re.findall("\d{5,6}", data)
+    array = re.findall(courseRegex, data)
     # print(array)
     non_duplicate_array = []
     for i in array:
@@ -130,7 +130,7 @@ def getSubjectAndExam(courseId, isMoedBet: bool):
         #     exam = re.findall(">.*(\d\d\.\d\d).*2018", data)[1]
         # else:
         #     exam = re.findall(">.*(\d\d\.\d\d).*2018", data)[0]
-        exam = re.findall(">.*(\d\d\.\d\d).*2018", data)[isMoedBet]
+        exam = re.findall(">.*(\d\d\.\d\d).*" + TestYear, data)[isMoedBet]
     except:
         exam = "None"
     print([subject, exam])
@@ -139,7 +139,7 @@ def getSubjectAndExam(courseId, isMoedBet: bool):
 
 def getKdams(data):
     try:
-        kdams = list(set(re.findall("\d{5,6}", re.findall("מקצועות קדם.*?/div><div", data, re.DOTALL)[0])))
+        kdams = list(set(re.findall(courseRegex, re.findall("מקצועות קדם.*?/div><div", data, re.DOTALL)[0])))
     except:
         kdams = []
     return kdams
@@ -147,7 +147,7 @@ def getKdams(data):
 
 def getZamuds(data):
     try:
-        zamuds = list(set(re.findall("\d{5,6}", re.findall("מקצועות צמודים.*?/div><div", data, re.DOTALL)[0])))
+        zamuds = list(set(re.findall(courseRegex, re.findall("מקצועות צמודים.*?/div><div", data, re.DOTALL)[0])))
     except:
         zamuds = []
     return zamuds
