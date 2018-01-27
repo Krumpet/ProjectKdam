@@ -21,6 +21,15 @@ class CourseNum(str):
     def __str__(self):
         return self.id
 
+    def faculty(self):
+        """
+        Tells us the faculty code of the course - currently 2 digits except for '500' type faculties
+        """
+        if self.id.startswith("5"):
+            return self.id[:3]
+        else:
+            return self.id[:2]
+
 
 class Course:
     courseId: CourseNum

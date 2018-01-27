@@ -102,6 +102,9 @@ def updateFollowups():
             if kdam in Courses.keys():
                 Courses[kdam].followups.append(courseId)
 
+    for courseId, course in Courses.items():
+        course.followups = list(set(course.followups))
+
 
 for course in Courses.keys():
     downloadCourse(course)
@@ -109,6 +112,16 @@ for course in Courses.keys():
 for course in Courses:
     getCourseInfo(course)
 
+# in case some files are not included in Courses:
+for x in os.listdir(htmlPath):
+    if os.path.isfile(os.path.join(htmlPath, x)):
+        courseId = CourseNum(os.path.splitext(x)[0])
+        Faculties[courseId.faculty()].courses.append(courseId)
+        Courses[courseId] = Course(courseId)
+        getCourseInfo(courseId)
+
 updateFollowups()
 
+# TODO: maybe save as different files?
+toPickle(Faculties, picklePath + r"\faculties.txt")
 toPickle(Courses, picklePath + r"\courses.txt")
