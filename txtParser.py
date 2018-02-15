@@ -25,15 +25,6 @@ Parse the entire catalogue into text files (one for each page) using GhostScript
     Note the %d which means each page becomes a different txt file
 """
 
-"""
-These are the names I gave my text files, and i will be the page number, in range (1,668) because that's
-how many pages there were
-TODO: export file names and path from the pdfParser file
-"""
-
-FileName = "blah-"
-Suffix = ".txt"
-
 Faculties: Dict[str, Faculty] = {}
 Courses: Dict[CourseNum, Course] = {}
 
@@ -42,7 +33,8 @@ def parseTexts():
     from pdfParser import numOfPages
     for i in range(1, numOfPages + 1):
         # tempOpen closes and deletes the text file after use
-        with tempOpen(data1Path + "\\" + FileName + str(i) + Suffix, 'r', encoding="utf8") as file:
+        # with tempOpen(txtPath + "\\" + FileName + str(i) + Suffix, 'r', encoding="utf8") as file:
+        with open(txtPath + "\\" + FileName + str(i) + Suffix, 'r', encoding="utf8") as file:
             try:
                 data = [" ".join(line.split()).strip() for line in file.readlines()]
                 if re.search("תו?כנית לימודים", data[0][::-1], re.DOTALL) is None:
@@ -62,11 +54,18 @@ def parseTexts():
                     set([CourseNum(courseNum) for sublist in courseInEachLine for courseNum in sublist]))
                 courseObjects = [Courses.get(courseId, Course(courseId)) for courseId in coursesOnThisPage]
                 for course in courseObjects:
-                    if course.courseId not in Courses.keys():
+                    if course.courseId not in Courses:
                         Courses[course.courseId] = course
-                if facultyCode not in Faculties.keys():
+                    faculty = course.faculty()
+                    if faculty not in Faculties:
+                        Faculties[faculty] = Faculty(faculty, "")
+                    if course.courseId not in Faculties[faculty].courses:
+                        Faculties[faculty].courses.append(course.courseId)
+                if facultyCode not in Faculties:
                     Faculties[facultyCode] = Faculty(facultyCode, facultyName)
                 Faculties[facultyCode].addCourses(coursesOnThisPage)
+                if Faculties[facultyCode].name == "":  # if created earlier without a name, make sure to update it
+                    Faculties[facultyCode].name = facultyName
 
                 print("reading page {0}, faculty {1}, faculty code {2}".format(i, facultyName, facultyCode))
             except Exception as e:
@@ -74,10 +73,50 @@ def parseTexts():
                 continue
 
 
+def updateExtraCourses():
+    with open('ug-fetch/metadata/course_ids.txt') as file:
+        rawCourses = file.readlines()
+        courses = [CourseNum(x.strip()) for x in rawCourses]
+        courseNums = [x for x in courses if x not in Courses]
+        print("adding {} classes".format(len(courseNums)))
+        for courseNum in courseNums:
+            Courses[courseNum] = Course(courseNum)
+            faculty = courseNum.faculty()
+            if faculty not in Faculties:
+                print("adding faculty {}".format(faculty))
+                Faculties[faculty] = Faculty(faculty, "")
+            print("adding course {} to faculty {}".format(courseNum, faculty))
+            Faculties[faculty].courses.append(courseNum)
+
+
+def updateExtraCoursesFromTxt():
+    """
+    Get courses from extra files in the "txtPath" directory, and
+    add them to the main Courses list, and the appropriate Faculty
+    :return:
+    """
+    for x in os.listdir(txtPath):
+        path = os.path.join(txtPath, x)
+        if os.path.isfile(path):
+            print("got file ", path)
+            with tempOpen(path, 'r') as file:
+                data = file.read()
+                coursesNumbers = list(set(re.findall(courseRegex, data, re.DOTALL)))
+                courseNumList = [CourseNum(x) for x in coursesNumbers]
+                for courseNumber in courseNumList:
+                    if courseNumber not in Courses:
+                        Courses[courseNumber] = Course(courseNumber)
+                        if courseNumber.faculty() not in Faculties:
+                            raise AttributeError(
+                                "Faculty with code " + courseNumber.faculty() + " not found in Faculties in catalogue!")
+                        Faculties[courseNumber.faculty()].courses.append(courseNumber)
+
+
 # prune faculties with no courses on their page
 def pruneFaculties():
     for k in list(Faculties.keys()):
         if len(Faculties[k].courses) == 0:
+            print("removing faculty {} because it has no courses".format(k))
             Faculties.pop(k, None)
 
 
@@ -88,9 +127,23 @@ def writeToFiles():
     toPickle(Courses, picklePath + "\\courses.txt")
 
 
+def typoFixes():
+    Courses.pop(Faculties['29'].courses[0])
+    Courses.pop(Faculties['00'].courses[0])
+    badCourses = {CourseNum(x) for x in {'294901', '03042'}}
+    Faculties['21'].courses = [x for x in Faculties['21'].courses if x not in badCourses]
+    Faculties.pop('29')
+    Faculties.pop('00')
+    Faculties['39'].name = 'קורסי ספורט'
+
+
 if __name__ == "__main__":
     parseTexts()
+    updateExtraCourses()
+    typoFixes()  # some errors in the catalogue, I remove them manually
+
     pruneFaculties()
+
     writeToFiles()
 
 # print(sorted(Courses.keys()))

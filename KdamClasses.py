@@ -8,18 +8,33 @@ from html.parser import HTMLParser
 class CourseNum(str):
     id: str
 
-    def __init__(self, str=""):
-        if (len(str) < 5):
-            raise AttributeError("Course number too short at " + str)
+    def __init__(self, num):
+        if (len(num) < 5):
+            raise AttributeError("Course number too short at " + num)
         super(CourseNum, self).__init__()
-        self.id = str
-        while (len(self.id) < 6):
-            self.id = "0" + self.id
-        # if (len(self.id) < 6):
+        self.id = num.zfill(6)
+        # while (len(self.id) < 6):
         #     self.id = "0" + self.id
+
+    def __eq__(self, other):
+        if isinstance(other, CourseNum):
+            return self.id == other.id
+        return NotImplemented
 
     def __str__(self):
         return self.id
+
+    def __hash__(self):
+        return hash(self.id)
+    #
+    # def __eq__(self, other):
+    #     return isinstance(other, CourseNum) and self.id == other.id
+    #
+    # def __ne__(self, other):
+    #     return not (self == other)
+    #
+    # def __len__(self):
+    #     return len(self.id)
 
     def faculty(self):
         """
@@ -36,11 +51,12 @@ class Course:
     name: str
     moed_A: str
     moed_B: str
-    kdams: List[CourseNum]  # list
-    zamuds: List[CourseNum]  # list
-    followups: List[CourseNum]  # list
+    kdams: List[List[CourseNum]]
+    zamuds: List[List[CourseNum]]
+    followups: List[CourseNum]
+    reverseZamuds: List[CourseNum]
 
-    def __init__(self, id, name="", Moed_A="None", Moed_B="None", Kdams=None, Zamuds=None, Followups=None):
+    def __init__(self, id, name="", Moed_A="", Moed_B="", Kdams=None, Zamuds=None, Followups=None, RZ=None):
         self.courseId = CourseNum(id)
         self.name = name
         self.moed_A = Moed_A
@@ -48,15 +64,17 @@ class Course:
         self.kdams = Kdams if Kdams is not None else []
         self.zamuds = Zamuds if Zamuds is not None else []
         self.followups = Followups if Followups is not None else []
+        self.reverseZamuds = RZ if RZ is not None else []
 
     def faculty(self):
         """
         Tells us the faculty code of the course - currently 2 digits except for '500' type faculties
         """
-        if self.courseId.startswith("5"):
-            return self.courseId[:3]
-        else:
-            return self.courseId[:2]
+        return self.courseId.faculty()
+        # if self.courseId.startswith("5"):
+        #     return self.courseId[:3]
+        # else:
+        #     return self.courseId[:2]
 
     def __eq__(self, other):
         if isinstance(other, Course):
@@ -106,7 +124,7 @@ class Faculty:
     # courses: Dict[str, Course]
     courses: List[CourseNum]
 
-    def __init__(self, id: str, name: str):
+    def __init__(self, id, name=""):
         self.code = id
         self.name = name
         # self.courses = {course : Course(course) for course in courseIds} if courseIds is not None else {}
@@ -128,20 +146,37 @@ class Faculty:
             if course not in self.courses:
                 self.courses.append(course)
 
+    def __str__(self):
+        return self.__repr__()  # "Faculty: {} name: {}, has {} classes, subclasses are: {}".format(self.code, self.name,
+        #                                                  len(self.courses),
+        #                                                 sorted(set(
+        #                                                    x[:3] for x in self.courses if
+        #                                                   x.faculty() == self.code)))
 
-class MyHTMLParser(HTMLParser):
-    # Initialize lists
-    name = ""
-    kdams = []
-    zamuds = []
-    latestStartTag = ""
-    gotTitle: bool = True
+    def __repr__(self):
+        return "Faculty: {} name: {} classes: {} fac-classes: {} subfaculties are: {}".format(self.code, self.name,
+                                                                                              len(self.courses),
+                                                                                              len(set(x for x in
+                                                                                                      self.courses if
+                                                                                                      x.faculty() == self.code)),
+                                                                                              sorted(set(
+                                                                                                  x[:3] for x in
+                                                                                                  self.courses if
+                                                                                                  x.faculty() == self.code)))
 
-    def handle_starttag(self, startTag, attrs):
-        self.latestStartTag = startTag
-        self.gotTitle = False
-
-    def handle_data(self, data: str):
-        if self.latestStartTag == "title" and not self.gotTitle:
-            self.gotTitle = True
-            self.name = data.split(":")[1].split("-")[0].strip()
+    # class MyHTMLParser(HTMLParser):
+    #     # Initialize lists
+    #     name = ""
+    #     kdams = []
+    #     zamuds = []
+    #     latestStartTag = ""
+    #     gotTitle: bool = True
+    #
+    #     def handle_starttag(self, startTag, attrs):
+    #         self.latestStartTag = startTag
+    #         self.gotTitle = False
+    #
+    #     def handle_data(self, data: str):
+    #         if self.latestStartTag == "title" and not self.gotTitle:
+    #             self.gotTitle = True
+    #             self.name = data.split(":")[1].split("-")[0].strip()

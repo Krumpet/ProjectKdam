@@ -6,7 +6,10 @@ import sys
 from time import sleep
 from random import random
 from contextlib import contextmanager
+from typing import Optional
 from urllib.request import urlopen
+
+from collections import defaultdict
 
 """
 Paths and other string constants
@@ -19,19 +22,53 @@ TestYear = str(int(Year) + int(Semester) - 1)  # For the regex searching for exa
 TechnionUg = "https://ug3.technion.ac.il/rishum/course?SEM=" + Year + Semester + "&MK="
 TechnionGrad = "http://www.graduate.technion.ac.il/heb/Subjects/?Sub="
 
-MainPath = r"C:\Users\ADMIN\PycharmProjects\Project_Kdam"
-data1Path = MainPath + r"\data1"
-htmlPath = MainPath + r"\html"
-jsonPath = data1Path + "\json"
-picklePath = data1Path + "\pickle"
+MainPath = os.path.abspath(".")
+dataPath = MainPath + r"\data"
+# MainPath = "."
+# dataPath = os.path.abspath(".")
+# dataPath = os.path.abspath(utils.__file__)
+# dataPath = 'data'
+pdfPath = dataPath + r"\pdf"
+txtPath = dataPath + r"\txt"
+htmlPath = dataPath + r"\html"
+jsonPath = dataPath + r"\json"
+picklePath = dataPath + r"\pickle"
 
 courseRegex = "(?:^|\D)(\d{5,6})(?:\D|$)"
 
 # MyDataPath = r"C:\Users\ADMIN\PycharmProjects\Project_Kdam\html"
 
 """
+For PDF and TXT parsers
+"""
+
+FileName = "blah-"
+Suffix = ".txt"
+
+"""
+Dictionary class
+"""
+
+
+class keydefaultdict(defaultdict):
+    def __missing__(self, key):
+        if self.default_factory is None:
+            raise KeyError(key)
+        else:
+            ret = self[key] = self.default_factory(key)
+            return ret
+
+
+# d = keydefaultdict(C)
+# d[x] # returns C(x)
+
+"""
 Generic functions
 """
+
+
+def printInLines(Iterable, file=None):
+    print('\n'.join(str(x) for x in Iterable), file=file)
 
 
 def suppress_stdout():
@@ -45,7 +82,7 @@ def suppress_stdout():
 
 
 @contextmanager
-def tempOpen(path, mode, encoding):
+def tempOpen(path, mode, encoding: Optional = None):
     """
     Attempts to open the file in the path with mode and encoding, at the end closes and deletes the file
     :param path:
@@ -91,7 +128,7 @@ def toJSON(object):
 
 def toJSONFile(object, filename):
     with open(filename, 'w+', encoding='utf8') as file:
-        json.dump(object, file, default=lambda x: x.__dict__)
+        json.dump(object, file, default=lambda x: x.__dict__, ensure_ascii=False)
 
 
 def toPickle(object, filename):
