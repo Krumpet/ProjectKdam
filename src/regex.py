@@ -1,0 +1,1 @@
+CourseNum = r""
