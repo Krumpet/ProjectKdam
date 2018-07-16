@@ -7,7 +7,7 @@ from enum import Enum
 from time import sleep
 from random import random
 from contextlib import contextmanager
-from typing import Optional
+from typing import Optional, Dict
 from urllib.request import urlopen
 
 from collections import defaultdict
@@ -15,6 +15,7 @@ from collections import defaultdict
 # class strEnum(Enum):
 #     def __str__(self):
 #         return str(self.value)
+from KdamClasses import Faculty
 
 """
 Paths and other string constants
@@ -26,18 +27,22 @@ class Semester(Enum):
     Year = "2018"
     TestYear = str(int(Year) + int(Semester) - 1)  # For the regex searching for exam dates
 
+
 class Addresses(Enum):
     TechnionUg = "https://ug3.technion.ac.il/rishum/course?SEM=" + Semester.Year.value + Semester.Semester.value + "&MK="
     TechnionGrad = "http://www.graduate.technion.ac.il/heb/Subjects/?Sub="
 
+
 class Paths(Enum):
-    MainPath = os.path.abspath(".")
+    # TODO: use os.path.join on these
+    MainPath = os.path.abspath("..")
     dataPath = MainPath + r"\data"
     pdfPath = dataPath + r"\pdf"
     txtPath = dataPath + r"\txt"
     htmlPath = dataPath + r"\html"
     jsonPath = dataPath + r"\json"
     picklePath = dataPath + r"\pickle"
+
 
 courseRegex = "(?:^|\D)(\d{5,6})(?:\D|$)"
 

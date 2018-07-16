@@ -1,5 +1,6 @@
 from typing import List
 
+# TODO: changer all lists to sets
 
 class CourseNum():
     id: str
@@ -7,7 +8,7 @@ class CourseNum():
     def __init__(self, num):
         if (len(num) < 5):
             raise AttributeError("Course number too short at " + num)
-        super(CourseNum, self).__init__()
+        # super(CourseNum, self).__init__()
         self.id = num.zfill(6)
         # while (len(self.id) < 6):
         #     self.id = "0" + self.id
@@ -67,10 +68,6 @@ class Course:
         Tells us the faculty code of the course - currently 2 digits except for '500' type faculties
         """
         return self.courseId.faculty()
-        # if self.courseId.startswith("5"):
-        #     return self.courseId[:3]
-        # else:
-        #     return self.courseId[:2]
 
     def __eq__(self, other):
         if isinstance(other, Course):
@@ -159,28 +156,3 @@ class Faculty:
                                                                                                   x[:3] for x in
                                                                                                   self.courses if
                                                                                                   x.faculty() == self.code)))
-
-# class keydefaultdict(defaultdict):
-#     def __missing__(self, key):
-#         if self.default_factory is None:
-#             raise KeyError(key)
-#         else:
-#             ret = self[key] = self.default_factory(key)
-#             return ret
-
-# class MyHTMLParser(HTMLParser):
-#     # Initialize lists
-#     name = ""
-#     kdams = []
-#     zamuds = []
-#     latestStartTag = ""
-#     gotTitle: bool = True
-#
-#     def handle_starttag(self, startTag, attrs):
-#         self.latestStartTag = startTag
-#         self.gotTitle = False
-#
-#     def handle_data(self, data: str):
-#         if self.latestStartTag == "title" and not self.gotTitle:
-#             self.gotTitle = True
-#             self.name = data.split(":")[1].split("-")[0].strip()

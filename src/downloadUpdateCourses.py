@@ -106,7 +106,6 @@ def downloadCourse(courseId):
         #     if 'exam_B' in info:
         #         course.moed_B = ".".join(re.search("\d{1,2}\.\d{1,2}\.\d{4}", info['exam_B'])[0].split(".")[0:2])
 
-        # TODO - change pickle file suffix to .p and json to .json
         toPickle(info, "data/pickle/info-" + courseId + ".p")
         # print(info)
 
@@ -210,8 +209,8 @@ def getSubject(data):
     return subject
 
 
-def getExams(data: str):
-    exams: List[str] = re.findall(">.*(\d\d\.\d\d).*" + TestYear, data)
+def getExams(data: str) -> List[str]:
+    exams: List[str] = re.findall(">.*(\d\d\.\d\d).*" + Semester.TestYear.value, data)
 
     if (len(exams) > 1):
         return exams[:2]
