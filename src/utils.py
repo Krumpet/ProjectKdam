@@ -25,7 +25,7 @@ Paths and other string constants
 class Semester(Enum):
     Semester = "01"
     Year = "2018"
-    TestYear = str(int(Year) + int(Semester) - 1)  # For the regex searching for exam dates
+    TestYear = str(int(Year.value) + int(Semester.value) - 1)  # For the regex searching for exam dates
 
 
 class Addresses(Enum):
@@ -54,6 +54,7 @@ For PDF and TXT parsers
 
 
 class FilenameConsts(Enum):
+    # todo this should actually be an argument to txtParser
     FileName = "blah-"
     Suffix = ".txt"
 
@@ -81,8 +82,8 @@ Generic functions
 """
 
 
-def printInLines(Iterable, file=None):
-    print('\n'.join(str(x) for x in Iterable), file=file)
+def printInLines(iterable, file=None):
+    print('\n'.join(str(x) for x in iterable), file=file)
 
 
 def suppress_stdout():
@@ -128,7 +129,7 @@ def fileExists(filename):
 
 
 def courseExists(courseId):
-    return fileExists(htmlPath + "\\" + str(courseId) + ".htm")
+    return fileExists(os.path.join(Paths.htmlPath.value, str(courseId) + ".htm"))
 
 
 """

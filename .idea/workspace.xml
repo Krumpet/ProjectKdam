@@ -1,81 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98363d44-a0a1-4976-a1fb-91fb35c844b8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/GraduateParser.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/testPrinter.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/KdamClasses.py" afterPath="$PROJECT_DIR$/KdamClasses.py" />
-      <change beforePath="$PROJECT_DIR$/data1/Catalogue17-18.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/downloadUpdateCourses.py" afterPath="$PROJECT_DIR$/downloadUpdateCourses.py" />
-      <change beforePath="$PROJECT_DIR$/pdfParser.py" afterPath="$PROJECT_DIR$/pdfParser.py" />
-      <change beforePath="$PROJECT_DIR$/txtParser.py" afterPath="$PROJECT_DIR$/txtParser.py" />
-      <change beforePath="$PROJECT_DIR$/utils.py" afterPath="$PROJECT_DIR$/utils.py" />
+    <list default="true" id="98363d44-a0a1-4976-a1fb-91fb35c844b8" name="Default" comment="Some redesign - initial work summer 17/18">
+      <change afterPath="$PROJECT_DIR$/src/pdfToDataParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Project_Kdam.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project_Kdam.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/downloadUpdateCourses.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/downloadUpdateCourses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pdfParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdfParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/txtParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/txtParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Project_Kdam$dataManager.coverage" NAME="dataManager Coverage Results" MODIFIED="1531742936458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Project_Kdam$txtParser.coverage" NAME="txtParser Coverage Results" MODIFIED="1538855300354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Project_Kdam$testPrinter.coverage" NAME="testPrinter Coverage Results" MODIFIED="1530885813524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Project_Kdam$pdfParser.coverage" NAME="pdfParser Coverage Results" MODIFIED="1539201437724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Project_Kdam$downloadUpdateCourses.coverage" NAME="downloadUpdateCourses Coverage Results" MODIFIED="1538855357826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2027802694">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="8" />
+          <entry key="py" value="2255" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="Python" value="2255" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="5" />
+          <entry key="pyi" value="1" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="5" />
+          <entry key="PythonStub" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="KdamClasses.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KdamClasses.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/KdamClasses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="42">
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
               <folding>
-                <element signature="e#44#80#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pdfParser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pdfParser.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/testPrinter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="987">
+              <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pdfParser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="68" column="61" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
+                <marker date="1539468578715" expanded="true" signature="750:771" ph="..." />
+                <marker date="1539468578715" expanded="true" signature="756:767" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/txtParser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="154" column="20" lean-forward="true" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pdfToDataParser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="882">
+              <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1539471369687" expanded="true" signature="317:322" ph="..." />
+                <marker date="1539471369687" expanded="true" signature="1798:1807" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataManager.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
-              <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
               <folding>
-                <element signature="e#0#82#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="txtParser.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/txtParser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="830">
-              <caret line="132" column="53" lean-forward="false" selection-start-line="132" selection-start-column="53" selection-end-line="132" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testPrinter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testPrinter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2499">
-              <caret line="130" column="80" lean-forward="false" selection-start-line="130" selection-start-column="80" selection-end-line="130" selection-end-column="80" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,37 +166,43 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tryin</find>
-      <find>print(&quot;</find>
-      <find>failed</find>
-      <find>faculty</find>
-      <find>title</find>
-      <find>split</find>
-      <find>open</find>
-      <find>.keys</find>
-      <find>keys</find>
-      <find>.keys()</find>
-      <find>graduat</find>
-      <find>Courses[</find>
-      <find>39</find>
-      <find>\n39</find>
-      <find>reve</find>
-      <find>out</find>
-      <find>slee</find>
-      <find>800</find>
-      <find>except</find>
-      <find>not in</find>
-      <find>file=</find>
-      <find>CICS</find>
-      <find>add</find>
-      <find>-</find>
-      <find>003</find>
-      <find>\n003</find>
-      <find>274725</find>
-      <find>פסיכו</find>
       <find>234141</find>
+      <find>indent</find>
+      <find>frompickle</find>
       <find>json</find>
+      <find>tests.json</find>
+      <find>updated</find>
+      <find>[{</find>
+      <find>[</find>
+      <find>[{}</find>
+      <find>\\c</find>
+      <find>info-</find>
+      <find>from typing</find>
+      <find>from ty</find>
+      <find>testyear</find>
+      <find>pickle</find>
+      <find>semester.ye</find>
+      <find>isfile</find>
+      <find>&quot;&quot;&quot;</find>
+      <find>dor</find>
+      <find>direntry</find>
+      <find>frompi</find>
+      <find>topickle</find>
+      <find>topick</find>
+      <find>msg</find>
+      <find>trying to op</find>
+      <find>dict[</find>
+      <find>Type</find>
+      <find>basefil</find>
+      <find>replace</find>
+      <find>self.manager</find>
     </findStrings>
+    <replaceStrings>
+      <replace>manager</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\ADMIN\PycharmProjects\Project_Kdam\data\pickle</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,49 +218,59 @@
         <option value="$PROJECT_DIR$/testing/testing.py" />
         <option value="$PROJECT_DIR$/testing/test2.py" />
         <option value="$PROJECT_DIR$/testing/courseDownloader.py" />
-        <option value="$PROJECT_DIR$/kdamUG2.py" />
         <option value="$PROJECT_DIR$/courseDownloader.py" />
         <option value="$PROJECT_DIR$/regex.py" />
         <option value="$PROJECT_DIR$/testing/CourseNumTest.py" />
         <option value="$PROJECT_DIR$/testing/redownload.py" />
         <option value="$PROJECT_DIR$/redownload.py" />
         <option value="$PROJECT_DIR$/testing/parseExtraCourses.py" />
-        <option value="$PROJECT_DIR$/pdfParser.py" />
         <option value="$PROJECT_DIR$/ug-fetch/output/course_list.json" />
         <option value="$PROJECT_DIR$/testing/GraduateParser.py" />
-        <option value="$PROJECT_DIR$/ug-fetch/ug_fetch.py" />
-        <option value="$PROJECT_DIR$/downloadUpdateCourses.py" />
         <option value="$PROJECT_DIR$/GraduateParser.py" />
-        <option value="$PROJECT_DIR$/txtParser.py" />
         <option value="$PROJECT_DIR$/addExtraCourses.py" />
-        <option value="$PROJECT_DIR$/KdamClasses.py" />
-        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/testPrinter.py" />
+        <option value="$PROJECT_DIR$/kdamUG2.py" />
+        <option value="$PROJECT_DIR$/ug-fetch/ug_fetch.py" />
+        <option value="$PROJECT_DIR$/KdamClasses.py" />
+        <option value="$PROJECT_DIR$/txtParser.py" />
+        <option value="$PROJECT_DIR$/downloadUpdateCourses.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/pdfParser.py" />
+        <option value="$PROJECT_DIR$/src/testPrinter.py" />
+        <option value="$PROJECT_DIR$/src/KdamClasses.py" />
+        <option value="$PROJECT_DIR$/src/GraduateParser.py" />
+        <option value="$PROJECT_DIR$/src/dataLoader.py" />
+        <option value="$PROJECT_DIR$/src/__init__.py" />
+        <option value="$PROJECT_DIR$/src/.pylintrc.py" />
+        <option value="$PROJECT_DIR$/src/.pylintrc" />
+        <option value="$PROJECT_DIR$/sample_pylintrc" />
+        <option value="$PROJECT_DIR$/.pylintrc" />
+        <option value="$PROJECT_DIR$/src/downloadUpdateCourses.py" />
+        <option value="$PROJECT_DIR$/src/pdfParser.py" />
+        <option value="$PROJECT_DIR$/src/txtParser.py" />
+        <option value="$PROJECT_DIR$/src/dataManager.py" />
+        <option value="$PROJECT_DIR$/src/pdfToDataParser.py" />
+        <option value="$PROJECT_DIR$/src/utils.py" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="976" />
-    <option name="height" value="1038" />
+    <option name="x" value="950" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,18 +283,45 @@
               <item name="Project_Kdam" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Project_Kdam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project_Kdam" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="pdf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project_Kdam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project_Kdam" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project_Kdam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project_Kdam" type="462c0819:PsiDirectoryNode" />
+              <item name="ug-fetch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project_Kdam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project_Kdam" type="462c0819:PsiDirectoryNode" />
+              <item name="ug-fetch" type="462c0819:PsiDirectoryNode" />
+              <item name="metadata" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last.edited.regexp" value="charset=&quot;bla&quot; /&gt; blah blah&quot; /&gt;" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Google Drive/Technion/Semester 6/236606 - DL/project-test/src" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\PycharmProjects\Project_Kdam\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ADMIN\PycharmProjects\Project_Kdam" />
       <recent name="C:\Users\ADMIN\PycharmProjects\Project_Kdam\data" />
@@ -225,62 +342,53 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testPrinter">
-    <configuration name="GraduateParser (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.pdfParser">
+    <configuration name="dataManager" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Project_Kdam" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project_Kdam" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GraduateParser.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/dataManager.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="addExtraCourses" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project_Kdam" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/addExtraCourses.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="downloadUpdateCourses" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Project_Kdam" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project_Kdam" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/downloadUpdateCourses.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/downloadUpdateCourses.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="kdamUG2 download" type="PythonConfigurationType" factoryName="Python">
+      <module name="Project_Kdam" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -291,14 +399,18 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project_Kdam" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kdamUG2.py" />
       <option name="PARAMETERS" value="download outcslist.txt" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="kdamUG2 make" type="PythonConfigurationType" factoryName="Python">
+      <module name="Project_Kdam" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -309,14 +421,18 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project_Kdam" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kdamUG2.py" />
       <option name="PARAMETERS" value="make cslist.txt outcslist.txt" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="kdamUG2 parse" type="PythonConfigurationType" factoryName="Python">
+      <module name="Project_Kdam" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -327,50 +443,62 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project_Kdam" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kdamUG2.py" />
       <option name="PARAMETERS" value="parse outcslist.txt final_results.txt" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration name="testPrinter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pdfParser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Project_Kdam" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project_Kdam" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testPrinter.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/pdfParser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="txtParser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Project_Kdam" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project_Kdam" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/txtParser.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/txtParser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="ug_fetch course_ids" type="PythonConfigurationType" factoryName="Python">
+      <module name="Project_Kdam" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -381,14 +509,18 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project_Kdam" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ug-fetch/ug_fetch.py" />
       <option name="PARAMETERS" value="course_ids" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="ug_fetch metadata" type="PythonConfigurationType" factoryName="Python">
+      <module name="Project_Kdam" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -399,14 +531,18 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project_Kdam" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ug-fetch/ug_fetch.py" />
       <option name="PARAMETERS" value="metadata" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="ug_fetch" type="PythonConfigurationType" factoryName="Python">
+      <module name="Project_Kdam" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -417,38 +553,36 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project_Kdam" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ug-fetch/ug_fetch.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <list size="11">
-      <item index="0" class="java.lang.String" itemvalue="Python.kdamUG2 make" />
-      <item index="1" class="java.lang.String" itemvalue="Python.kdamUG2 download" />
-      <item index="2" class="java.lang.String" itemvalue="Python.kdamUG2 parse" />
-      <item index="3" class="java.lang.String" itemvalue="Python.ug_fetch metadata" />
-      <item index="4" class="java.lang.String" itemvalue="Python.ug_fetch course_ids" />
-      <item index="5" class="java.lang.String" itemvalue="Python.ug_fetch" />
-      <item index="6" class="java.lang.String" itemvalue="Python.downloadUpdateCourses" />
-      <item index="7" class="java.lang.String" itemvalue="Python.GraduateParser (3)" />
-      <item index="8" class="java.lang.String" itemvalue="Python.txtParser" />
-      <item index="9" class="java.lang.String" itemvalue="Python.addExtraCourses" />
-      <item index="10" class="java.lang.String" itemvalue="Python.testPrinter" />
+    <list>
+      <item itemvalue="Python.kdamUG2 make" />
+      <item itemvalue="Python.kdamUG2 download" />
+      <item itemvalue="Python.kdamUG2 parse" />
+      <item itemvalue="Python.ug_fetch metadata" />
+      <item itemvalue="Python.ug_fetch course_ids" />
+      <item itemvalue="Python.ug_fetch" />
+      <item itemvalue="Python.pdfParser" />
+      <item itemvalue="Python.dataManager" />
+      <item itemvalue="Python.txtParser" />
+      <item itemvalue="Python.downloadUpdateCourses" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.testPrinter" />
-        <item index="1" class="java.lang.String" itemvalue="Python.addExtraCourses" />
-        <item index="2" class="java.lang.String" itemvalue="Python.downloadUpdateCourses" />
-        <item index="3" class="java.lang.String" itemvalue="Python.txtParser" />
-        <item index="4" class="java.lang.String" itemvalue="Python.GraduateParser (3)" />
+      <list>
+        <item itemvalue="Python.pdfParser" />
+        <item itemvalue="Python.downloadUpdateCourses" />
+        <item itemvalue="Python.txtParser" />
+        <item itemvalue="Python.dataManager" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -496,30 +630,69 @@
       <option name="project" value="LOCAL" />
       <updated>1517023138553</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Printing tests, getting all courses from UG, updating reverse-kdam and reverse-zamud">
+      <created>1518702786903</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1518702786904</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Some redesign - initial work summer 17/18">
+      <created>1531603220170</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1531603220170</updated>
+    </task>
+    <task id="LOCAL-00008" summary="txtParser, pdfParser, and dataManager classes">
+      <created>1531708832384</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1531708832384</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13119073" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.341412" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33152175" sideWeight="0.658588" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39782608" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16151386" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.32765958" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6551173" weight="0.33049646" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.39760348" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4989339" weight="0.32897604" />
+      <window_info anchor="bottom" id="Mypy Terminal" order="7" show_stripe_button="false" weight="0.32897604" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.34488273" side_tool="true" weight="0.33049646" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49946696" weight="0.32897604" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.59115136" weight="0.32897604" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49840087" weight="0.32897604" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -530,7 +703,10 @@
     <MESSAGE value="big update - pdfparser, txtparser, working on updating course details" />
     <MESSAGE value="course downloader and updater - not parsing all of the html files!" />
     <MESSAGE value="course downloader and updater - parsed extra courses in CS faculty, added to Faculty and Courses" />
-    <option name="LAST_COMMIT_MESSAGE" value="course downloader and updater - parsed extra courses in CS faculty, added to Faculty and Courses" />
+    <MESSAGE value="Printing tests, getting all courses from UG, updating reverse-kdam and reverse-zamud" />
+    <MESSAGE value="Some redesign - initial work summer 17/18" />
+    <MESSAGE value="txtParser, pdfParser, and dataManager classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="txtParser, pdfParser, and dataManager classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -541,7 +717,6 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -577,322 +752,238 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/PyPDF2/pdf.py">
+    <entry file="file://$PROJECT_DIR$/data/tests/01-הנדסה אזרחית וסביבתית.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/json/01-tests" />
+    <entry file="file://$PROJECT_DIR$/data/json/01-tests.json" />
+    <entry file="file://$PROJECT_DIR$/data/tests/23-מדעי המחשב.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/json/23-tests.json" />
+    <entry file="file://$PROJECT_DIR$/ug-fetch/output/course_list.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="2580" column="8" lean-forward="false" selection-start-line="2580" selection-start-column="8" selection-end-line="2580" selection-end-column="8" />
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Faculty.py" />
-    <entry file="file://$PROJECT_DIR$/Course.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/contextlib.py">
+    <entry file="file://$PROJECT_DIR$/addExtraCourses.py" />
+    <entry file="file://$PROJECT_DIR$/cslist.txt" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1239681210/_collections.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="128" column="4" lean-forward="false" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
+        <state relative-caret-position="298">
+          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/data/json/faculties.txt" />
+    <entry file="file://$PROJECT_DIR$/data/json/courses.txt" />
+    <entry file="file://$PROJECT_DIR$/data/json/12-tests.json" />
+    <entry file="file://$PROJECT_DIR$/data/json/courses.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing/htmlReply.txt" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6720">
-          <caret line="320" column="0" lean-forward="false" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/data/json/faculties.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/ghostscript/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/regex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testing/CoursesFull" />
-    <entry file="file://$PROJECT_DIR$/testing/CourseNumTest.py" />
-    <entry file="file://$PROJECT_DIR$/courseDownloader.py" />
-    <entry file="file://$PROJECT_DIR$/kdamUG2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="76" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testing/parseExtraCourses.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/json/encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="375" column="0" lean-forward="false" selection-start-line="375" selection-start-column="0" selection-end-line="375" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/http/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="611" column="0" lean-forward="false" selection-start-line="611" selection-start-column="0" selection-end-line="611" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="585" column="0" lean-forward="false" selection-start-line="585" selection-start-column="0" selection-end-line="585" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/ssl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="630" column="0" lean-forward="false" selection-start-line="630" selection-start-column="0" selection-end-line="630" selection-end-column="0" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/final_results.txt" />
+    <entry file="file://$PROJECT_DIR$/data/json/tests.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/re.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-692">
-          <caret line="178" column="4" lean-forward="false" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="4" />
+        <state relative-caret-position="21">
+          <caret line="213" column="4" selection-start-line="213" selection-start-column="4" selection-end-line="213" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/xml/etree/ElementPath.py">
+    <entry file="file://$PROJECT_DIR$/testPrinter.py" />
+    <entry file="file://$PROJECT_DIR$/graduate_only_courses.txt" />
+    <entry file="file://$PROJECT_DIR$/ug-fetch/ug_fetch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-314">
-          <caret line="255" column="4" lean-forward="false" selection-start-line="255" selection-start-column="4" selection-end-line="255" selection-end-column="4" />
+        <state relative-caret-position="168">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/PyPDF2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txtParser.py" />
+    <entry file="file://$PROJECT_DIR$/downloadUpdateCourses.py" />
+    <entry file="file://$PROJECT_DIR$/utils.py" />
+    <entry file="file://$PROJECT_DIR$/2_final_results.txt" />
+    <entry file="file://$PROJECT_DIR$/pdfParser.py" />
+    <entry file="file://$PROJECT_DIR$/kdamUG2.py" />
+    <entry file="file://$PROJECT_DIR$/KdamClasses.py" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/regex.py" />
+    <entry file="file://$PROJECT_DIR$/src/kdamUG2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/collections/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1449">
-          <caret line="85" column="8" lean-forward="false" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
+        <state relative-caret-position="189">
+          <caret line="179" column="8" selection-start-line="179" selection-start-column="8" selection-end-line="179" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final_results.txt">
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/ntpath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="133">
+          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_courses.txt">
+    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1239681210/nt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-325">
+          <caret line="656" column="14" selection-start-line="656" selection-start-column="6" selection-end-line="656" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1239681210/builtins.py">
+    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.pylintrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-812">
-          <caret line="3377" column="8" lean-forward="false" selection-start-line="3377" selection-start-column="8" selection-end-line="3377" selection-end-column="8" />
+        <state relative-caret-position="46">
+          <caret line="149" selection-start-line="149" selection-end-line="149" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ug-fetch/misc/nx.py">
+    <entry file="file://$PROJECT_DIR$/src/downloadUpdateCourses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="7455">
+          <caret line="364" column="19" selection-start-line="364" selection-start-column="19" selection-end-line="364" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ug-fetch/misc/read.py">
+    <entry file="file://$PROJECT_DIR$/src/GraduateParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/xml/etree/ElementTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="585" column="0" lean-forward="false" selection-start-line="585" selection-start-column="0" selection-end-line="585" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1239681210/lxml/etree/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="151" column="4" lean-forward="false" selection-start-line="151" selection-start-column="4" selection-end-line="151" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ug-fetch/metadata/sub_faculties.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-754">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="924">
+          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ug-fetch/metadata/course_ids.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/ghostscript/_gsprint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65373">
-          <caret line="3113" column="2" lean-forward="false" selection-start-line="3112" selection-start-column="6" selection-end-line="3113" selection-end-column="2" />
+        <state relative-caret-position="296">
+          <caret line="253" column="4" lean-forward="true" selection-start-line="253" selection-start-column="4" selection-end-line="253" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1239681210/_collections.py">
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/ghostscript/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="76" column="4" lean-forward="false" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        <state relative-caret-position="210">
+          <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graduate_only_courses.txt">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="131">
+          <caret line="23" column="4" selection-start-line="23" selection-end-line="23" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ug-fetch/metadata/faculties.txt">
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/typing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="382">
+          <caret line="2096" column="1" lean-forward="true" selection-start-line="2096" selection-start-column="1" selection-end-line="2096" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt" />
-    <entry file="file://$PROJECT_DIR$/typo_courses.txt">
+    <entry file="file://$PROJECT_DIR$/src/KdamClasses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="42">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/downloadUpdateCourses.py">
+    <entry file="file://$PROJECT_DIR$/src/testPrinter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7434">
-          <caret line="361" column="4" lean-forward="false" selection-start-line="361" selection-start-column="4" selection-end-line="361" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GraduateParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/txtParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
-          <caret line="132" column="53" lean-forward="false" selection-start-line="132" selection-start-column="53" selection-end-line="132" selection-end-column="53" />
+        <state relative-caret-position="987">
+          <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/tests/01-הנדסה אזרחית וסביבתית.txt">
+    <entry file="file://$PROJECT_DIR$/src/pdfParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="585">
+          <caret line="68" column="61" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+            <marker date="1539468578715" expanded="true" signature="750:771" ph="..." />
+            <marker date="1539468578715" expanded="true" signature="756:767" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pdfParser.py">
+    <entry file="file://$PROJECT_DIR$/src/txtParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="154" column="20" lean-forward="true" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataManager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding>
-            <element signature="e#0#82#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KdamClasses.py">
+    <entry file="file://$PROJECT_DIR$/src/pdfToDataParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="882">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
           <folding>
-            <element signature="e#44#80#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1539471369687" expanded="true" signature="317:322" ph="..." />
+            <marker date="1539471369687" expanded="true" signature="1798:1807" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/json/01-tests" />
-    <entry file="file://$PROJECT_DIR$/ug-fetch/ug_fetch.py">
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/contextlib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="162" column="15" lean-forward="false" selection-start-line="162" selection-start-column="11" selection-end-line="162" selection-end-column="15" />
+        <state relative-caret-position="299">
+          <caret line="128" column="4" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$PROJECT_DIR$/src/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="130" column="80" lean-forward="false" selection-start-line="130" selection-start-column="80" selection-end-line="130" selection-end-column="80" />
+        <state relative-caret-position="580">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/json/01-tests.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/tests/23-מדעי המחשב.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/json/23-tests.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="0" column="501" lean-forward="false" selection-start-line="0" selection-start-column="501" selection-end-line="0" selection-end-column="501" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ug-fetch/output/course_list.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testPrinter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addExtraCourses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -318,8 +318,8 @@ def removeCourses(typoCourses):
 
 
 if __name__ == "__main__":
-    Faculties: Dict[str, Faculty] = fromPickle(Paths.picklePath + "\\faculties.p")
-    Courses: Dict[CourseNum, Course] = fromPickle(Paths.picklePath + "\\courses.p")
+    Faculties: Dict[str, Faculty] = fromPickle(Paths.picklePath.value + "\\faculties.p")
+    Courses: Dict[CourseNum, Course] = fromPickle(Paths.picklePath.value + "\\courses.p")
     GraduateOnlyClasses: Set[CourseNum] = set()
 
     updateCourses()
@@ -364,5 +364,5 @@ if __name__ == "__main__":
     # filteredlist = filter(lambda x: courseOnUg(x) and CourseNum(x) not in Courses.keys(), megalist)
     # print(list(filteredlist))
 
-    toPickle(Faculties, Paths.picklePath + r"\facultiesUpdated.p")
-    toPickle(Courses, Paths.picklePath + r"\coursesUpdated.p")
+    toPickle(Faculties, Paths.picklePath.value + r"\facultiesUpdated.p")
+    toPickle(Courses, Paths.picklePath.value + r"\coursesUpdated.p")
