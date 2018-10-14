@@ -1,4 +1,5 @@
-from typing import List
+from typing import List, Type, Dict
+
 
 # TODO: changer all lists to sets
 
@@ -9,7 +10,7 @@ class CourseNum():
         if (len(num) < 5):
             raise AttributeError("Course number too short at " + num)
         # super(CourseNum, self).__init__()
-        self.id = num.zfill(6)
+        self.id = str(num).zfill(6)
         # while (len(self.id) < 6):
         #     self.id = "0" + self.id
 
@@ -69,6 +70,7 @@ class Course:
         """
         return self.courseId.faculty()
 
+# TODO: check if all of these operators are even in use
     def __eq__(self, other):
         if isinstance(other, Course):
             return self.courseId == other.courseId
@@ -140,11 +142,7 @@ class Faculty:
                 self.courses.append(course)
 
     def __str__(self):
-        return self.__repr__()  # "Faculty: {} name: {}, has {} classes, subclasses are: {}".format(self.code, self.name,
-        #                                                  len(self.courses),
-        #                                                 sorted(set(
-        #                                                    x[:3] for x in self.courses if
-        #                                                   x.faculty() == self.code)))
+        return self.__repr__()
 
     def __repr__(self):
         return "Faculty: {} name: {} classes: {} fac-classes: {} subfaculties are: {}".format(self.code, self.name,
@@ -156,3 +154,7 @@ class Faculty:
                                                                                                   x[:3] for x in
                                                                                                   self.courses if
                                                                                                   x.faculty() == self.code)))
+
+
+FacultiesDB: Type = Dict[str, Faculty]
+CoursesDB: Type = Dict[CourseNum, Course]

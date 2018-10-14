@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 from lxml import etree
 import urllib.request as request
 
-backupPath = Paths.htmlPath.value + r"\backup html"
+backupPath = Paths.htmlPath + r"\backup html"
 
 categories = ['מקצועות זהים', 'מקצועות קדם', 'מקצועות צמודים', 'מקצועות ללא זיכוי נוסף',
               'מקצועות ללא זיכוי נוסף (מכילים)', 'מקצועות ללא זיכוי נוסף (מוכלים)', 'מקצועות מכילים']
@@ -16,7 +16,7 @@ trans = dict(zip(categories, english))
 def parseGraduate(courseId):
     # categories = ['מקצועות קדם', 'מקצועות צמודים', 'מקצועות ללא זיכוי נוסף', 'מקצועות ללא זיכוי נוסף (מוכלים)']
 
-    w = request.urlopen(Addresses.TechnionGrad.value + courseId)
+    w = request.urlopen(Addresses.TechnionGrad + courseId)
     htm = w.read().decode('windows-1255')
     # print(htm)
     # parser = ET.XMLParser(encoding='windows-1255')

@@ -1,3 +1,5 @@
+from typing import List
+
 from KdamClasses import Course, CourseNum
 from dataManager import dataManager
 from pdfParser import getPdfPageNum
@@ -32,6 +34,7 @@ class txtParser:
             # with open(Paths.txtPath.value + "\\" + FilenameConsts.FileName.value + str(i) + FilenameConsts.Suffix.value,
             #           'r',
             #           encoding="utf8") as file:
+                data: List[str] = []
                 try:
                     data = [" ".join(line.split()).strip() for line in file.readlines()]
                     # if not data or ... and take out of 'with' scope
@@ -43,7 +46,14 @@ class txtParser:
                     2017/2018 Blah blah blah / 23 Computer Science
                     So we capture the '23' and the 'Computer Science'
                     """
-                    facultyCode, facultyName = re.findall("\d+.\d+ +.* +/ +(\d+) +(.*)", data[0])[0]
+                    # print('got here for real page')
+                    # print(data[0])
+                    # Use this then text is reversed in the text files:
+                    # facultyCode, facultyName = re.findall("\d+.\d+ +.* +/ +(\d+) +(.*)", data[0])[0]
+                    # Use this if you bothered to flip the Hebrew text in the text files
+                    facultyName, facultyCode = re.findall("(.*) +(\d{2,3}) +/ +.* \d+[/-]\d+", data[0])[0]
+
+                    # print('used regex on real page')
 
                     # if text is not flipped, faculty name is captured in reverse so flip it
                     # facultyName = facultyName[::-1]
@@ -66,8 +76,10 @@ class txtParser:
                         if course.courseId not in manager.courses:
                             manager.courses[course.courseId] = course
                         faculty = course.faculty()
+                        # todo: this is possibly avoided by using a defaultkeydict - trying to access the faculty will
+                        # create a default one with no name
                         if faculty not in manager.faculties:
-                            manager.faculties[faculty] = Faculty(faculty, "")
+                            manager.faculties[faculty] = Faculty(faculty)
                         if course.courseId not in manager.faculties[faculty].courses:
                             manager.faculties[faculty].courses.append(course.courseId)
                     if facultyCode not in manager.faculties:
@@ -80,54 +92,55 @@ class txtParser:
                         facultyCode].name == "":  # if created earlier without a name, make sure to update it
                         manager.faculties[facultyCode].name = facultyName
 
-                    print("reading page {0}, faculty {1}, faculty code {2}".format(i, facultyName, facultyCode))
+                    print("reading faculty {0}, faculty code {1}".format(facultyName, facultyCode))
                 except Exception as e:
-                    print(e)
+                    print(e, data[0] if len(data) > 0 else "no text found on page")
                     continue
 
-    # def updateExtraCourses(self):
-    #     with open('../ug-fetch/metadata/course_ids.txt') as file:
-    #         rawCourses = file.readlines()
-    #     courses = [CourseNum(x.strip()) for x in rawCourses]
-    #     courseNums = [x for x in courses if x not in courses]
-    #     print("adding {} classes".format(len(courseNums)))
-    #     for courseNum in courseNums:
-    #         manager.courses[courseNum] = Course(courseNum)
-    #         faculty = courseNum.faculty()
-    #         if faculty not in manager.faculties:
-    #             print("adding faculty {}".format(faculty))
-    #             manager.faculties[faculty] = Faculty(faculty, "")
-    #         print("adding course {} to faculty {}".format(courseNum, faculty))
-    #         manager.faculties[faculty].courses.append(courseNum)
+    def updateExtraCourses(self, manager):
+        # TODO: save this path externally
+        with open('../ug-fetch/metadata/course_ids.txt') as file:
+            rawCourses = file.readlines()
+        courses = [CourseNum(x.strip()) for x in rawCourses]
+        courseNums = [x for x in courses if x not in courses]
+        print("adding {} classes".format(len(courseNums)))
+        for courseNum in courseNums:
+            manager.courses[courseNum] = Course(courseNum)
+            faculty = courseNum.faculty()
+            if faculty not in manager.faculties:
+                print("adding faculty {}".format(faculty))
+                manager.faculties[faculty] = Faculty(faculty, "")
+            print("adding course {} to faculty {}".format(courseNum, faculty))
+            manager.faculties[faculty].courses.append(courseNum)
+
+    def updateExtraCoursesFromTxt(self, manager):
+        '''
+        Get courses from extra files in the "txtPath" directory, and
+        add them to the main Courses list, and the appropriate Faculty
+        :return:
+        '''
+        for x in os.listdir(Paths.txtPath):
+            path = os.path.join(Paths.txtPath, x)
+            if os.path.isfile(path):
+                print("got file ", path)
+                with tempOpen(path, 'r') as file:
+                    data = file.read()
+                coursesNumbers = list(set(re.findall(courseRegex, data, re.DOTALL)))
+                courseNumList = [CourseNum(x) for x in coursesNumbers]
+                for courseNumber in courseNumList:
+                    if courseNumber not in manager.courses:
+                        manager.courses[courseNumber] = Course(courseNumber)
+                        if courseNumber.faculty() not in manager.faculties:
+                            raise AttributeError(
+                                "Faculty with code " + courseNumber.faculty() + " not found in Faculties in catalogue!")
+                        manager.faculties[courseNumber.faculty()].courses.append(courseNumber)
     #
-    # def updateExtraCoursesFromTxt(self):
-    #     '''
-    #     Get courses from extra files in the "txtPath" directory, and
-    #     add them to the main Courses list, and the appropriate Faculty
-    #     :return:
-    #     '''
-    #     for x in os.listdir(Paths.txtPath.value):
-    #         path = os.path.join(Paths.txtPath.value, x)
-    #         if os.path.isfile(path):
-    #             print("got file ", path)
-    #             with tempOpen(path, 'r') as file:
-    #                 data = file.read()
-    #             coursesNumbers = list(set(re.findall(courseRegex, data, re.DOTALL)))
-    #             courseNumList = [CourseNum(x) for x in coursesNumbers]
-    #             for courseNumber in courseNumList:
-    #                 if courseNumber not in manager.courses:
-    #                     manager.courses[courseNumber] = Course(courseNumber)
-    #                     if courseNumber.faculty() not in manager.faculties:
-    #                         raise AttributeError(
-    #                             "Faculty with code " + courseNumber.faculty() + " not found in Faculties in catalogue!")
-    #                     manager.faculties[courseNumber.faculty()].courses.append(courseNumber)
-    #
-    # # prune faculties with no courses on their page
-    # def pruneFaculties(self):
-    #     for k in list(manager.faculties.keys()):
-    #         if len(manager.faculties[k].courses) == 0:
-    #             print("removing faculty {} because it has no courses".format(k))
-    #             manager.faculties.pop(k, None)
+    # prune faculties with no courses on their page
+    def pruneFaculties(self, manager):
+        for k in list(manager.faculties.keys()):
+            if len(manager.faculties[k].courses) == 0:
+                print("removing faculty {} because it has no courses".format(k))
+                manager.faculties.pop(k, None)
     #
     # # def writeToFiles():
     # #     toJSONFile(Faculties, Paths.jsonPath + "\\faculties.json")
@@ -135,14 +148,14 @@ class txtParser:
     # #     toPickle(Faculties, Paths.picklePath + "\\faculties.p")
     # #     toPickle(Courses, Paths.picklePath + "\\courses.p")
     #
-    # def typoFixes(self):
-    #     manager.courses.pop(manager.faculties['29'].courses[0])
-    #     manager.courses.pop(manager.faculties['00'].courses[0])
-    #     badCourses = {CourseNum(x) for x in {'294901', '03042'}}
-    #     manager.faculties['21'].courses = [x for x in manager.faculties['21'].courses if x not in badCourses]
-    #     manager.faculties.pop('29')
-    #     manager.faculties.pop('00')
-    #     manager.faculties['39'].name = 'קורסי ספורט'
+    def typoFixes(self, manager):
+        manager.courses.pop(manager.faculties['29'].courses[0])
+        manager.courses.pop(manager.faculties['00'].courses[0])
+        badCourses = {CourseNum(x) for x in {'294901', '03042'}}
+        manager.faculties['21'].courses = [x for x in manager.faculties['21'].courses if x not in badCourses]
+        manager.faculties.pop('29')
+        manager.faculties.pop('00')
+        manager.faculties['39'].name = 'קורסי ספורט'
     #
     # def writeToFiles(self):
     #     manager.writeToFiles()

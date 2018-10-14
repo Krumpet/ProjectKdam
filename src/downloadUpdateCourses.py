@@ -33,16 +33,16 @@ def getHtmlDataFromURL(url: str):
     return f.read()
 
 
-def getHTMLDataFromUG(courseId):
+def getHTMLDataFromUG(courseId: CourseNum):
     return getHtmlDataFromURL(Addresses.TechnionUg + str(courseId))
 
 
-def getHTMLDataFromGrad(courseId):
+def getHTMLDataFromGrad(courseId: CourseNum):
     return getHtmlDataFromURL(Addresses.TechnionGrad + str(courseId))
 
 
-def parseDataFromGraduate(data, courseId):
-    pass
+# def parseDataFromGraduate(data, courseId):
+#     pass
 
 
 def listSubFaculties():
@@ -51,31 +51,31 @@ def listSubFaculties():
     return result
 
 
-def listAllCourses():
-    List = []
-    for subfaculty in listSubFaculties():
-        List.extend([subfaculty + str(num).zfill(3) for num in range(1000)])
-
-        # if len(faculty) == 2:
-        #     List.extend([faculty + digit + str(num).zfill(3) for num in range(1000) for digit in ThirdDigit])
-        # elif len(faculty) == 3:
-        #     List.extend([faculty + str(num).zfill(3) for num in range(1000)])
-    # print(List[:100])
-    return List
-
-
-def courseOnUg(courseId):
-    # print("trying course " + str(courseId))
-    data = getHTMLDataFromUG(courseId)
-    strData = str(data, encoding='utf8')
-    # if not (len(re.findall("לא קיים", strData)) > 0):
-    #     print("===ON UG===")
-    # else:
-    #     print("===NOT ON UG===")
-    return not (len(re.findall("לא קיים", strData)) > 0)
+# def listAllCourses():
+#     List = []
+#     for subfaculty in listSubFaculties():
+#         List.extend([subfaculty + str(num).zfill(3) for num in range(1000)])
+#
+#         # if len(faculty) == 2:
+#         #     List.extend([faculty + digit + str(num).zfill(3) for num in range(1000) for digit in ThirdDigit])
+#         # elif len(faculty) == 3:
+#         #     List.extend([faculty + str(num).zfill(3) for num in range(1000)])
+#     # print(List[:100])
+#     return List
 
 
-def downloadCourse(courseId):
+# def courseOnUg(courseId):
+#     # print("trying course " + str(courseId))
+#     data = getHTMLDataFromUG(courseId)
+#     strData = str(data, encoding='utf8')
+#     # if not (len(re.findall("לא קיים", strData)) > 0):
+#     #     print("===ON UG===")
+#     # else:
+#     #     print("===NOT ON UG===")
+#     return not (len(re.findall("לא קיים", strData)) > 0)
+
+
+def downloadCourse(courseId: CourseNum):
     try:
         # if (False == courseExists(courseId)):
         # data = getHTMLDataFromUG(courseId)
@@ -106,7 +106,7 @@ def downloadCourse(courseId):
         #     if 'exam_B' in info:
         #         course.moed_B = ".".join(re.search("\d{1,2}\.\d{1,2}\.\d{4}", info['exam_B'])[0].split(".")[0:2])
 
-        toPickle(info, "data/pickle/info-" + courseId + ".p")
+        # toPickle(info, "data/pickle/info-" + str(courseId) + ".p")
         # print(info)
 
         # Courses[courseId].name = getSubject(strData)
@@ -127,13 +127,13 @@ def downloadCourse(courseId):
     # randomSleep()
 
 
-def getKdams(data):
-    try:
-        kdams = list(set(re.findall(courseRegex, re.findall("מקצועות קדם.*?/div><div", data, re.DOTALL)[0])))
-        kdams = list(set([CourseNum(x).id for x in kdams]))
-    except:
-        kdams = []
-    return kdams
+# def getKdams(data):
+#     try:
+#         kdams = list(set(re.findall(courseRegex, re.findall("מקצועות קדם.*?/div><div", data, re.DOTALL)[0])))
+#         kdams = list(set([CourseNum(x).id for x in kdams]))
+#     except:
+#         kdams = []
+#     return kdams
 
 
 def extract_info(html):
@@ -184,40 +184,42 @@ def fetch(url):
         return w.read().decode('utf8')
 
 
+# TODO: use the address that includes semester and year
 def read_course(number):
-    return fetch("https://ug3.technion.ac.il/rishum/course/{}".format(number))
+    # return fetch("https://ug3.technion.ac.il/rishum/course/{}".format(number))
+    return fetch(Addresses.TechnionUg + "{}".format(number))
 
 
 def fetch_course(number):
     return cleanup(extract_info(read_course(number)))
 
 
-def getZamuds(data):
-    try:
-        zamuds = list(set(re.findall(courseRegex, re.findall("מקצועות צמודים.*?/div><div", data, re.DOTALL)[0])))
-        zamuds = list(set([CourseNum(x).id for x in zamuds]))
-    except:
-        zamuds = []
-    return zamuds
+# def getZamuds(data):
+#     try:
+#         zamuds = list(set(re.findall(courseRegex, re.findall("מקצועות צמודים.*?/div><div", data, re.DOTALL)[0])))
+#         zamuds = list(set([CourseNum(x).id for x in zamuds]))
+#     except:
+#         zamuds = []
+#     return zamuds
 
 
-def getSubject(data):
-    try:
-        subject = re.findall("\|.*\|(.*)</title>", data)[0].strip()
-    except:
-        subject = "None"
-    return subject
+# def getSubject(data):
+#     try:
+#         subject = re.findall("\|.*\|(.*)</title>", data)[0].strip()
+#     except:
+#         subject = "None"
+#     return subject
 
 
-def getExams(data: str) -> List[str]:
-    exams: List[str] = re.findall(">.*(\d\d\.\d\d).*" + Semester.TestYear.value, data)
-
-    if (len(exams) > 1):
-        return exams[:2]
-    elif (len(exams) == 1):
-        return [exams[0], ""]
-    else:
-        return ["", ""]
+# def getExams(data: str) -> List[str]:
+#     exams: List[str] = re.findall(">.*(\d\d\.\d\d).*" + Semester.TestYear, data)
+#
+#     if (len(exams) > 1):
+#         return exams[:2]
+#     elif (len(exams) == 1):
+#         return [exams[0], ""]
+#     else:
+#         return ["", ""]
 
 
 # def getCourseInfo(courseId):
@@ -246,7 +248,6 @@ def updateFollowups():
                 if kdam in Courses:
                     Courses[kdam].followups.append(courseId)
                 else:
-                    # print(kdam)
                     GraduateOnlyClasses.add(kdam)
 
     for courseId, course in Courses.items():
@@ -318,8 +319,10 @@ def removeCourses(typoCourses):
 
 
 if __name__ == "__main__":
-    Faculties: Dict[str, Faculty] = fromPickle(Paths.picklePath.value + "\\faculties.p")
-    Courses: Dict[CourseNum, Course] = fromPickle(Paths.picklePath.value + "\\courses.p")
+    # TODO: use new types
+    # TODO: save full filenames externally to this and to pdfDataParser
+    Faculties: FacultiesDB = fromPickle(Paths.pickleFaculties)
+    Courses: CoursesDB = fromPickle(Paths.pickleCourses)
     GraduateOnlyClasses: Set[CourseNum] = set()
 
     updateCourses()
@@ -330,6 +333,7 @@ if __name__ == "__main__":
     print(
         "found {} courses listed as kdam/zamud listed only on Graduate, not included in database, writing to graduate_only_courses.txt".format(
             len(GraduateOnlyClasses)))
+    # TODO: move this file to txt folder
     with open("graduate_only_courses.txt", 'w') as file:
         printInLines(GraduateOnlyClasses, file=file)
 
@@ -364,5 +368,6 @@ if __name__ == "__main__":
     # filteredlist = filter(lambda x: courseOnUg(x) and CourseNum(x) not in Courses.keys(), megalist)
     # print(list(filteredlist))
 
-    toPickle(Faculties, Paths.picklePath.value + r"\facultiesUpdated.p")
-    toPickle(Courses, Paths.picklePath.value + r"\coursesUpdated.p")
+    # TODO save filepath externally
+    toPickle(Faculties, Paths.pickleNewFaculties)
+    toPickle(Courses, Paths.pickleNewCourses)

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MypyConfigService">
+    <option name="executableName" value="dmypy start -- --follow-imports=error ; dmypy check ." />
+    <option name="pathSuffix" value="C:\Users\ADMIN\Anaconda3\Scripts" />
+  </component>
+</project>

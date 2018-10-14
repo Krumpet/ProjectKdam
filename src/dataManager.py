@@ -1,11 +1,6 @@
-import os
-from typing import Dict, Type
+from KdamClasses import FacultiesDB, CoursesDB
+from utils import fromPickle
 
-from KdamClasses import Course, Faculty, CourseNum
-from utils import fromPickle, Paths, toJSONFile, toPickle
-
-CoursesDB: Type = Dict[CourseNum, Course]
-FacultiesDB: Type = Dict[str, Faculty]
 
 class dataManager:
     faculties: FacultiesDB

@@ -14,7 +14,7 @@ def getPdfPageNum(fileName: str) -> int:
     :param fileName:
     :return: the number of pages in that pdf file
     """
-    pdfFile: str = os.path.join(Paths.pdfPath.value, fileName)
+    pdfFile: str = os.path.join(Paths.pdfPath, fileName)
     pdf = PdfFileReader(open(pdfFile, 'rb'))
     return pdf.getNumPages()
 
@@ -43,6 +43,7 @@ class pdfParser:
         #     os.makedirs(self.targetDir)
         # os.mkdir(targerDir)
         # print(targerDir)
+        # TODO: map encode over the strings
         args = [
             "gs".encode(),
             "-sDEVICE=txtwrite".encode(),
@@ -52,7 +53,7 @@ class pdfParser:
             ("-o" + txtFilenameTemplate).encode(),
             # + FilenameConsts.FileName.value + r"%d" + FilenameConsts.Suffix.value).encode(),
             # (Paths.pdfPath.value + "\\" + pdfFilename).encode(),
-            (os.path.join(Paths.pdfPath.value,pdfFilename)).encode(),
+            (os.path.join(Paths.pdfPath,pdfFilename)).encode(),
         ]
         # with suppress_stdout():
         ghostscript.Ghostscript(*args)
@@ -74,7 +75,7 @@ class pdfParser:
             print("updating file", file.name)
 
 
-if __name__ == "__main__":
-    parser = pdfParser()
-    parser.catalogueToTxtFiles()
-    parser.reverseTextInFiles()
+# if __name__ == "__main__":
+    # parser = pdfParser()
+    # parser.catalogueToTxtFiles()
+    # parser.reverseTextInFiles()

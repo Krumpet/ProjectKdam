@@ -22,26 +22,40 @@ Paths and other string constants
 """
 
 
-class Semester(Enum):
+# class Semester(Enum):
+#     Semester = "01"
+#     Year = "2018"
+#     TestYear = str(int(Year) + int(Semester) - 1)  # For the regex searching for exam dates
+
+class Semester:
     Semester = "01"
     Year = "2018"
-    TestYear = str(int(Year.value) + int(Semester.value) - 1)  # For the regex searching for exam dates
+    # TestYear = str(int(Year) + int(Semester) - 1)
 
 
-class Addresses(Enum):
-    TechnionUg = "https://ug3.technion.ac.il/rishum/course?SEM=" + Semester.Year.value + Semester.Semester.value + "&MK="
+class Addresses:
+    TechnionUg = "https://ug3.technion.ac.il/rishum/course?SEM=" + Semester.Year + Semester.Semester + "&MK="
     TechnionGrad = "http://www.graduate.technion.ac.il/heb/Subjects/?Sub="
 
 
-class Paths(Enum):
+class Paths:
     # TODO: use os.path.join on these
-    MainPath = os.path.abspath("..")
-    dataPath = MainPath + r"\data"
-    pdfPath = dataPath + r"\pdf"
-    txtPath = dataPath + r"\txt"
-    htmlPath = dataPath + r"\html"
-    jsonPath = dataPath + r"\json"
-    picklePath = dataPath + r"\pickle"
+    mainPath = os.path.abspath("..")
+    dataPath = os.path.join(mainPath, "data")
+    pdfPath = os.path.join(mainPath, "pdf")
+    txtPath = os.path.join(mainPath, "txt")
+    testPath = os.path.join(mainPath, "tests")
+    htmlPath = os.path.join(mainPath, "html")
+
+    jsonPath = os.path.join(mainPath, "json")
+    jsonTests = os.path.join(jsonPath, "tests.json")
+    jsonNewCourses = os.path.join(jsonPath, "coursesUpdated.json")
+
+    picklePath = os.path.join(mainPath, "pickle")
+    pickleFaculties = os.path.join(picklePath, "faculties.p")
+    pickleCourses = os.path.join(picklePath, "courses.p")
+    pickleNewFaculties = os.path.join(picklePath, "facultiesUpdated.p")
+    pickleNewCourses = os.path.join(picklePath, "coursesUpdated.p")
 
 
 courseRegex = "(?:^|\D)(\d{5,6})(?:\D|$)"
@@ -52,11 +66,10 @@ courseRegex = "(?:^|\D)(\d{5,6})(?:\D|$)"
 For PDF and TXT parsers
 """
 
-
-class FilenameConsts(Enum):
-    # todo this should actually be an argument to txtParser
-    FileName = "blah-"
-    Suffix = ".txt"
+# class FilenameConsts(Enum):
+#     # todo this should actually be an argument to txtParser
+#     FileName = "blah-"
+#     Suffix = ".txt"
 
 
 """
@@ -76,6 +89,21 @@ class keydefaultdict(defaultdict):
 
 # d = keydefaultdict(C)
 # d[x] # returns C(x)
+
+def dictRecursiveFormat(d: dict) -> dict:
+    """
+    returns a new dictionary where all non-string keys and values have been (recursively) turned into strings.
+    Use this for e.g. JSON dumps
+    :param d:
+    :return:
+    """
+    newDict = {}
+    for key, val in d.items():
+        newVal = val if type(val) is not dict else dictRecursiveFormat(val)
+        if not isinstance(key, str):
+            newDict[str(key)] = newVal
+    return newDict
+
 
 """
 Generic functions
@@ -129,7 +157,7 @@ def fileExists(filename):
 
 
 def courseExists(courseId):
-    return fileExists(os.path.join(Paths.htmlPath.value, str(courseId) + ".htm"))
+    return fileExists(os.path.join(Paths.htmlPath, str(courseId) + ".htm"))
 
 
 """
