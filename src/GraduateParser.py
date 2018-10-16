@@ -1,9 +1,10 @@
-from utils import *
-from typing import Dict, Match
-from KdamClasses import *
-import xml.etree.ElementTree as ET
-from lxml import etree
+import re
 import urllib.request as request
+
+from lxml import etree
+
+from KdamClasses import *
+from utils import *
 
 backupPath = Paths.htmlPath + r"\backup html"
 
@@ -13,10 +14,10 @@ english = 'identical kdam adjacent no_more no_more_contains no_more_included con
 trans = dict(zip(categories, english))
 
 
-def parseGraduate(courseId):
+def parse_graduate(course_id):
     # categories = ['מקצועות קדם', 'מקצועות צמודים', 'מקצועות ללא זיכוי נוסף', 'מקצועות ללא זיכוי נוסף (מוכלים)']
 
-    w = request.urlopen(Addresses.TechnionGrad + courseId)
+    w = request.urlopen(Addresses.TechnionGrad + course_id)
     htm = w.read().decode('windows-1255')
     # print(htm)
     # parser = ET.XMLParser(encoding='windows-1255')
@@ -28,70 +29,71 @@ def parseGraduate(courseId):
     # root: ET.Element = tree.getroot()
 
     root = etree.fromstring(htm)  # , parser=parser)
-    dataDictionary = {}
-    titleElement = root.findall(".//title")
-    if titleElement:
-        data = titleElement[0].text
+    data_dictionary = {}
+    title_element = root.findall(".//title")
+    if title_element:
+        data = title_element[0].text
         title = "-".join(data.split(":")[1].split("-")[:-1]).strip()
-        dataDictionary['name'] = title
+        data_dictionary['name'] = title
 
-    testElements = root.findall(".//*[@class='tab1']/tr/td")
-    testRegex = re.compile("\d{1,2}\.\d{1,2}\.\d{4}")
-    dateList = list(filter(testRegex.match, [element.text.strip() for element in testElements]))
-    if dateList:
-        dataDictionary['exam_A'] = ".".join(dateList[0].split('.')[0:2])
-        if len(dateList) > 1:
-            dataDictionary['exam_B'] = ".".join(dateList[1].split('.')[0:2])
+    test_elements = root.findall(".//*[@class='tab1']/tr/td")
+    test_regex = re.compile("\d{1,2}\.\d{1,2}\.\d{4}")
+    date_list = list(filter(test_regex.match, [element.text.strip() for element in test_elements]))
+    if date_list:
+        data_dictionary['exam_A'] = ".".join(date_list[0].split('.')[0:2])
+        if len(date_list) > 1:
+            data_dictionary['exam_B'] = ".".join(date_list[1].split('.')[0:2])
 
     elements = root.findall(".//*[@class='tab0']/tr")
-    Lines = []
+    lines = []
     for element in elements:
-        Line = []
+        line = []
         # TODO: write recursive helper function with depth 3
         if element.text.strip() != "":
-            Line.append(element.text.strip())
+            line.append(element.text.strip())
             # print(element.text.strip())
         for subelement in element.getchildren():
             if subelement.text.strip() != "":
-                Line.append(subelement.text.strip())
+                line.append(subelement.text.strip())
             for subsubelement in subelement.getchildren():
                 if subsubelement.text.strip() != "":
-                    Line.append(subsubelement.text.strip())
-        Lines.append(Line)
+                    line.append(subsubelement.text.strip())
+        lines.append(line)
 
-    currentKey = ""  # category we are reading now, 'kdam', 'zamud', etc
-    # print(Lines)
-    for line in Lines:
+    current_key = ""  # category we are reading now, 'kdam', 'zamud', etc
+    # print(lines)
+    for line in lines:
         if not line:
             continue
+        current_list = []
         if line[-1] in categories:  # start reading new category
-            currentKey = trans[line[-1]]
-            currentList = []
-            dataDictionary[currentKey] = []
-            dataDictionary[currentKey].append(currentList)
+            current_key = trans[line[-1]]
+            current_list = []
+            data_dictionary[current_key] = []
+            data_dictionary[current_key].append(current_list)
         if line[-1] == 'או':  # same category, new list of possible kdams
-            currentList = []
-            dataDictionary[currentKey].append(currentList)
+            current_list = []
+            data_dictionary[current_key].append(current_list)
         r = re.compile("\d{5,6}")
         newlist = filter(r.match, line)
         course = CourseNum(list(newlist)[0])
-        currentList.append(course)  # This is declared depending on the start of the line, and should always be valid
+        current_list.append(course)  # This is declared depending on the start of the line, and should always be valid
 
     # Currently only kdam and adjacent are lists of lists, the others need to be extracted
     for category in english:
         if category in ['kdam', 'adjacent']:
             continue
-        if category in dataDictionary:
-            dataDictionary[category] = dataDictionary[category][0]
+        if category in data_dictionary:
+            data_dictionary[category] = data_dictionary[category][0]
 
-    # if categories[2] in dataDictionary:
-    #     dataDictionary[categories[2]] = dataDictionary[categories[2]][0]
-    # if categories[3] in dataDictionary:
-    #     dataDictionary[categories[3]] = dataDictionary[categories[3]][0]
+    # if categories[2] in data_dictionary:
+    #     data_dictionary[categories[2]] = data_dictionary[categories[2]][0]
+    # if categories[3] in data_dictionary:
+    #     data_dictionary[categories[3]] = data_dictionary[categories[3]][0]
 
-    print(courseId + " : " + str(dataDictionary))
+    print("grad:" + course_id + " : " + str(data_dictionary))
 
-    return dataDictionary
+    return data_dictionary
 
 # info = parseGraduate('234123')
 # info = fetch_course('234123')
@@ -100,6 +102,7 @@ def parseGraduate(courseId):
 # courseNum = "236335"
 # courseNum = "114074"
 
-# graduateCourseRegex = "(?:(?P<kdams>.*?)מקצועות קדם)?(?:(?P<zamuds>.*?)מקצועות צמודים)?(?:(?P<noZikui>.*?)מקצועות ללא זיכוי נוסף)?(?:(?P<Moohal>.*?)מקצועות ללא זיכוי נוסף \(מוכלים)?(?P<extra>.*)"
+# graduateCourseRegex = "(?:(?P<kdams>.*?)מקצועות קדם)?(?:(?P<zamuds>.*?)מקצועות צמודים)?(?:(?P<noZikui>.*?)מקצועות
+# ללא זיכוי נוסף)?(?:(?P<Moohal>.*?)מקצועות ללא זיכוי נוסף \(מוכלים)?(?P<extra>.*)"
 
 # parseGraduate(courseNum)

@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98363d44-a0a1-4976-a1fb-91fb35c844b8" name="Default" comment="refactoring - txt data and pdf into one class that contains them all">
+    <list default="true" id="98363d44-a0a1-4976-a1fb-91fb35c844b8" name="Default" comment="refactoring - removed enums, using static string fields in classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pylintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.pylintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/json/courses.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json/courses.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/json/faculties.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json/faculties.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/json/tests.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json/tests.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GraduateParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraduateParser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/KdamClasses.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/KdamClasses.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataManager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/downloadUpdateCourses.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/downloadUpdateCourses.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pdfParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdfParser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pdfToDataParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pdfToDataParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kdamUG2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/kdamUG2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pdfParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PdfParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pdfToDataParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PdfToDataParser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/testPrinter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/testPrinter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/txtParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/txtParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/txtParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/TxtParser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ug-fetch/ug_fetch.py" beforeDir="false" afterPath="$PROJECT_DIR$/ug-fetch/ug_fetch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ug-fetch/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ug-fetch/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,12 +27,14 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Project_Kdam$dataManager.coverage" NAME="dataManager Coverage Results" MODIFIED="1531742936458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Project_Kdam$PdfToDataParser.coverage" NAME="PdfToDataParser Coverage Results" MODIFIED="1539556247426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Project_Kdam$PdfParser.coverage" NAME="PdfParser Coverage Results" MODIFIED="1539626613729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Project_Kdam$txtParser.coverage" NAME="txtParser Coverage Results" MODIFIED="1538855300354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Project_Kdam$pdfToDataParser.coverage" NAME="pdfToDataParser Coverage Results" MODIFIED="1539518909048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Project_Kdam$testPrinter.coverage" NAME="testPrinter Coverage Results" MODIFIED="1539528280846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Project_Kdam$jsonDumpTest.coverage" NAME="jsonDumpTest Coverage Results" MODIFIED="1539515041371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Project_Kdam$pdfToDataParser.coverage" NAME="pdfToDataParser Coverage Results" MODIFIED="1539536904932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Project_Kdam$testPrinter.coverage" NAME="testPrinter Coverage Results" MODIFIED="1539538048304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Project_Kdam$jsonDumpTest.coverage" NAME="jsonDumpTest Coverage Results" MODIFIED="1539616093141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Project_Kdam$pdfParser.coverage" NAME="pdfParser Coverage Results" MODIFIED="1539201437724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Project_Kdam$downloadUpdateCourses.coverage" NAME="downloadUpdateCourses Coverage Results" MODIFIED="1539530074042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Project_Kdam$downloadUpdateCourses.coverage" NAME="downloadUpdateCourses Coverage Results" MODIFIED="1539569634397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -50,42 +54,43 @@
     <session id="-2027802694">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="10" />
-          <entry key="py" value="5916" />
+          <entry key="Python Console" value="885" />
+          <entry key="dummy" value="283" />
+          <entry key="py" value="12670" />
           <entry key="pylintrc" value="3" />
-          <entry key="txt" value="70" />
+          <entry key="txt" value="122" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="83" />
-          <entry key="Python" value="5916" />
+          <entry key="PLAIN_TEXT" value="408" />
+          <entry key="Python" value="13555" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="18" />
+          <entry key="py" value="35" />
           <entry key="pyi" value="2" />
           <entry key="pylintrc" value="2" />
-          <entry key="txt" value="2" />
+          <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="18" />
+          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="Python" value="35" />
           <entry key="PythonStub" value="2" />
         </counts>
       </usages-collector>
@@ -97,32 +102,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/KdamClasses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="145" selection-start-line="145" selection-end-line="145" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+            <state relative-caret-position="395">
+              <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <marker date="1539533962967" expanded="true" signature="606:699" ph="..." />
+                <marker date="1539714654732" expanded="true" signature="647:653" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testPrinter.py">
+        <entry file="file://$PROJECT_DIR$/src/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="195">
+              <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1539626606496" expanded="true" signature="308:401" ph="..." />
               </folding>
             </state>
           </provider>
@@ -131,80 +127,81 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/downloadUpdateCourses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="368" column="29" lean-forward="true" selection-start-line="368" selection-start-column="29" selection-end-line="368" selection-end-column="29" />
-              <folding>
-                <marker date="1539532386994" expanded="true" signature="6374:6379" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pdfParser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#53#0" expanded="true" />
-                <marker date="1539534024929" expanded="true" signature="744:765" ph="..." />
-                <marker date="1539534024929" expanded="true" signature="750:761" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GraduateParser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.pylintrc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/txtParser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="88" column="39" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pdfToDataParser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-123">
-              <caret line="43" column="66" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="66" />
+            <state relative-caret-position="395">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1539532387023" expanded="true" signature="361:366" ph="..." />
-                <marker date="1539532387023" expanded="true" signature="2285:2294" ph="..." />
+                <marker date="1539714763225" expanded="true" signature="342:347" ph="..." />
+                <marker date="1539714763225" expanded="true" signature="1209:2470" ph="..." />
+                <marker date="1539714763225" expanded="true" signature="1474:2468" ph="..." />
+                <marker date="1539714763225" expanded="true" signature="2721:2730" ph="..." />
+                <marker date="1539714763225" expanded="true" signature="5388:5397" ph="..." />
+                <marker date="1539714763225" expanded="true" signature="6658:9695" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/txt/badOnlineCourses.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-651" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/txt/badCatalogueCourses.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1449">
+              <caret line="328" column="6" selection-start-line="328" selection-end-line="328" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/testPrinter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TxtParser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-72">
+              <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dataManager.py">
+        <entry file="file://$PROJECT_DIR$/src/jsonDumpTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-42">
-              <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+            <state relative-caret-position="481">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
-                <element signature="e#0#46#0" expanded="true" />
+                <element signature="e#0#29#0" expanded="true" />
+                <marker date="1539630679127" expanded="true" signature="82:89" ph="..." />
+                <marker date="1539630679127" expanded="true" signature="317:322" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PdfToDataParser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1539567555868" expanded="true" signature="366:371" ph="..." />
+                <marker date="1539567555868" expanded="true" signature="2342:2351" ph="..." />
               </folding>
             </state>
           </provider>
@@ -221,39 +218,40 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pickle</find>
-      <find>semester.ye</find>
-      <find>isfile</find>
-      <find>&quot;&quot;&quot;</find>
-      <find>dor</find>
-      <find>direntry</find>
-      <find>frompi</find>
-      <find>topickle</find>
-      <find>topick</find>
-      <find>msg</find>
-      <find>trying to op</find>
-      <find>dict[</find>
-      <find>Type</find>
-      <find>basefil</find>
-      <find>replace</find>
-      <find>self.manager</find>
-      <find>regex</find>
-      <find>zfill</find>
-      <find>coursenum</find>
-      <find>json.</find>
-      <find>graduate_o</find>
-      <find>coursesdb</find>
-      <find>value +</find>
-      <find>white</find>
-      <find>.value</find>
-      <find>os.path.join</find>
-      <find>args</find>
-      <find>os.path.j</find>
       <find>fromst</find>
+      <find>defaul</find>
+      <find>courseid</find>
+      <find>temp_op</find>
       <find>used</find>
+      <find>###</find>
+      <find>listed only</find>
+      <find>update</find>
+      <find>236990</find>
+      <find>info</find>
+      <find>graduate</find>
+      <find>fetch</find>
+      <find>else:</find>
+      <find>download_course</find>
+      <find>search</find>
+      <find>__init</find>
+      <find>not in</find>
+      <find>adding thi</find>
+      <find>not a</find>
+      <find>@</find>
+      <find>.name</find>
+      <find>found the da</find>
+      <find>real_course</find>
+      <find>[{}</find>
+      <find>23\d{4}</find>
+      <find>29\d{1,2}</find>
+      <find>214097</find>
+      <find>filter</find>
+      <find>-&gt; F</find>
+      <find>.cid</find>
     </findStrings>
     <replaceStrings>
       <replace>manager</replace>
+      <replace>#</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\ADMIN\PycharmProjects\Project_Kdam\data\pickle</dir>
@@ -297,17 +295,24 @@
         <option value="$PROJECT_DIR$/src/.pylintrc" />
         <option value="$PROJECT_DIR$/sample_pylintrc" />
         <option value="$PROJECT_DIR$/php/outToPHPfast.py" />
-        <option value="$PROJECT_DIR$/src/jsonDumpTest.py" />
-        <option value="$PROJECT_DIR$/src/dataManager.py" />
-        <option value="$PROJECT_DIR$/src/KdamClasses.py" />
-        <option value="$PROJECT_DIR$/src/txtParser.py" />
-        <option value="$PROJECT_DIR$/src/GraduateParser.py" />
         <option value="$PROJECT_DIR$/.pylintrc" />
-        <option value="$PROJECT_DIR$/src/downloadUpdateCourses.py" />
+        <option value="$PROJECT_DIR$/src/dataManager.py" />
+        <option value="$PROJECT_DIR$/src/kdamUG2.py" />
+        <option value="$PROJECT_DIR$/src/pdfParser.py" />
         <option value="$PROJECT_DIR$/src/pdfToDataParser.py" />
+        <option value="$PROJECT_DIR$/src/data_manager.py" />
+        <option value="$PROJECT_DIR$/src/datamanager.py" />
+        <option value="$PROJECT_DIR$/src/PdfParser.py" />
+        <option value="$PROJECT_DIR$/src/PdfToDataParser.py" />
+        <option value="$PROJECT_DIR$/src/txtParser.py" />
+        <option value="$PROJECT_DIR$/src/DataManager.py" />
+        <option value="$PROJECT_DIR$/src/GraduateParser.py" />
         <option value="$PROJECT_DIR$/src/testPrinter.py" />
         <option value="$PROJECT_DIR$/src/utils.py" />
-        <option value="$PROJECT_DIR$/src/pdfParser.py" />
+        <option value="$PROJECT_DIR$/src/jsonDumpTest.py" />
+        <option value="$PROJECT_DIR$/src/TxtParser.py" />
+        <option value="$PROJECT_DIR$/src/KdamClasses.py" />
+        <option value="$PROJECT_DIR$/src/downloadUpdateCourses.py" />
       </list>
     </option>
   </component>
@@ -318,9 +323,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="1186" />
+    <option name="width" value="1225" />
+    <option name="height" value="1300" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -379,7 +384,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last.edited.regexp" value="charset=&quot;bla&quot; /&gt; blah blah&quot; /&gt;" />
     <property name="last_opened_file_path" value="$USER_HOME$/Google Drive/Technion/Semester 6/236606 - DL/project-test/src" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -406,7 +412,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.downloadUpdateCourses">
-    <configuration name="downloadUpdateCourses" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="PdfParser" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project_Kdam" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -419,9 +425,50 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/downloadUpdateCourses.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/PdfParser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PdfToDataParser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Project_Kdam" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/PdfToDataParser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="downloadUpdateCourses" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Project_Kdam" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\ADMIN\PycharmProjects\Project_Kdam\src\CourseDownloaderUpdater.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -432,9 +479,6 @@
       <module name="Project_Kdam" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -443,7 +487,7 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/jsonDumpTest.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -509,50 +553,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kdamUG2.py" />
       <option name="PARAMETERS" value="parse outcslist.txt final_results.txt" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pdfParser" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Project_Kdam" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/pdfParser.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pdfToDataParser" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Project_Kdam" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/pdfToDataParser.py" />
-      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -655,19 +655,19 @@
       <item itemvalue="Python.ug_fetch metadata" />
       <item itemvalue="Python.ug_fetch course_ids" />
       <item itemvalue="Python.ug_fetch" />
-      <item itemvalue="Python.pdfParser" />
       <item itemvalue="Python.downloadUpdateCourses" />
-      <item itemvalue="Python.pdfToDataParser" />
       <item itemvalue="Python.jsonDumpTest" />
       <item itemvalue="Python.testPrinter" />
+      <item itemvalue="Python.PdfToDataParser" />
+      <item itemvalue="Python.PdfParser" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.downloadUpdateCourses" />
-        <item itemvalue="Python.testPrinter" />
-        <item itemvalue="Python.pdfToDataParser" />
         <item itemvalue="Python.jsonDumpTest" />
-        <item itemvalue="Python.pdfParser" />
+        <item itemvalue="Python.PdfParser" />
+        <item itemvalue="Python.PdfToDataParser" />
+        <item itemvalue="Python.testPrinter" />
       </list>
     </recent_temporary>
   </component>
@@ -745,7 +745,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539472230701</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="refactoring - removed enums, using static string fields in classes">
+      <created>1539534240893</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1539534240893</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -758,25 +765,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16151386" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20604026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.3275488" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6551173" visible="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.39696312" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.590604" weight="0.3253796" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6536913" weight="0.43058568" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798658" weight="0.39574468" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4989339" weight="0.3286334" />
-      <window_info anchor="bottom" id="Mypy Terminal" order="7" show_stripe_button="false" weight="0.32897604" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.34488273" side_tool="true" weight="0.33049646" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49798658" weight="0.32765958" />
+      <window_info anchor="bottom" id="Mypy Terminal" order="7" sideWeight="0.49932885" weight="0.32765958" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.34630874" side_tool="true" weight="0.43120566" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49946696" weight="0.32897604" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.59115136" weight="0.32897604" />
-      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49840087" weight="0.32897604" />
+      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.71073824" weight="0.31205675" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.5892618" weight="0.3275488" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49798658" weight="0.32765958" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.3319149" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -800,7 +809,8 @@
     <MESSAGE value="Some redesign - initial work summer 17/18" />
     <MESSAGE value="txtParser, pdfParser, and dataManager classes" />
     <MESSAGE value="refactoring - txt data and pdf into one class that contains them all" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring - txt data and pdf into one class that contains them all" />
+    <MESSAGE value="refactoring - removed enums, using static string fields in classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring - removed enums, using static string fields in classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -852,26 +862,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/json/faculties.txt" />
-    <entry file="file://$PROJECT_DIR$/data/json/courses.txt" />
-    <entry file="file://$PROJECT_DIR$/data/json/12-tests.json" />
-    <entry file="file://$PROJECT_DIR$/data/json/courses.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/json/faculties.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/final_results.txt" />
-    <entry file="file://$PROJECT_DIR$/data/json/tests.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="213" column="4" selection-start-line="213" selection-start-column="4" selection-end-line="213" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testPrinter.py" />
     <entry file="file://$PROJECT_DIR$/graduate_only_courses.txt" />
     <entry file="file://$PROJECT_DIR$/ug-fetch/ug_fetch.py">
@@ -892,22 +882,15 @@
     <entry file="file://$PROJECT_DIR$/kdamUG2.py" />
     <entry file="file://$PROJECT_DIR$/KdamClasses.py" />
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/regex.py" />
-    <entry file="file://$PROJECT_DIR$/src/kdamUG2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/ntpath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -963,9 +946,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/pdf/Catalogue17-18-16.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/pdf/Catalogue17-18-16.txt" />
     <entry file="file://$USER_HOME$/Anaconda3/Lib/enum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1008,29 +989,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jsonDumpTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="32" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1539515245612" expanded="true" signature="52:57" ph="..." />
-            <marker date="1539515245612" expanded="true" signature="264:267" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/builtins.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="897" column="43" selection-start-line="897" selection-start-column="43" selection-end-line="897" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/KdamClasses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="145" selection-start-line="145" selection-end-line="145" />
         </state>
       </provider>
     </entry>
@@ -1048,86 +1010,167 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/downloadUpdateCourses.py">
+    <entry file="file://$PROJECT_DIR$/src/kdamUG2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="368" column="29" lean-forward="true" selection-start-line="368" selection-start-column="29" selection-end-line="368" selection-end-column="29" />
+        <state relative-caret-position="190">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PdfParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
           <folding>
-            <marker date="1539532386994" expanded="true" signature="6374:6379" ph="..." />
+            <element signature="e#0#53#0" expanded="true" />
+            <marker date="1539541629715" expanded="true" signature="768:789" ph="..." />
+            <marker date="1539541629715" expanded="true" signature="774:785" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/txtParser.py">
+    <entry file="file://$PROJECT_DIR$/src/DataManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="88" column="39" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        <state relative-caret-position="168">
+          <caret line="8" column="114" lean-forward="true" selection-start-line="8" selection-start-column="114" selection-end-line="8" selection-end-column="114" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pdfToDataParser.py">
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1239681210/_collections.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123">
-          <caret line="43" column="66" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1539532387023" expanded="true" signature="361:366" ph="..." />
-            <marker date="1539532387023" expanded="true" signature="2285:2294" ph="..." />
-          </folding>
+        <state relative-caret-position="203">
+          <caret line="194" column="8" selection-start-line="194" selection-start-column="8" selection-end-line="194" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1239681210/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="3000" column="6" selection-start-line="3000" selection-start-column="6" selection-end-line="3000" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/typing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="2389" selection-start-line="2389" selection-end-line="2389" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GraduateParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="311">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/testPrinter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="194">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pdfParser.py">
+    <entry file="file://$PROJECT_DIR$/src/graduate_only_courses.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-            <marker date="1539534024929" expanded="true" signature="744:765" ph="..." />
-            <marker date="1539534024929" expanded="true" signature="750:761" ph="..." />
-          </folding>
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/typo_courses.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+        <state relative-caret-position="195">
+          <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1539533962967" expanded="true" signature="606:699" ph="..." />
+            <marker date="1539626606496" expanded="true" signature="308:401" ph="..." />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PdfToDataParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1539567555868" expanded="true" signature="366:371" ph="..." />
+            <marker date="1539567555868" expanded="true" signature="2342:2351" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonDumpTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1539630679127" expanded="true" signature="82:89" ph="..." />
+            <marker date="1539630679127" expanded="true" signature="317:322" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TxtParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/mypy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/KdamClasses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding>
+            <marker date="1539714654732" expanded="true" signature="647:653" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/downloadUpdateCourses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1539714763225" expanded="true" signature="342:347" ph="..." />
+            <marker date="1539714763225" expanded="true" signature="1209:2470" ph="..." />
+            <marker date="1539714763225" expanded="true" signature="1474:2468" ph="..." />
+            <marker date="1539714763225" expanded="true" signature="2721:2730" ph="..." />
+            <marker date="1539714763225" expanded="true" signature="5388:5397" ph="..." />
+            <marker date="1539714763225" expanded="true" signature="6658:9695" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/txt/badCatalogueCourses.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1449">
+          <caret line="328" column="6" selection-start-line="328" selection-end-line="328" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/txt/badOnlineCourses.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-651" />
       </provider>
     </entry>
   </component>

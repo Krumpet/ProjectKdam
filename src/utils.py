@@ -1,31 +1,19 @@
 import json
 import os
 import pickle
-import re
 import sys
-from enum import Enum
-from time import sleep
-from random import random
-from contextlib import contextmanager
-from typing import Optional, Dict
-from urllib.request import urlopen
-
 from collections import defaultdict
+from contextlib import contextmanager
+from typing import Optional, Iterable
 
-# class strEnum(Enum):
-#     def __str__(self):
-#         return str(self.value)
-from KdamClasses import Faculty
-
-"""
-Paths and other string constants
-"""
+# Course Regex
 
 
-# class Semester(Enum):
-#     Semester = "01"
-#     Year = "2018"
-#     TestYear = str(int(Year) + int(Semester) - 1)  # For the regex searching for exam dates
+course_regex = "(?:^|\D)(\d{5,6})(?:\D|$)"
+bad_course_on_grad = "z/OS (CICS)"
+
+# Paths and other string constants
+
 
 class Semester:
     Semester = "01"
@@ -39,46 +27,33 @@ class Addresses:
 
 
 class Paths:
-    # TODO: use os.path.join on these
     mainPath = os.path.abspath("..")
     dataPath = os.path.join(mainPath, "data")
-    pdfPath = os.path.join(mainPath, "pdf")
-    txtPath = os.path.join(mainPath, "txt")
-    testPath = os.path.join(mainPath, "tests")
-    htmlPath = os.path.join(mainPath, "html")
+    pdfPath = os.path.join(dataPath, "pdf")
 
-    jsonPath = os.path.join(mainPath, "json")
+    txtPath = os.path.join(dataPath, "txt")
+    bad_online_courses = os.path.join(txtPath, "badOnlineCourses.txt")
+    bad_catalogue_courses = os.path.join(txtPath, "badCatalogueCourses.txt")
+
+    testPath = os.path.join(dataPath, "tests")
+    htmlPath = os.path.join(dataPath, "html")
+
+    jsonPath = os.path.join(dataPath, "json")
     jsonTests = os.path.join(jsonPath, "tests.json")
     jsonNewCourses = os.path.join(jsonPath, "coursesUpdated.json")
 
-    picklePath = os.path.join(mainPath, "pickle")
+    picklePath = os.path.join(dataPath, "pickle")
     pickleFaculties = os.path.join(picklePath, "faculties.p")
     pickleCourses = os.path.join(picklePath, "courses.p")
     pickleNewFaculties = os.path.join(picklePath, "facultiesUpdated.p")
     pickleNewCourses = os.path.join(picklePath, "coursesUpdated.p")
 
 
-courseRegex = "(?:^|\D)(\d{5,6})(?:\D|$)"
-
-# MyDataPath = r"C:\Users\ADMIN\PycharmProjects\Project_Kdam\html"
-
-"""
-For PDF and TXT parsers
-"""
-
-# class FilenameConsts(Enum):
-#     # todo this should actually be an argument to txtParser
-#     FileName = "blah-"
-#     Suffix = ".txt"
-
-
-"""
-Dictionary class
-"""
+# Dictionary class
 
 
 # TODO: use this for Faculties and Courses
-class keydefaultdict(defaultdict):
+class KeyDefaultDict(defaultdict):
     def __missing__(self, key):
         if self.default_factory is None:
             raise KeyError(key)
@@ -90,27 +65,25 @@ class keydefaultdict(defaultdict):
 # d = keydefaultdict(C)
 # d[x] # returns C(x)
 
-def dictRecursiveFormat(d: dict) -> dict:
+def dict_recursive_format(dictionary: dict) -> dict:
     """
     returns a new dictionary where all non-string keys and values have been (recursively) turned into strings.
     Use this for e.g. JSON dumps
-    :param d:
+    :param dictionary:
     :return:
     """
-    newDict = {}
-    for key, val in d.items():
-        newVal = val if type(val) is not dict else dictRecursiveFormat(val)
-        if not isinstance(key, str):
-            newDict[str(key)] = newVal
-    return newDict
+    new_dict = {}
+    for key, val in dictionary.items():
+        new_val = val if not isinstance(val, dict) else dict_recursive_format(val)
+        # if not isinstance(key, str):
+        new_dict[str(key)] = new_val
+    return new_dict
 
 
-"""
-Generic functions
-"""
+# Generic functions
 
 
-def printInLines(iterable, file=None):
+def print_in_lines(iterable: Iterable, file=None):
     print('\n'.join(str(x) for x in iterable), file=file)
 
 
@@ -125,7 +98,7 @@ def suppress_stdout():
 
 
 @contextmanager
-def tempOpen(path, mode, encoding: Optional[str] = None):
+def temp_open(path, mode, encoding: Optional[str] = None):
     """
     Attempts to open the file in the path with mode and encoding, at the end closes and deletes the file
     :param path:
@@ -143,43 +116,41 @@ def tempOpen(path, mode, encoding: Optional[str] = None):
         os.remove(path)
 
 
-def randomSleep():
-    if random() > 0.7:
-        sleep(5)
+# def randomSleep():
+#     if random() > 0.7:
+#         sleep(5)
 
 
-def fileExists(filename):
-    # b1 = os.path.exists(filename)
-    # b2 = os.path.isfile(filename)
-    # if (b1 and b2): return True
-    # return False
-    return ((os.path.exists(filename)) and (os.path.isfile(filename)))
+# def fileExists(filename):
+#     # b1 = os.path.exists(filename)
+#     # b2 = os.path.isfile(filename)
+#     # if (b1 and b2): return True
+#     # return False
+#     return (os.path.exists(filename)) and (os.path.isfile(filename))
 
 
-def courseExists(courseId):
-    return fileExists(os.path.join(Paths.htmlPath, str(courseId) + ".htm"))
+# def course_exists(course_id):
+#     return fileExists(os.path.join(Paths.htmlPath, str(course_id) + ".htm"))
 
 
-"""
-Data storage utilities - pickle and JSON
-"""
+# Data storage utilities - pickle and JSON
 
 
-def toJSON(object):
-    return json.dumps(object, default=lambda x: x.__dict__)
+def to_json(obj):
+    return json.dumps(obj, default=lambda x: x.__dict__)
 
 
-def toJSONFile(object, filename: str, indent=None):
+def to_json_file(obj, filename: str, indent=None):
     with open(filename, 'w+', encoding='utf8') as file:
-        json.dump(object, file, default=lambda x: x.__dict__, ensure_ascii=False, indent=indent)
+        json.dump(obj, file, default=lambda x: x.__dict__, ensure_ascii=False, indent=indent)
 
 
-def toPickle(object, filename: str):
+def to_pickle(obj, filename: str):
     with open(filename, 'wb+') as file:
-        pickle.dump(object, file, protocol=pickle.HIGHEST_PROTOCOL)
+        pickle.dump(obj, file, protocol=pickle.HIGHEST_PROTOCOL)
 
 
-def fromPickle(filename):
+def from_pickle(filename):
     with open(filename, 'rb') as file:
         result = pickle.load(file, encoding='utf8')
     return result

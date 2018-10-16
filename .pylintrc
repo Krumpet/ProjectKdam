@@ -45,7 +45,7 @@ unsafe-load-any-extension=no
 # all. Valid levels: HIGH, INFERENCE, INFERENCE_FAILURE, UNDEFINED
 confidence=
 
-# Disable the message, report, category or checker with the given id(s). You
+# Disable the message, report, category or checker with the given cid(s). You
 # can either give multiple identifiers separated by comma (,) or put this
 # option multiple times (only on the command line, not in the configuration
 # file where it should appear only once).You can also use "--disable=all" to
@@ -128,7 +128,7 @@ disable=print-statement,
         dict-keys-not-iterating,
         dict-values-not-iterating
 
-# Enable the message, report, category or checker with the given id(s). You can
+# Enable the message, report, category or checker with the given cid(s). You can
 # either give multiple identifier separated by comma (,) or put this option
 # multiple time (only on the command line, not in the configuration file where
 # it should appear only once). See also the "--disable" option for examples.
