@@ -1,24 +1,23 @@
 import re
-import urllib.request as request
+from urllib import request
 
 from lxml import etree
 
-from KdamClasses import *
-from utils import *
+from KdamClasses import CourseNum
+from Utils import Addresses
 
-backupPath = Paths.htmlPath + r"\backup html"
-
-categories = ['מקצועות זהים', 'מקצועות קדם', 'מקצועות צמודים', 'מקצועות ללא זיכוי נוסף',
+CATEGORIES = ['מקצועות זהים', 'מקצועות קדם', 'מקצועות צמודים', 'מקצועות ללא זיכוי נוסף',
               'מקצועות ללא זיכוי נוסף (מכילים)', 'מקצועות ללא זיכוי נוסף (מוכלים)', 'מקצועות מכילים']
-english = 'identical kdam adjacent no_more no_more_contains no_more_included contains'.split()
-trans = dict(zip(categories, english))
+ENGLISH = 'identical kdam adjacent no_more no_more_contains no_more_included contains'.split()
+TRANS = dict(zip(CATEGORIES, ENGLISH))
 
 
+# TODO: check type of c_id
 def parse_graduate(course_id):
     # categories = ['מקצועות קדם', 'מקצועות צמודים', 'מקצועות ללא זיכוי נוסף', 'מקצועות ללא זיכוי נוסף (מוכלים)']
 
-    w = request.urlopen(Addresses.TechnionGrad + course_id)
-    htm = w.read().decode('windows-1255')
+    answer = request.urlopen(Addresses.technionGrad + course_id)
+    htm = answer.read().decode('windows-1255')
     # print(htm)
     # parser = ET.XMLParser(encoding='windows-1255')
     # parser = ET.XMLParser(encoding='latin-1')
@@ -37,7 +36,7 @@ def parse_graduate(course_id):
         data_dictionary['name'] = title
 
     test_elements = root.findall(".//*[@class='tab1']/tr/td")
-    test_regex = re.compile("\d{1,2}\.\d{1,2}\.\d{4}")
+    test_regex = re.compile(r"\d{1,2}\.\d{1,2}\.\d{4}")
     date_list = list(filter(test_regex.match, [element.text.strip() for element in test_elements]))
     if date_list:
         data_dictionary['exam_A'] = ".".join(date_list[0].split('.')[0:2])
@@ -66,21 +65,21 @@ def parse_graduate(course_id):
         if not line:
             continue
         current_list = []
-        if line[-1] in categories:  # start reading new category
-            current_key = trans[line[-1]]
+        if line[-1] in CATEGORIES:  # start reading new category
+            current_key = TRANS[line[-1]]
             current_list = []
             data_dictionary[current_key] = []
             data_dictionary[current_key].append(current_list)
         if line[-1] == 'או':  # same category, new list of possible kdams
             current_list = []
             data_dictionary[current_key].append(current_list)
-        r = re.compile("\d{5,6}")
-        newlist = filter(r.match, line)
+        basic_course_regex = re.compile(r"\d{5,6}")
+        newlist = filter(basic_course_regex.match, line)
         course = CourseNum(list(newlist)[0])
         current_list.append(course)  # This is declared depending on the start of the line, and should always be valid
 
     # Currently only kdam and adjacent are lists of lists, the others need to be extracted
-    for category in english:
+    for category in ENGLISH:
         if category in ['kdam', 'adjacent']:
             continue
         if category in data_dictionary:

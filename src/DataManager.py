@@ -1,5 +1,5 @@
 from KdamClasses import FacultiesDB, CoursesDB
-from utils import from_pickle
+from Utils import from_pickle
 
 
 class DataManager:

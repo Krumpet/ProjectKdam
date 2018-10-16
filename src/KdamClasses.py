@@ -1,7 +1,7 @@
-from typing import List, Type, Dict
+from typing import List, Type, Dict, Collection
 
 
-# TODO: changer all lists to sets
+# TODO: change all lists to sets (of lists or frozensets
 
 class CourseNum:
     _id: str
@@ -19,8 +19,8 @@ class CourseNum:
         return self._id
 
     @cid.setter
-    def cid(self, id):
-        self._id = str(id).zfill(6)
+    def cid(self, c_id):
+        self._id = str(c_id).zfill(6)
 
     def __str__(self):
         return self.cid
@@ -35,7 +35,7 @@ class CourseNum:
         return isinstance(other, CourseNum) and self.cid == other.cid
 
     def __ne__(self, other):
-        return not (self == other)
+        return not self == other
 
     def __len__(self):
         return len(self.cid)
@@ -73,36 +73,38 @@ class CourseNum:
 
 
 class Course:
-    courseId: CourseNum
+    course_id: CourseNum
     name: str
-    moed_A: str
-    moed_B: str
+    moed_a: str
+    moed_b: str
     kdams: List[List[CourseNum]]
     zamuds: List[List[CourseNum]]
     followups: List[CourseNum]
-    reverseZamuds: List[CourseNum]
+    reverse_zamuds: List[CourseNum]
 
-    def __init__(self, cid, name="", moed_a="", moed_b="", kdams=None, zamuds=None, followups=None,
-                 reverse_zamuds=None) -> None:
-        self.courseId = CourseNum(cid)
-        self.name = name
-        self.moed_A = moed_a
-        self.moed_B = moed_b
-        self.kdams = kdams if kdams is not None else []
-        self.zamuds = zamuds if zamuds is not None else []
-        self.followups = followups if followups is not None else []
-        self.reverseZamuds = reverse_zamuds if reverse_zamuds is not None else []
+    # def __init__(self, cid, name="", moed_a="", moed_b="", kdams=None, zamuds=None, followups=None,
+    #              reverse_zamuds=None) -> None:
+    # TODO: testing creation with only code, as other data is obtained later
+    def __init__(self, cid) -> None:
+        self.course_id = CourseNum(cid)
+        self.name = ""
+        self.moed_a = ""
+        self.moed_b = ""
+        self.kdams = []
+        self.zamuds = []
+        self.followups = []
+        self.reverse_zamuds = []
 
     def faculty(self):
         """
         Tells us the faculty code of the course - currently 2 digits except for '500' type faculties
         """
-        return self.courseId.faculty()
+        return self.course_id.faculty()
 
     # TODO: check if all of these operators are even in use
     def __eq__(self, other):
         if isinstance(other, Course):
-            return self.courseId == other.courseId
+            return self.course_id == other.course_id
         return NotImplemented
 
     def __ne__(self, other):
@@ -114,32 +116,35 @@ class Course:
     # For <, __lt__ is used.For >, __gt__.For <= and >=, __le__ and __ge__ respectively.
     def __lt__(self, other):
         if isinstance(other, Course):
-            return self.courseId < other.courseId
+            return self.course_id < other.course_id
         return NotImplemented
 
     def __gt__(self, other):
         if isinstance(other, Course):
-            return self.courseId > other.courseId
+            return self.course_id > other.course_id
         return NotImplemented
 
     def __le__(self, other):
         if isinstance(other, Course):
-            return self.courseId <= other.courseId
+            return self.course_id <= other.course_id
         return NotImplemented
 
     def __ge__(self, other):
         if isinstance(other, Course):
-            return self.courseId >= other.courseId
+            return self.course_id >= other.course_id
         return NotImplemented
 
     def __str__(self):
         return "Course {0} ID: {1}, Kdams: {2}, " \
                "followups: {3}, Moed A: {4}, Moed B: {5}".format(self.name,
-                                                                 self.courseId,
+                                                                 self.course_id,
                                                                  self.kdams,
                                                                  self.followups,
-                                                                 self.moed_A,
-                                                                 self.moed_B)
+                                                                 self.moed_a,
+                                                                 self.moed_b)
+
+    def __hash__(self):
+        return hash(self.course_id)
 
 
 class Faculty:
@@ -154,7 +159,7 @@ class Faculty:
         # self.courses = {course : Course(course) for course in courseIds} if courseIds is not None else {}
         self.courses = []
 
-    def add_courses(self, course_list: List[CourseNum]):
+    def add_courses(self, course_list: Collection[CourseNum]):
         if not course_list:
             return
 
@@ -184,6 +189,9 @@ class Faculty:
                         x[:3] for x in
                         self.courses if
                         x.faculty() == self.code)))
+
+    def __hash__(self):
+        return hash(self.code)
 
 
 FacultiesDB: Type = Dict[str, Faculty]

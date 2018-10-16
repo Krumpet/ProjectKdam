@@ -4,7 +4,7 @@ import sys
 import json
 import re
 from collections import defaultdict, OrderedDict
-from utils import Semester #, Year
+from Utils import Semester #, Year
 
 
 class FILES:

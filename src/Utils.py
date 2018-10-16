@@ -4,13 +4,13 @@ import pickle
 import sys
 from collections import defaultdict
 from contextlib import contextmanager
-from typing import Optional, Iterable
+from typing import Optional, Collection
 
 # Course Regex
 
 
-course_regex = "(?:^|\D)(\d{5,6})(?:\D|$)"
-bad_course_on_grad = "z/OS (CICS)"
+COURSE_REGEX = r"(?:^|\D)(\d{5,6})(?:\D|$)"
+BAD_COURSE_ON_GRAD = "z/OS (CICS)"
 
 # Paths and other string constants
 
@@ -18,12 +18,11 @@ bad_course_on_grad = "z/OS (CICS)"
 class Semester:
     Semester = "01"
     Year = "2018"
-    # TestYear = str(int(Year) + int(Semester) - 1)
 
 
 class Addresses:
-    TechnionUg = "https://ug3.technion.ac.il/rishum/course?SEM=" + Semester.Year + Semester.Semester + "&MK="
-    TechnionGrad = "http://www.graduate.technion.ac.il/heb/Subjects/?Sub="
+    technionUg = "https://ug3.technion.ac.il/rishum/course?SEM=" + Semester.Year + Semester.Semester + "&MK="
+    technionGrad = "http://www.graduate.technion.ac.il/heb/Subjects/?Sub="
 
 
 class Paths:
@@ -67,7 +66,8 @@ class KeyDefaultDict(defaultdict):
 
 def dict_recursive_format(dictionary: dict) -> dict:
     """
-    returns a new dictionary where all non-string keys and values have been (recursively) turned into strings.
+    returns a new dictionary where all non-string keys and values have been (recursively)
+    turned into strings.
     Use this for e.g. JSON dumps
     :param dictionary:
     :return:
@@ -83,7 +83,7 @@ def dict_recursive_format(dictionary: dict) -> dict:
 # Generic functions
 
 
-def print_in_lines(iterable: Iterable, file=None):
+def print_in_lines(iterable: Collection, file=None):
     print('\n'.join(str(x) for x in iterable), file=file)
 
 
@@ -100,7 +100,8 @@ def suppress_stdout():
 @contextmanager
 def temp_open(path, mode, encoding: Optional[str] = None):
     """
-    Attempts to open the file in the path with mode and encoding, at the end closes and deletes the file
+    Attempts to open the file in the path with mode and encoding,
+    at the end closes and deletes the file
     :param path:
     :param mode:
     :param encoding:

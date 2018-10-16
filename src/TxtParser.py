@@ -1,64 +1,45 @@
+import os
 import re
-from typing import List
+from typing import List, Set, FrozenSet
 
 from KdamClasses import Course, CourseNum, Faculty
 from DataManager import DataManager
-from utils import *
+from Utils import COURSE_REGEX, Paths, temp_open
 
 
 class TxtParser:
-    # manager: dataManager
-
-    # def __init__(self, manager: dataManager = dataManager()):
-    #     manager = manager
-
     @staticmethod
     def parse_texts(manager: DataManager, target_dir: str):
-        # numOfPages = getPdfPageNum(fileName=fileName)
-
-        # def txtFilename(index: int):
-        #     # TODO: refactor so basefilename is saved once in txt/pdf manager
-        #     baseTxtFilename = fileName.replace(".pdf", "")
-
-        # manager = dataManager()
-        # faculties = manager.faculties
-        # TODO: replace page number iteration with iterating over text files
-        # specify the format of text files - should contain faculty code and name like in pdf catalogue,
-        # or make that part optional
-        # for i in range(1, numOfPages + 1):
-        for file in os.scandir(target_dir):
-            if not file.is_file():
+        for dir_entry in os.scandir(target_dir):
+            if not dir_entry.is_file():
                 continue
             # tempOpen closes and deletes the text file after use
             # with tempOpen(txtPath + "\\" + FileName + str(i) + Suffix, 'r', encoding="utf8") as file:
             # TODO: use temp_open
-            with open(file.path, "r", encoding="utf8") as f:
+            with open(dir_entry.path, "r", encoding="utf8") as file:
                 # with open(Paths.txtPath.value + "\\" + FilenameConsts.FileName.value + str(i) +
                 # FilenameConsts.Suffix.value, 'r', encoding="utf8") as file:
                 data: List[str] = []
                 try:
-                    data = [" ".join(line.split()).strip() for line in f.readlines()]
+                    data = [" ".join(line.split()).strip() for line in file.readlines()]
                     # if not data or ... and take out of 'with' scope
                     # if text is not flipped, use data[0][::-1] to flip the line
                     if re.search("תו?כנית לימודים", data[0], re.DOTALL) is None:
                         continue
-                    """
-                    The title of pages that contain class lists for each faculty have the format:
-                    2017/2018 Blah blah blah / 23 Computer Science
-                    So we capture the '23' and the 'Computer Science'
-                    """
-                    # print('got here for real page')
-                    # print(data[0])
+
+                    # The title of pages that contain class lists for each faculty have the format:
+                    # 2017/2018 Blah blah blah / 23 Computer Science
+                    # So we capture the '23' and the 'Computer Science'
+
                     # Use this then text is reversed in the text files:
                     # faculty_code, faculty_name = re.findall("\d+.\d+ +.* +/ +(\d+) +(.*)", data[0])[0]
-                    # Use this if you bothered to flip the Hebrew text in the text files
-                    faculty_name, faculty_code = re.findall("(.*) +(\d{2,3}) +/ +.* \d+[/-]\d+", data[0])[0]
+
+                    # Alternatively, use this if you bothered to flip the Hebrew text in the text files
+                    faculty_name, faculty_code = re.findall(r"(.*) +(\d{2,3}) +/ +.* \d+[/-]\d+", data[0])[0]
 
                     # Some faculties don't have a faculty code, producing a "list index out of range" error when trying
                     # to find the faculty name and code. e.g.:
                     # "list index out of range אנרגיה / תוכנית לימודים תשע"ח 2017/2018"
-
-                    # print('used regex on real page')
 
                     # if text is not flipped, faculty name is captured in reverse so flip it
                     # faculty_name = faculty_name[::-1]
@@ -70,23 +51,25 @@ class TxtParser:
                     # TODO: TESTING joining all lines and then doing regex search
 
                     # TODO: move all addition logic to the data manager
-                    course_in_each_line = re.findall(course_regex, "\n".join(data))
+                    course_in_each_line = re.findall(COURSE_REGEX, "\n".join(data))
                     # TODO: split courses into self_courses and other_courses
-                    courses_on_this_page = list(
-                        set([CourseNum(courseNum) for courseNum in course_in_each_line]))
+                    # courses_on_this_page = list(
+                    #     set([CourseNum(courseNum) for courseNum in course_in_each_line]))
+                    courses_on_this_page: Set[CourseNum] = {CourseNum(courseNum) for courseNum in course_in_each_line}
 
-                    course_objects = [manager.courses.get(courseId, Course(courseId)) for courseId in
-                                      courses_on_this_page]
+                    # TODO: defaultKeyDict would obsolete this bit of "get then insert"
+                    course_objects: Set[Course] = {manager.courses.get(courseId, Course(courseId)) for courseId in
+                                                   courses_on_this_page}
                     for course in course_objects:
-                        if course.courseId not in manager.courses:
-                            manager.courses[course.courseId] = course
+                        if course.course_id not in manager.courses:
+                            manager.courses[course.course_id] = course
                         faculty = course.faculty()
                         # todo: this is possibly avoided by using a defaultkeydict - trying to access the faculty will
                         # create a default one with no name
                         if faculty not in manager.faculties:
                             manager.faculties[faculty] = Faculty(faculty)
-                        if course.courseId not in manager.faculties[faculty].courses:
-                            manager.faculties[faculty].courses.append(course.courseId)
+                        if course.course_id not in manager.faculties[faculty].courses:
+                            manager.faculties[faculty].courses.append(course.course_id)
                     if faculty_code not in manager.faculties:
                         manager.faculties[faculty_code] = Faculty(faculty_code, faculty_name)
                     # else:
@@ -99,12 +82,13 @@ class TxtParser:
 
                     print("reading faculty {0}, faculty code {1}".format(faculty_name, faculty_code))
                 except Exception as e:
-                    print(e, data[0] if len(data) > 0 else "no text found on page")
+                    print(e, data[0] if data else "no text found on page")
                     continue
 
     @staticmethod
     def update_extra_courses(manager: DataManager) -> None:
         # TODO: save this path externally
+        # TODO: rebuild this file myself
         with open('../ug-fetch/metadata/course_ids.txt') as file:
             raw_courses = file.readlines()
         courses = [CourseNum(x.strip()) for x in raw_courses]
@@ -126,13 +110,13 @@ class TxtParser:
         add them to the main Courses list, and the appropriate Faculty
         :return:
         """
-        for x in os.listdir(Paths.txtPath):
-            path = os.path.join(Paths.txtPath, x)
+        for potential_file in os.listdir(Paths.txtPath):
+            path = os.path.join(Paths.txtPath, potential_file)
             if os.path.isfile(path):
                 print("got file ", path)
                 with temp_open(path, 'r') as file:
                     data = file.read()
-                courses_numbers = list(set(re.findall(course_regex, data, re.DOTALL)))
+                courses_numbers = list(set(re.findall(COURSE_REGEX, data, re.DOTALL)))
                 course_num_list = [CourseNum(x) for x in courses_numbers]
                 for course_number in course_num_list:
                     if course_number not in manager.courses:
@@ -143,37 +127,38 @@ class TxtParser:
                                 " not found in Faculties in catalogue!")
                         manager.faculties[course_number.faculty()].courses.append(course_number)
 
-    #
-
-    #
-    # # def writeToFiles():
-    # #     toJSONFile(Faculties, Paths.jsonPath + "\\faculties.json")
-    # #     toJSONFile(Courses, Paths.jsonPath + "\\courses.json")
-    # #     toPickle(Faculties, Paths.picklePath + "\\faculties.p")
-    # #     toPickle(Courses, Paths.picklePath + "\\courses.p")
-    #
     @staticmethod
     def typo_fixes(manager: DataManager) -> None:
-        manager.courses.pop(manager.faculties['29'].courses[0], None)
-        manager.courses.pop(manager.faculties['00'].courses[0], None)
-        bad_courses = {CourseNum(x) for x in {'294901', '03042'}}
-        manager.faculties['21'].courses = [x for x in manager.faculties['21'].courses if x not in bad_courses]
+        """
+        There are some typos in the pdf (at least in the 17-18 version) that need to be manually removed
+        :param manager:
+        :return:
+        """
+        bad_faculty_codes = ['29', '00']
+        bad_faculties: Set[Faculty] = {fac for fac in
+                                       {manager.faculties.get(fac_code, None) for fac_code in bad_faculty_codes} if
+                                       fac is not None}
+        # TODO: change to set, as in many places...
+        bad_course_lists: Set[FrozenSet[CourseNum]] = {frozenset(fac.courses) for fac in bad_faculties}
+        bad_courses: Set[CourseNum] = {course for course_list in bad_course_lists for course in course_list}
+        for course in bad_courses:
+            manager.courses.pop(course, None)
+        # manager.courses.pop(manager.faculties['29'].courses[0], None)
+        # manager.courses.pop(manager.faculties['00'].courses[0], None)
+        combined_courses = bad_courses.union({CourseNum(x) for x in {'294901', '03042'}})
+        manager.faculties['21'].courses = [x for x in manager.faculties['21'].courses if x not in combined_courses]
         manager.faculties.pop('29', None)
         manager.faculties.pop('00', None)
         manager.faculties['39'].name = 'קורסי ספורט'
-    #
-    # def writeToFiles(self):
-    #     manager.writeToFiles()
 
+# if __name__ == "__main__":
+#     parser = TxtParser()
 
-if __name__ == "__main__":
-    parser = TxtParser()
-
-    # parser.parseTexts()
-    # parser.updateExtraCourses()
-    # # parser.typoFixes()  # some errors in the catalogue, I remove them manually
-    # parser.pruneFaculties()
-    # parser.writeToFiles()
+# parser.parseTexts()
+# parser.updateExtraCourses()
+# # parser.typoFixes()  # some errors in the catalogue, I remove them manually
+# parser.pruneFaculties()
+# parser.writeToFiles()
 
 # print(sorted(Courses.keys()))
 # print(Faculties.keys())

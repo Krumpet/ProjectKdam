@@ -1,8 +1,10 @@
-from typing import Set
+import os
+from typing import Set, Tuple
 
-from KdamClasses import *
-from utils import *
+from KdamClasses import FacultiesDB, CoursesDB, CourseNum
+from Utils import from_pickle, Paths, to_json_file
 
+# TODO: wrap in class
 Faculties: FacultiesDB = from_pickle(Paths.pickleNewFaculties)
 Courses: CoursesDB = from_pickle(Paths.pickleNewCourses)
 facultyTests = {}
@@ -10,10 +12,12 @@ facultyTests = {}
 
 def print_tests(faculty_to_print: str) -> None:
     course_nums: Set[CourseNum] = {x for x in Faculties[faculty_to_print].courses if
-                                   x in Courses and (Courses[x].moed_A != "" or Courses[x].moed_B != "")}
+                                   x in Courses and (Courses[x].moed_a != "" or Courses[x].moed_b != "")}
 
-    moed_as = {(Courses[num].moed_A, num, Courses[num].name) for num in course_nums if Courses[num].moed_A != ""}
-    moed_bs = {(Courses[num].moed_B, num, Courses[num].name) for num in course_nums if Courses[num].moed_B != ""}
+    moed_as: Set[Tuple[str, CourseNum, str]] = {(Courses[num].moed_a, num, Courses[num].name) for num in course_nums if
+                                                Courses[num].moed_a != ""}
+    moed_bs: Set[Tuple[str, CourseNum, str]] = {(Courses[num].moed_b, num, Courses[num].name) for num in course_nums if
+                                                Courses[num].moed_b != ""}
     sorted_as = sorted(moed_as, key=lambda tup: [int(x) for x in tup[0].split('.')[::-1]])
     sorted_bs = sorted(moed_bs, key=lambda tup: [int(x) for x in tup[0].split('.')[::-1]])
 
@@ -38,6 +42,7 @@ def print_tests(faculty_to_print: str) -> None:
 
     # print(setToSort)
 
+
 # TODO: wrap this up in a test printer
 for faculty in Faculties:
     # for faculty in ['23']:
@@ -53,6 +58,4 @@ for faculty in Faculties:
 # toPickle(Faculties, picklePath + r"\facultiesUpdated.p")
 # TODO: put in "main" function
 
-"""
-Note for the future: Currently run "pdfToDataParser" and then "downloadUpdateCourses" and then "testPrinter"
-"""
+# Note for the future: Currently run "pdfToDataParser" and then "downloadUpdateCourses" and then "testPrinter"

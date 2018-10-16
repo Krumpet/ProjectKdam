@@ -1,11 +1,11 @@
 import re
-import urllib.request as request
 from collections import OrderedDict, deque
-from typing import Set, Union, Deque, Tuple
+from typing import Set, Union, Deque, Tuple, List, Collection
+from urllib import request
 
 from GraduateParser import parse_graduate
-from KdamClasses import *
-from utils import *
+from KdamClasses import CoursesDB, FacultiesDB, CourseNum, Course
+from Utils import from_pickle, Paths, print_in_lines, to_pickle, BAD_COURSE_ON_GRAD, Addresses
 
 
 class CourseDownloaderUpdater:
@@ -23,7 +23,7 @@ class CourseDownloaderUpdater:
               'no_more_contains no_more_included'.split() + irrelevant
     trans = dict(zip(hebrew, english))
 
-    def __init__(self, courses: CoursesDB = None, faculties: FacultiesDB = None):
+    def __init__(self, courses: CoursesDB = None, faculties: FacultiesDB = None) -> None:
         self.courses = from_pickle(Paths.pickleCourses) if courses is None else courses
         self.faculties = from_pickle(Paths.pickleFaculties) if faculties is None else faculties
         self.bad_online_courses = set()
@@ -51,77 +51,81 @@ class CourseDownloaderUpdater:
         to_pickle(self.faculties, Paths.pickleNewFaculties)
         to_pickle(self.courses, Paths.pickleNewCourses)
 
-    def nested_string_list_to_course_nums(self, nested_list: List[List[str]]) -> List[List[CourseNum]]:
+    @staticmethod
+    def nested_string_list_to_course_nums(nested_list: Collection[Collection[str]]) -> List[List[CourseNum]]:
         return [[CourseNum(num) for num in sub_list] for sub_list in nested_list]
 
     def download_course(self, course: Union[CourseNum, Course]):
         try:
             real_course = course if isinstance(course, Course) else self.courses[course]
             # TODO: testing using courseNum as argument rather than ".cid"ing it
-            info = self.fetch_course(real_course.courseId)
+            info = self.fetch_course(real_course.course_id)
             if not info:  # meaning the course isn't on UG, try on graduate
                 info = parse_graduate(real_course)
             real_course.name = info.get('name', "")
-            if real_course.name == bad_course_on_grad:  # this means the course isn't on graduate
+            if real_course.name == BAD_COURSE_ON_GRAD:  # this means the course isn't on graduate
                 real_course.name = ""
 
             # TODO: change these to sets
             real_course.kdams = self.nested_string_list_to_course_nums(info.get('kdam', []))
             real_course.zamuds = self.nested_string_list_to_course_nums(info.get('adjacent', []))
 
-            real_course.moed_A = info.get('exam_A', "")
-            real_course.moed_B = info.get('exam_B', "")
+            real_course.moed_a = info.get('exam_A', "")
+            real_course.moed_b = info.get('exam_B', "")
         except:
             pass
 
-    def extract_info(self, html):
+    @staticmethod
+    def extract_info(html):
         div_fmt = r'<div class="{}">\s*(.*?)\s*</div>'
         keys = re.findall(div_fmt.format('property'), html)
         values = re.findall(div_fmt.format('property-value'), html)
         # print("found " + str(values))
-        return OrderedDict(zip(keys, [re.sub('\s+', ' ', v) for v in values]))
+        return OrderedDict(zip(keys, [re.sub(r'\s+', ' ', v) for v in values]))
 
-    def fix(self, k, v):
+    @staticmethod
+    def fix(key, value):
         """
         kdam and adjacent are lists of lists, the rest are lists
-        :param k:
-        :param v:
+        :param key:
+        :param value:
         :return:
         """
         # TODO: fix exam dates so they're uniform with graduate parser
         data_title = r'data-original-title="(.*?)"'
-        if k in ['kdam', 'adjacent']:
-            return [re.findall(data_title, x) for x in v.split(' או ')]
-        if k.startswith('no_more') or k in ['identical']:
-            return re.findall(data_title, v)
-        if k in ['site']:
-            return re.search(r'href="(.*?)" ', v).group(1)
-        if k in ['exam_A', 'exam_B']:
-            return ".".join(re.search("\d{1,2}\.\d{1,2}\.\d{4}", v)[0].split(".")[0:2])
-        return v
+        if key in ['kdam', 'adjacent']:
+            return [re.findall(data_title, x) for x in value.split(' או ')]
+        if key.startswith('no_more') or key in ['identical']:
+            return re.findall(data_title, value)
+        if key in ['site']:
+            return re.search(r'href="(.*?)" ', value).group(1)
+        if key in ['exam_A', 'exam_B']:
+            return ".".join(re.search(r"\d{1,2}\.\d{1,2}\.\d{4}", value)[0].split(".")[0:2])
+        return value
 
     def cleanup(self, raw_dict):
-        od = OrderedDict((self.trans[k], self.fix(self.trans[k], v))
-                         for k, v in raw_dict.items())
-        if not od:
+        ordered_dict = OrderedDict((self.trans[k], self.fix(self.trans[k], v))
+                                   for k, v in raw_dict.items())
+        if not ordered_dict:
             return {}
         # TODO:
-        if 'points' in od:
-            od.move_to_end('points', last=False)
-        od.move_to_end('id', last=False)
-        if 'site' in od:
-            od.move_to_end('site')
-        od.move_to_end('syllabus')
-        return od
+        if 'points' in ordered_dict:
+            ordered_dict.move_to_end('points', last=False)
+        ordered_dict.move_to_end('id', last=False)
+        if 'site' in ordered_dict:
+            ordered_dict.move_to_end('site')
+        ordered_dict.move_to_end('syllabus')
+        return ordered_dict
 
-    def fetch(self, url):
-        with request.urlopen(url) as w:
-            return w.read().decode('utf8')
+    @staticmethod
+    def fetch(url):
+        with request.urlopen(url) as data:
+            return data.read().decode('utf8')
 
     # TODO: use the address that includes semester and year
     def read_course(self, number: CourseNum):
         # return fetch("https://ug3.technion.ac.il/rishum/course/{}".format(number))
-        return self.fetch(Addresses.TechnionUg + "{}".format(number))
+        return self.fetch(Addresses.technionUg + "{}".format(number))
 
     def fetch_course(self, number: CourseNum):
         return self.cleanup(self.extract_info(self.read_course(number)))
@@ -143,7 +147,7 @@ class CourseDownloaderUpdater:
                 self.courses[cid] = course
             # go over the courses kdams/zamuds and update the opposite direction
             # if we discover a course not in Courses, create it and add it to the end of the queue
-            for attr in attributes_and_opposites.keys():
+            for attr in attributes_and_opposites:
                 main_list: List[List[CourseNum]] = getattr(course, attr)
                 for sublist in main_list:
                     for k_or_z_id in sublist:
@@ -162,8 +166,8 @@ class CourseDownloaderUpdater:
                             if k_or_z_id in {k[0] for k in
                                              courses_to_check}:
                                 # finding an item in the queue is ugly
-                                course_to_update: Course = \
-                                    list(filter(lambda tup: tup[0] == k_or_z_id, courses_to_check))[0][1]
+                                course_to_update: Course = list(filter(lambda tup, kz_id=k_or_z_id:
+                                                                       tup[0] == kz_id, courses_to_check))[0][1]
                                 opposite_attribute: List[CourseNum] = getattr(course_to_update,
                                                                               attributes_and_opposites[attr])
                                 opposite_attribute.append(cid)
@@ -188,28 +192,28 @@ class CourseDownloaderUpdater:
                                                                                   attributes_and_opposites[attr])
                                     opposite_attribute.append(cid)
 
-    def remove_courses(self, bad_courses: Iterable[CourseNum]) -> None:
+    def remove_courses(self, bad_courses: Collection[CourseNum]) -> None:
         # remove from zamud lists
-        for courseId, course in self.courses.items():
-            for zamudList in course.zamuds:
-                for zamud in zamudList:
+        for course in self.courses.values():
+            for zamud_list in course.zamuds:
+                for zamud in zamud_list:
                     if zamud in bad_courses:
-                        zamudList.remove(zamud)
-                        if not zamudList:
-                            course.zamuds.remove(zamudList)
+                        zamud_list.remove(zamud)
+                        if not zamud_list:
+                            course.zamuds.remove(zamud_list)
 
         # remove from kdam lists
-        for courseId, course in self.courses.items():
-            for kdamList in course.kdams:
-                for kdam in kdamList:
+        for course in self.courses.values():
+            for kdam_list in course.kdams:
+                for kdam in kdam_list:
                     if kdam in bad_courses:
-                        kdamList.remove(kdam)
-                        if not kdamList:
-                            course.kdams.remove(kdamList)
+                        kdam_list.remove(kdam)
+                        if not kdam_list:
+                            course.kdams.remove(kdam_list)
 
         # remove from faculty course list
         # TODO: change to set
-        for facultyCode, faculty in self.faculties.items():
+        for faculty in self.faculties.values():
             faculty.courses = [x for x in faculty.courses if x not in bad_courses]
 
         for course in bad_courses:
@@ -219,6 +223,7 @@ class CourseDownloaderUpdater:
         self.faculties = {k: v for k, v in self.faculties.items() if v.courses}
 
 
+# TODO: wrap in function
 if __name__ == "__main__":
     downloader = CourseDownloaderUpdater()
     downloader.download_and_update_courses()
@@ -408,12 +413,14 @@ if __name__ == "__main__":
     # # courses that were in the pdf(s) we scanned but were not found online.
     # # these could include typos.
     # bad_catalogue_courses: Set[CourseNum] = {k for k, v in Courses.items() if v.name == ""}
-    # print("found {} courses in the DB that were not found online. They will be removed from DB.".format(
-    #     len(bad_catalogue_courses)))
+    # print("found {} courses in the DB that were not found online. They will be removed from DB."
+    # .format(len(bad_catalogue_courses)))
     # with open(Paths.bad_catalogue_courses, 'w+') as file:
     #     print_in_lines(sorted(bad_catalogue_courses), file=file)
     #
-    # Faculties = remove_courses(bad_catalogue_courses.union(bad_online_courses), faculties=Faculties, courses_db=Courses)
+    # Faculties = remove_courses(bad_catalogue_courses.union(bad_online_courses),
+    # faculties=Faculties,
+    # courses_db=Courses)
     #
     # to_pickle(Faculties, Paths.pickleNewFaculties)
     # to_pickle(Courses, Paths.pickleNewCourses)
