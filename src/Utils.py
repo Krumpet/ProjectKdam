@@ -6,47 +6,6 @@ from collections import defaultdict
 from contextlib import contextmanager
 from typing import Optional, Collection
 
-# Course Regex
-
-
-COURSE_REGEX = r"(?:^|\D)(\d{5,6})(?:\D|$)"
-BAD_COURSE_ON_GRAD = "z/OS (CICS)"
-
-# Paths and other string constants
-
-
-class Semester:
-    Semester = "01"
-    Year = "2018"
-
-
-class Addresses:
-    technionUg = "https://ug3.technion.ac.il/rishum/course?SEM=" + Semester.Year + Semester.Semester + "&MK="
-    technionGrad = "http://www.graduate.technion.ac.il/heb/Subjects/?Sub="
-
-
-class Paths:
-    mainPath = os.path.abspath("..")
-    dataPath = os.path.join(mainPath, "data")
-    pdfPath = os.path.join(dataPath, "pdf")
-
-    txtPath = os.path.join(dataPath, "txt")
-    bad_online_courses = os.path.join(txtPath, "badOnlineCourses.txt")
-    bad_catalogue_courses = os.path.join(txtPath, "badCatalogueCourses.txt")
-
-    testPath = os.path.join(dataPath, "tests")
-    htmlPath = os.path.join(dataPath, "html")
-
-    jsonPath = os.path.join(dataPath, "json")
-    jsonTests = os.path.join(jsonPath, "tests.json")
-    jsonNewCourses = os.path.join(jsonPath, "coursesUpdated.json")
-
-    picklePath = os.path.join(dataPath, "pickle")
-    pickleFaculties = os.path.join(picklePath, "faculties.p")
-    pickleCourses = os.path.join(picklePath, "courses.p")
-    pickleNewFaculties = os.path.join(picklePath, "facultiesUpdated.p")
-    pickleNewCourses = os.path.join(picklePath, "coursesUpdated.p")
-
 
 # Dictionary class
 
@@ -64,6 +23,9 @@ class KeyDefaultDict(defaultdict):
 # d = keydefaultdict(C)
 # d[x] # returns C(x)
 
+
+# Generic functions
+
 def dict_recursive_format(dictionary: dict) -> dict:
     """
     returns a new dictionary where all non-string keys and values have been (recursively)
@@ -78,9 +40,6 @@ def dict_recursive_format(dictionary: dict) -> dict:
         # if not isinstance(key, str):
         new_dict[str(key)] = new_val
     return new_dict
-
-
-# Generic functions
 
 
 def print_in_lines(iterable: Collection, file=None):
@@ -117,23 +76,6 @@ def temp_open(path, mode, encoding: Optional[str] = None):
         os.remove(path)
 
 
-# def randomSleep():
-#     if random() > 0.7:
-#         sleep(5)
-
-
-# def fileExists(filename):
-#     # b1 = os.path.exists(filename)
-#     # b2 = os.path.isfile(filename)
-#     # if (b1 and b2): return True
-#     # return False
-#     return (os.path.exists(filename)) and (os.path.isfile(filename))
-
-
-# def course_exists(course_id):
-#     return fileExists(os.path.join(Paths.htmlPath, str(course_id) + ".htm"))
-
-
 # Data storage utilities - pickle and JSON
 
 
@@ -155,3 +97,19 @@ def from_pickle(filename):
     with open(filename, 'rb') as file:
         result = pickle.load(file, encoding='utf8')
     return result
+
+# def randomSleep():
+#     if random() > 0.7:
+#         sleep(5)
+
+
+# def fileExists(filename):
+#     # b1 = os.path.exists(filename)
+#     # b2 = os.path.isfile(filename)
+#     # if (b1 and b2): return True
+#     # return False
+#     return (os.path.exists(filename)) and (os.path.isfile(filename))
+
+
+# def course_exists(course_id):
+#     return fileExists(os.path.join(Paths.htmlPath, str(course_id) + ".htm"))

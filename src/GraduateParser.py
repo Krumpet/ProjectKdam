@@ -4,7 +4,7 @@ from urllib import request
 from lxml import etree
 
 from KdamClasses import CourseNum
-from Utils import Addresses
+from Consts import Addresses
 
 CATEGORIES = ['מקצועות זהים', 'מקצועות קדם', 'מקצועות צמודים', 'מקצועות ללא זיכוי נוסף',
               'מקצועות ללא זיכוי נוסף (מכילים)', 'מקצועות ללא זיכוי נוסף (מוכלים)', 'מקצועות מכילים']
@@ -14,9 +14,7 @@ TRANS = dict(zip(CATEGORIES, ENGLISH))
 
 # TODO: check type of c_id
 def parse_graduate(course_id):
-    # categories = ['מקצועות קדם', 'מקצועות צמודים', 'מקצועות ללא זיכוי נוסף', 'מקצועות ללא זיכוי נוסף (מוכלים)']
-
-    answer = request.urlopen(Addresses.technionGrad + course_id)
+    answer = request.urlopen(Addresses.TECHNION_GRAD + course_id)
     htm = answer.read().decode('windows-1255')
     # print(htm)
     # parser = ET.XMLParser(encoding='windows-1255')
@@ -51,10 +49,10 @@ def parse_graduate(course_id):
         if element.text.strip() != "":
             line.append(element.text.strip())
             # print(element.text.strip())
-        for subelement in element.getchildren():
-            if subelement.text.strip() != "":
-                line.append(subelement.text.strip())
-            for subsubelement in subelement.getchildren():
+        for sub_element in element.getchildren():
+            if sub_element.text.strip() != "":
+                line.append(sub_element.text.strip())
+            for subsubelement in sub_element.getchildren():
                 if subsubelement.text.strip() != "":
                     line.append(subsubelement.text.strip())
         lines.append(line)
@@ -74,8 +72,8 @@ def parse_graduate(course_id):
             current_list = []
             data_dictionary[current_key].append(current_list)
         basic_course_regex = re.compile(r"\d{5,6}")
-        newlist = filter(basic_course_regex.match, line)
-        course = CourseNum(list(newlist)[0])
+        new_list = list(filter(basic_course_regex.match, line))
+        course = CourseNum(new_list[0])
         current_list.append(course)  # This is declared depending on the start of the line, and should always be valid
 
     # Currently only kdam and adjacent are lists of lists, the others need to be extracted
@@ -85,23 +83,6 @@ def parse_graduate(course_id):
         if category in data_dictionary:
             data_dictionary[category] = data_dictionary[category][0]
 
-    # if categories[2] in data_dictionary:
-    #     data_dictionary[categories[2]] = data_dictionary[categories[2]][0]
-    # if categories[3] in data_dictionary:
-    #     data_dictionary[categories[3]] = data_dictionary[categories[3]][0]
-
     print("grad:" + course_id + " : " + str(data_dictionary))
 
     return data_dictionary
-
-# info = parseGraduate('234123')
-# info = fetch_course('234123')
-# print(info)
-
-# courseNum = "236335"
-# courseNum = "114074"
-
-# graduateCourseRegex = "(?:(?P<kdams>.*?)מקצועות קדם)?(?:(?P<zamuds>.*?)מקצועות צמודים)?(?:(?P<noZikui>.*?)מקצועות
-# ללא זיכוי נוסף)?(?:(?P<Moohal>.*?)מקצועות ללא זיכוי נוסף \(מוכלים)?(?P<extra>.*)"
-
-# parseGraduate(courseNum)

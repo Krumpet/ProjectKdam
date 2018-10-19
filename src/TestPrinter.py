@@ -1,61 +1,67 @@
 import os
-from typing import Set, Tuple
+from typing import Set, Tuple, List, Dict
 
 from KdamClasses import FacultiesDB, CoursesDB, CourseNum
-from Utils import from_pickle, Paths, to_json_file
-
-# TODO: wrap in class
-Faculties: FacultiesDB = from_pickle(Paths.pickleNewFaculties)
-Courses: CoursesDB = from_pickle(Paths.pickleNewCourses)
-facultyTests = {}
+from Utils import from_pickle, to_json_file
+from Consts import Paths
 
 
-def print_tests(faculty_to_print: str) -> None:
-    course_nums: Set[CourseNum] = {x for x in Faculties[faculty_to_print].courses if
-                                   x in Courses and (Courses[x].moed_a != "" or Courses[x].moed_b != "")}
+class TestPrinter:
+    faculties: FacultiesDB
+    courses: CoursesDB
+    # TODO: make these tuples into a type of their own (namedtuples?)
+    faculties_tests: Dict[str, List[Tuple[str, CourseNum, str]]] = {}
 
-    moed_as: Set[Tuple[str, CourseNum, str]] = {(Courses[num].moed_a, num, Courses[num].name) for num in course_nums if
-                                                Courses[num].moed_a != ""}
-    moed_bs: Set[Tuple[str, CourseNum, str]] = {(Courses[num].moed_b, num, Courses[num].name) for num in course_nums if
-                                                Courses[num].moed_b != ""}
-    sorted_as = sorted(moed_as, key=lambda tup: [int(x) for x in tup[0].split('.')[::-1]])
-    sorted_bs = sorted(moed_bs, key=lambda tup: [int(x) for x in tup[0].split('.')[::-1]])
+    def __init__(self, courses: CoursesDB = None, faculties: FacultiesDB = None) -> None:
+        self.courses = from_pickle(Paths.PICKLE_COURSES) if courses is None else courses
+        self.faculties = from_pickle(Paths.PICKLE_FACULTIES) if faculties is None else faculties
+        self.faculties_tests = {}
 
-    with open(os.path.join(Paths.testPath, "{}-{}.txt".format(faculty_to_print, Faculties[faculty_to_print].name)),
-              mode='w+') as file:
-        print("Exam dates for faculty {} - {}\n".format(faculty_to_print, Faculties[faculty_to_print].name), file=file)
-        print("Moed-A:", file=file)
-        print("\n".join("{:7} {!s:7} {:>35}".format(tup[0], tup[1], tup[2]) for tup in sorted_as), file=file)
-        print("Moed-B:", file=file)
-        print("\n".join("{:7} {!s:7} {:>35}".format(tup[0], tup[1], tup[2]) for tup in sorted_bs), file=file)
+    def print_tests_for_faculty(self, fac_code: str) -> None:
+        course_nums: Set[CourseNum] = {x for x in self.faculties[fac_code].courses if
+                                       x in self.courses and (
+                                               self.courses[x].moed_a != "" or self.courses[x].moed_b != "")}
 
-    sorted_as.extend(sorted_bs)
-    if sorted_as:
-        facultyTests[faculty_to_print] = sorted_as
-    # sorted_Tests = sorted_as[:]
-    # sorted_Tests.extend(sorted_bs)
-    # toJSONFile(sorted_Tests, "data/json/{}-tests.json".format(faculty))
+        moed_as: Set[Tuple[str, CourseNum, str]] = {(self.courses[num].moed_a, num, self.courses[num].name) for num in
+                                                    course_nums
+                                                    if
+                                                    self.courses[num].moed_a != ""}
+        moed_bs: Set[Tuple[str, CourseNum, str]] = {(self.courses[num].moed_b, num, self.courses[num].name) for num in
+                                                    course_nums
+                                                    if
+                                                    self.courses[num].moed_b != ""}
+        sorted_as = sorted(moed_as, key=lambda tup: [int(x) for x in tup[0].split('.')[::-1]])
+        sorted_bs = sorted(moed_bs, key=lambda tup: [int(x) for x in tup[0].split('.')[::-1]])
 
-    # print(Moed_As)
+        with open(os.path.join(Paths.TEST_PATH,
+                               "{}-{}.txt".format(fac_code, self.faculties[fac_code].name)),
+                  mode='w+') as file:
+            print("Exam dates for faculty {} - {}\n".format(fac_code, self.faculties[fac_code].name),
+                  file=file)
+            print("Moed-A:", file=file)
+            print("\n".join("{:7} {!s:7} {:>35}".format(tup[0], tup[1], tup[2]) for tup in sorted_as), file=file)
+            print("Moed-B:", file=file)
+            print("\n".join("{:7} {!s:7} {:>35}".format(tup[0], tup[1], tup[2]) for tup in sorted_bs), file=file)
 
-    # print(list(setToSort).sort(key=lambda tup: [str(x) for x in tup[2].split('.')]))
+        sorted_as.extend(sorted_bs)
+        if sorted_as:
+            self.faculties_tests[fac_code] = sorted_as
 
-    # print(setToSort)
+    def print_tests(self):
+        # populate test list for each faculty
+        print("building test lists for each faculty and writing them to files",
+              "output will be at" + Paths.TEST_PATH)
+        for faculty_code in self.faculties:
+            # TODO: change to just populating lists, print in separate function
+            self.print_tests_for_faculty(faculty_code)
+        to_json_file(self.faculties_tests, Paths.JSON_TESTS)
 
 
-# TODO: wrap this up in a test printer
-for faculty in Faculties:
-    # for faculty in ['23']:
-    #     print(faculty)
-    print_tests(faculty)
-    # print("========")
+def main():
+    printer = TestPrinter()
+    printer.print_tests()
 
-    # files are not modified, so only save tests
-    to_json_file(facultyTests, Paths.jsonTests)  # , indent=0)
-    # toJSONFile(dictRecursiveFormat(Courses), Paths.jsonNewCourses)
-    # toJSONFile(Faculties, os.path.join(Paths.jsonPath ,"facultiesUpdated.json"))
 
-# toPickle(Faculties, picklePath + r"\facultiesUpdated.p")
-# TODO: put in "main" function
-
-# Note for the future: Currently run "pdfToDataParser" and then "downloadUpdateCourses" and then "testPrinter"
+if __name__ == "__main__":
+    # Note for the future: Currently run "pdfToDataParser" and then "downloadUpdateself.courses" and then "testPrinter"
+    main()

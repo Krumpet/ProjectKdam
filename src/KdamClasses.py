@@ -1,18 +1,15 @@
 from typing import List, Type, Dict, Collection
 
 
-# TODO: change all lists to sets (of lists or frozensets
+# TODO: change all lists to sets (of lists or frozensets)
 
 class CourseNum:
     _id: str
 
     def __init__(self, num) -> None:
-        # if len(num) < 5:
-        #     raise AttributeError("Course number too short at " + num)
-        # super(CourseNum, self).__init__()
-        self.cid = str(num)  # .zfill(6)
-        # while (len(self.id) < 6):
-        #     self.id = "0" + self.id
+        if len(num) < 5:
+            raise AttributeError("Course number too short at " + num)
+        self.cid = str(num)
 
     @property
     def cid(self):
@@ -65,11 +62,7 @@ class CourseNum:
         """
         Tells us the faculty code of the course - currently 2 digits except for '500' type faculties
         """
-        return self.cid[:3] if self.cid.startswith("5") else self.cid[:2]
-        # if self.cid.startswith("5"):
-        #     return self.cid[:3]
-        # else:
-        #     return self.cid[:2]
+        return self.cid[:2] if not self.cid.startswith("5") else self.cid[:3]
 
 
 class Course:

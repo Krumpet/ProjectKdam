@@ -4,7 +4,9 @@ from typing import List, Set, FrozenSet
 
 from KdamClasses import Course, CourseNum, Faculty
 from DataManager import DataManager
-from Utils import COURSE_REGEX, Paths, temp_open
+from Utils import temp_open
+from Consts.CourseValues import COURSE_REGEX
+from Consts import Paths
 
 
 class TxtParser:
@@ -43,12 +45,6 @@ class TxtParser:
 
                     # if text is not flipped, faculty name is captured in reverse so flip it
                     # faculty_name = faculty_name[::-1]
-
-                    # TODO: maybe combine data from lines to one big string?
-                    # course_in_each_line = [re.findall(courseRegex, data[j]) for j in range(len(data))]
-                    # courses_on_this_page = list(
-                    #     set([CourseNum(courseNum) for sublist in course_in_each_line for courseNum in sublist]))
-                    # TODO: TESTING joining all lines and then doing regex search
 
                     # TODO: move all addition logic to the data manager
                     course_in_each_line = re.findall(COURSE_REGEX, "\n".join(data))
@@ -110,8 +106,8 @@ class TxtParser:
         add them to the main Courses list, and the appropriate Faculty
         :return:
         """
-        for potential_file in os.listdir(Paths.txtPath):
-            path = os.path.join(Paths.txtPath, potential_file)
+        for potential_file in os.listdir(Paths.TXT_PATH):
+            path = os.path.join(Paths.TXT_PATH, potential_file)
             if os.path.isfile(path):
                 print("got file ", path)
                 with temp_open(path, 'r') as file:
@@ -138,13 +134,10 @@ class TxtParser:
         bad_faculties: Set[Faculty] = {fac for fac in
                                        {manager.faculties.get(fac_code, None) for fac_code in bad_faculty_codes} if
                                        fac is not None}
-        # TODO: change to set, as in many places...
         bad_course_lists: Set[FrozenSet[CourseNum]] = {frozenset(fac.courses) for fac in bad_faculties}
         bad_courses: Set[CourseNum] = {course for course_list in bad_course_lists for course in course_list}
         for course in bad_courses:
             manager.courses.pop(course, None)
-        # manager.courses.pop(manager.faculties['29'].courses[0], None)
-        # manager.courses.pop(manager.faculties['00'].courses[0], None)
         combined_courses = bad_courses.union({CourseNum(x) for x in {'294901', '03042'}})
         manager.faculties['21'].courses = [x for x in manager.faculties['21'].courses if x not in combined_courses]
         manager.faculties.pop('29', None)

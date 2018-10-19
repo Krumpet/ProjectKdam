@@ -4,7 +4,7 @@ import sys
 import json
 import re
 from collections import defaultdict, OrderedDict
-from Utils import Semester #, Year
+from Consts.SemesterCodes import SEMESTER
 
 
 class FILES:
@@ -44,7 +44,7 @@ def get_form(**kwargs):
         'FAC': '',  # Faculty
         'LLN': '',  # Lecturer Last Name
         'LFN': '',  # Lecturer First Name
-        'SEM': Semester.Year + Semester.Semester,  # Year and Semester. 201?(01|02|03) e.g 201702
+        'SEM': SEMESTER.Year + SEMESTER.Semester,  # Year and Semester. 201?(01|02|03) e.g 201702
         'RECALL': 'Y',  # Something with the days
         'D1': 'on', 'D2': 'on', 'D3': 'on', 'D4': 'on', 'D5': 'on', 'D6': 'on',  # Day
         'FTM': '', 'TTM': '',  # From/To Hour HH:MM (24H format)

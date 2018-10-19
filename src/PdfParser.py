@@ -3,7 +3,7 @@ import os
 import ghostscript  # for converting pdf file to text
 from bidi.algorithm import get_display
 
-from Utils import Paths
+from Consts import Paths
 
 
 class PdfParser:
@@ -17,19 +17,14 @@ class PdfParser:
         :return:
         """
 
-        # TODO: map encode over the strings
-        print(os.path.join(Paths.pdfPath, pdf_filename))
-        args = [
-            "gs".encode(),
-            "-sDEVICE=txtwrite".encode(),
-            # ("-o" + Paths.txtPath.value + "\\"
-            #  + baseFileName + "\\" + baseFileName + r"-%d.txt").encode(),
-            # ("-o" + targerDir + "\\" + baseFileName + r"-%d.txt").encode(),
-            ("-o" + txt_filename_template).encode(),
-            # + FilenameConsts.FileName.value + r"%d" + FilenameConsts.Suffix.value).encode(),
-            # (Paths.pdfPath.value + "\\" + pdfFilename).encode(),
-            (os.path.join(Paths.pdfPath, pdf_filename)).encode(),
-        ]
+        args = list(map(lambda s: s.encode(),  # args need to be encoded into bytes
+                        [
+                            "gs",  # name of the command
+                            "-sDEVICE=txtwrite",  # job type - writing to txt files
+                            "-o" + txt_filename_template,  # output filename template
+                            os.path.join(Paths.PDF_PATH, pdf_filename),  # input filename
+                        ]))
+
         # with suppress_stdout():
         ghostscript.Ghostscript(*args)
 
