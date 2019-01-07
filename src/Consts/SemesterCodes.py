@@ -1,2 +1,2 @@
-SEMESTER = "01"
+SEMESTER = "02"
 YEAR = "2018"

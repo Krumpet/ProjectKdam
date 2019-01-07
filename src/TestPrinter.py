@@ -6,6 +6,7 @@ from Utils import from_pickle, to_json_file
 from Consts import Paths
 
 
+# TODO: save by semester so as to not lose previous results
 class TestPrinter:
     faculties: FacultiesDB
     courses: CoursesDB
@@ -13,8 +14,8 @@ class TestPrinter:
     faculties_tests: Dict[str, List[Tuple[str, CourseNum, str]]] = {}
 
     def __init__(self, courses: CoursesDB = None, faculties: FacultiesDB = None) -> None:
-        self.courses = from_pickle(Paths.PICKLE_COURSES) if courses is None else courses
-        self.faculties = from_pickle(Paths.PICKLE_FACULTIES) if faculties is None else faculties
+        self.courses = from_pickle(Paths.PICKLE_NEW_COURSES) if courses is None else courses
+        self.faculties = from_pickle(Paths.PICKLE_NEW_FACULTIES) if faculties is None else faculties
         self.faculties_tests = {}
 
     def print_tests_for_faculty(self, fac_code: str) -> None:

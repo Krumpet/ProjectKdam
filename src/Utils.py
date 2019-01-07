@@ -4,7 +4,7 @@ import pickle
 import sys
 from collections import defaultdict
 from contextlib import contextmanager
-from typing import Optional, Collection
+from typing import Optional, Collection, Dict, Any
 
 
 # Dictionary class
@@ -25,8 +25,8 @@ class KeyDefaultDict(defaultdict):
 
 
 # Generic functions
-
-def dict_recursive_format(dictionary: dict) -> dict:
+# taken from https://stackoverflow.com/a/51051641/6338059
+def dict_recursive_format(dictionary: dict) -> Dict[str, Any]:
     """
     returns a new dictionary where all non-string keys and values have been (recursively)
     turned into strings.

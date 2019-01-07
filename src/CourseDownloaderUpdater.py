@@ -5,7 +5,7 @@ from urllib import request
 
 from GraduateParser import parse_graduate
 from KdamClasses import CoursesDB, FacultiesDB, CourseNum, Course
-from Utils import from_pickle, print_in_lines, to_pickle
+from Utils import from_pickle, print_in_lines, to_pickle, to_json, to_json_file, dict_recursive_format
 from Consts.CourseValues import BAD_COURSE_ON_GRAD
 from Consts import Paths, Addresses
 
@@ -50,30 +50,35 @@ class CourseDownloaderUpdater:
 
         self.remove_courses(bad_catalogue_courses.union(self.bad_online_courses))
 
+        print("saving faculties and courses")
         to_pickle(self.faculties, Paths.PICKLE_NEW_FACULTIES)
         to_pickle(self.courses, Paths.PICKLE_NEW_COURSES)
+        to_json_file(self.faculties, Paths.JSON_NEW_FACULTIES)
+        # TODO: this doesn't work because keys are not strings
+        # see this: https://stackoverflow.com/a/12734621/6338059
+        to_json_file(dict_recursive_format(self.courses), Paths.JSON_NEW_COURSES)
 
     @staticmethod
     def nested_string_list_to_course_nums(nested_list: Collection[Collection[str]]) -> List[List[CourseNum]]:
-        return list({list({CourseNum(num) for num in sub_list}) for sub_list in nested_list})
+        return list(list({CourseNum(num) for num in sub_list}) for sub_list in nested_list)
 
-    def download_course(self, course: Union[CourseNum, Course]):
+    def download_course(self, course: Course):
         try:
-            real_course = course if isinstance(course, Course) else self.courses[course]
+            # real_course = course if isinstance(course, Course) else self.courses[course]
             # TODO: testing using courseNum as argument rather than ".cid"ing it
-            info = self.fetch_course(real_course.course_id)
+            info = self.fetch_course(course.course_id)
             if not info:  # meaning the course isn't on UG, try on graduate
-                info = parse_graduate(real_course)
-            real_course.name = info.get('name', "")
-            if real_course.name == BAD_COURSE_ON_GRAD:  # this means the course isn't on graduate
-                real_course.name = ""
+                info = parse_graduate(course)
+            course.name = info.get('name', "")
+            if course.name == BAD_COURSE_ON_GRAD:  # this means the course isn't on graduate
+                course.name = ""
                 return
 
-            real_course.kdams = self.nested_string_list_to_course_nums(info.get('kdam', []))
-            real_course.zamuds = self.nested_string_list_to_course_nums(info.get('adjacent', []))
+            course.kdams = self.nested_string_list_to_course_nums(info.get('kdam', []))
+            course.zamuds = self.nested_string_list_to_course_nums(info.get('adjacent', []))
 
-            real_course.moed_a = info.get('exam_A', "")
-            real_course.moed_b = info.get('exam_B', "")
+            course.moed_a = info.get('exam_A', "")
+            course.moed_b = info.get('exam_B', "")
         except:
             pass
 
@@ -136,14 +141,14 @@ class CourseDownloaderUpdater:
 
     def download_courses(self):
         print("downloading data for courses:")
-        for i, course_id in enumerate(self.courses):
-            print(str(i + 1), "/", len(self.courses), " [{}]".format(course_id))
-            self.download_course(course_id)
+        for i, (course_id, course) in enumerate(self.courses.items()):
+            print(str(i + 1), "/", len(self.courses), "\t[{}]".format(course_id))
+            self.download_course(course)
 
     def update_followups_and_reverse_zamuds(self):
         # TODO: handle updating faculties when a new course is discovered
         courses_to_check: Deque[Tuple[CourseNum, Course]] = deque(self.courses.items())
-        attributes_and_opposites = {'kdams': 'followups', 'zamuds': 'reverseZamuds'}
+        attributes_and_opposites = {'kdams': 'followups', 'zamuds': 'reverse_zamuds'}
         while courses_to_check:
             cid, course = courses_to_check.popleft()
             # if this is a course discovered while updating kdams/zamuds, add to courses
