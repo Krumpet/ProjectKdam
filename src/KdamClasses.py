@@ -179,7 +179,7 @@ class Faculty:
                             self.courses if
                             x.faculty() == self.code)),
                     sorted(set(
-                        x[:3] for x in
+                        x.cid[:3] for x in
                         self.courses if
                         x.faculty() == self.code)))
 

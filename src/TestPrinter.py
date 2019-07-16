@@ -1,9 +1,9 @@
 import os
 from typing import Set, Tuple, List, Dict
 
+from Consts import Paths
 from KdamClasses import FacultiesDB, CoursesDB, CourseNum
 from Utils import from_pickle, to_json_file
-from Consts import Paths
 
 
 # TODO: save by semester so as to not lose previous results
@@ -31,6 +31,10 @@ class TestPrinter:
                                                     course_nums
                                                     if
                                                     self.courses[num].moed_b != ""}
+
+        if not moed_as and not moed_bs:
+            print("No exam dates found for ", self.faculties.get(fac_code, "(not in faculty DB"))
+
         sorted_as = sorted(moed_as, key=lambda tup: [int(x) for x in tup[0].split('.')[::-1]])
         sorted_bs = sorted(moed_bs, key=lambda tup: [int(x) for x in tup[0].split('.')[::-1]])
 
@@ -50,7 +54,7 @@ class TestPrinter:
 
     def print_tests(self):
         # populate test list for each faculty
-        print("building test lists for each faculty and writing them to files",
+        print("building test lists for each faculty and writing them to files\n",
               "output will be at" + Paths.TEST_PATH)
         for faculty_code in self.faculties:
             # TODO: change to just populating lists, print in separate function

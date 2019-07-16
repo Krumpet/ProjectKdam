@@ -1,13 +1,13 @@
 import re
 from collections import deque
-from typing import Set, Union, Deque, Tuple, List, Collection, Dict
+from typing import Set, Deque, Tuple, List, Collection, Dict
 from urllib import request
 
+from Consts import Paths, Addresses
+from Consts.CourseValues import BAD_COURSE_ON_GRAD
 from GraduateParser import parse_graduate
 from KdamClasses import CoursesDB, FacultiesDB, CourseNum, Course
-from Utils import from_pickle, print_in_lines, to_pickle, to_json, to_json_file, dict_recursive_format
-from Consts.CourseValues import BAD_COURSE_ON_GRAD
-from Consts import Paths, Addresses
+from Utils import from_pickle, print_in_lines, to_pickle, to_json_file, dict_recursive_format
 
 
 class CourseDownloaderUpdater:
@@ -147,7 +147,7 @@ class CourseDownloaderUpdater:
 
     def update_followups_and_reverse_zamuds(self):
         # TODO: handle updating faculties when a new course is discovered
-        courses_to_check: Deque[Tuple[CourseNum, Course]] = deque(self.courses.items())
+        courses_to_check: Deque[Tuple[CourseNum, Course]] = deque([(k, v) for k, v in self.courses.items()])
         attributes_and_opposites = {'kdams': 'followups', 'zamuds': 'reverse_zamuds'}
         while courses_to_check:
             cid, course = courses_to_check.popleft()
